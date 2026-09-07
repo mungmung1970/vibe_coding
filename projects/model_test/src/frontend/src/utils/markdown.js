@@ -1,4 +1,7 @@
-import { escapeHtml } from './dom.js';
+/** 모델 출력을 먼저 이스케이프한 뒤에만 마크업을 만든다. */
+const escapeHtml = (value) => String(value ?? '')
+  .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
 
 const inline = (text) => escapeHtml(text)
   .replace(/`([^`]+)`/g, '<code>$1</code>')

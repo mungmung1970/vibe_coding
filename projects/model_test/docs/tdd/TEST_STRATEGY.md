@@ -19,7 +19,7 @@
 | 프로세스 수명 | `src/backend/tests/test_shutdown.py` | — | 서버를 자식 프로세스로 띄우고 SIGTERM 종료 확인 |
 | 프론트 단위 | `src/frontend/tests/unit.test.js`, `api.test.js` | — | 마크다운 렌더·이스케이프, 스토어, SSE 청크 재조립, 표시 문구 |
 | 프론트 정적 | `src/frontend/tests/smoke.sh` | — | 모든 모듈 `node --check` |
-| 합계 | 백엔드 37건 · 프론트 13건 | | |
+| 합계 | 백엔드 42건 · 프론트 테스트 12개 | | |
 
 ## 실행
 
@@ -52,5 +52,5 @@ sh src/frontend/tests/smoke.sh
 ## 하지 않는 것
 
 - 부하·동시성·장시간 안정성 시험
-- 모델 출력 품질의 자동 채점
+- 장시간·대규모 모델 출력 품질 평가
 - 브라우저 호환성 매트릭스(크롬 계열만 확인)

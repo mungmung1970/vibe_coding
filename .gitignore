@@ -4,6 +4,9 @@
 !.env.example
 !**/.env.example
 **/secrets.env
+
+# Native infrastructure build sources and downloaded archives
+.native-src/
 *.pem
 *.key
 *.crt

@@ -5,7 +5,7 @@
 ```text
 src/
 ├── backend/    파이썬 표준 라이브러리만 사용하는 API + 정적 파일 서버
-└── frontend/   의존성 없는 바닐라 ES 모듈 화면 (하니스 프론트 템플릿 구조/토큰 준수)
+└── frontend/   React 19 + Vite 화면 (하니스 프론트 템플릿 구조/토큰 준수)
 models/         서빙 대상 모델 디렉터리 (models/README.md 참고)
 ```
 
@@ -17,9 +17,17 @@ sh src/backend/run.sh --host 0.0.0.0  # 다른 PC에서도 접속 (http://<서�
 sh src/backend/run.sh --port 9000 --engine vllm
 ```
 
-백엔드가 `src/frontend`를 그대로 서빙하므로 별도 빌드나 정적 서버가 필요 없습니다. 프론트만 따로 띄울 때는 `globalThis.MODEL_TEST_API_BASE`로 API 주소를 지정하면 됩니다.
+프론트엔드는 React + Vite다. 백엔드는 빌드 산출물 `src/frontend/dist`가 있으면 그것을, 없으면 소스 디렉터리를 정적으로 서빙한다.
 
-`index.html`을 파일로 직접 열면(`file://`) ES 모듈과 API 호출이 모두 차단되므로, 반드시 위 주소로 접속해야 합니다.
+```sh
+cd src/frontend
+npm install          # 최초 1회
+npm run build        # dist/ 생성 → 백엔드가 이걸 서빙
+npm run dev          # 개발 서버 5173, /api는 8080으로 프록시
+sh tests/smoke.sh    # 구성 확인 + 단위 테스트 + 빌드
+```
+
+화면을 고친 뒤에는 **반드시 `npm run build`를 다시 실행해야** 백엔드가 서빙하는 화면에 반영됩니다.
 
 ### 다른 PC에서 접속
 
@@ -94,6 +102,13 @@ VLM 모델을 서빙하면 입력 패널에 이미지 첨부 버튼이 생긴다
 | `MODEL_TEST_STARTUP_TIMEOUT` | `1800` | 서빙 준비 대기 한도(초) |
 | `MODEL_TEST_VAR_DIR` | `<project>/var` | 실행 기록·로그 저장 위치 |
 | `MODEL_TEST_PARAMETERS_FILE` | `app/data/parameters.json` | 파라미터 정의 파일 |
+| `MODEL_TEST_FRONTEND_DIR` | 자동 선택된 `frontend/dist` 또는 `frontend` | 정적 프론트엔드 위치 |
+| `MODEL_TEST_HISTORY_FILE` | `<project>/var/history.jsonl` | 실행 기록 파일 |
+| `MODEL_TEST_LOG_DIR` | `<project>/var/logs` | vLLM 로그 위치 |
+| `MODEL_TEST_SECRETS_FILE` | `<project>/var/secrets.env` | 외부 API 키 파일 |
+| `MODEL_TEST_SHUTDOWN_TIMEOUT` | `30` | 서빙 종료 대기 한도(초) |
+| `MODEL_TEST_REQUEST_TIMEOUT` | `600` | 생성 요청 대기 한도(초) |
+| `MODEL_TEST_HISTORY_LIMIT` | `500` | 보관할 실행 기록 최대 수 |
 
 ## 파라미터 정의
 
@@ -116,6 +131,7 @@ VLM 모델을 서빙하면 입력 패널에 이미지 첨부 버튼이 생긴다
 | --- | --- | --- |
 | `GET` | `/api/v1/health` | 상태와 현재 엔진 |
 | `GET` | `/api/v1/models` | 모델 목록과 제공자 |
+| `GET` | `/api/v1/models/{model_id}` | 모델 상세 정보 |
 | `GET` | `/api/v1/serving` | 서빙 상태 (`idle`/`starting`/`ready`/`stopping`/`error`) |
 | `POST` | `/api/v1/serving` | `{"model_id": "..."}` — 기존 서빙 중단 후 해당 모델 서빙 |
 | `DELETE` | `/api/v1/serving` | 서빙 중단 |
@@ -136,11 +152,13 @@ VLM 모델을 서빙하면 입력 패널에 이미지 첨부 버튼이 생긴다
 
 백엔드는 `core`(HTTP 원시 계층) → `services`(도메인) → `api`(경로 연결) 방향으로만 의존합니다. `services/serving_manager.py`가 "한 번에 한 모델" 불변식을 지키고, `services/engines.py`가 프로세스 기동/중단과 스트리밍을, `services/parameter_catalog.py`가 파라미터 검증을 담당합니다.
 
-프론트엔드는 하니스 표준(`harness/docs/FRONTEND_STANDARD.md`)대로 `components`(렌더링), `data`(상태 모양), `state`(상태 전이), `services`(API), `styles`(토큰), `utils`(순수 함수)로 나뉘며 컴포넌트에서 직접 `fetch`하지 않습니다. 입력·슬라이더·스트리밍 텍스트는 `store.setQuiet`으로 저장해 타이핑 중 리렌더가 끼어들지 않도록 했습니다.
+프론트엔드는 하니스 표준(`harness/docs/FRONTEND_STANDARD.md`)대로 `components`(렌더링), `features`(업무 기능), `data`(상태 모양), `state`(공유 상태), `services`(API), `styles`(토큰), `utils`(순수 함수)로 나뉘며 컴포넌트에서 직접 `fetch`하지 않습니다.
+
+공유 상태는 `state/WorkbenchContext.jsx`(모델·서빙·파라미터·실행)와 `features/workbench/HistoryContext.jsx`(선택·숨김·탭·비교) 두 곳에 있습니다. 스트리밍 델타는 ref에 누적하고 60ms 간격으로만 커밋해, 리렌더 폭주와 "완료된 답변을 옛 스냅샷이 덮어쓰는" 회귀를 함께 막습니다.
 
 ## 검증
 
 ```sh
-cd src/backend && python3 -m unittest discover -s tests -t .   # 36 tests
-sh src/frontend/tests/smoke.sh                                  # 파싱 + 단위 테스트
+cd src/backend && python3 -m unittest discover -s tests -t .   # 42 tests
+sh src/frontend/tests/smoke.sh                                  # 구성 + 단위 테스트 + 빌드
 ```

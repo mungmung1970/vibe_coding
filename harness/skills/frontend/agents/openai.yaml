@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Development"
+  short_description: "Build and maintain the React frontend template"
+  default_prompt: "Use the React/Vite frontend template and its feature boundaries for this task."

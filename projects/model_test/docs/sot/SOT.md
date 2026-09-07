@@ -44,8 +44,8 @@ sh src/backend/run.sh --host 0.0.0.0        # http://<서버IP>:8080
 
 Test:
 ```sh
-cd src/backend && python3 -m unittest discover -s tests -t .   # 백엔드 37건
-sh src/frontend/tests/smoke.sh                                  # 프론트 13건
+cd src/backend && python3 -m unittest discover -s tests -t .   # 백엔드 42건
+sh src/frontend/tests/smoke.sh                                  # 프론트 12개 테스트 + Vite 빌드
 ```
 
 Lint:
@@ -54,6 +54,7 @@ Lint:
 ```
 
 Build:
+```sh
+cd src/frontend && npm run build
 ```
-빌드 단계 없음. 백엔드가 src/frontend를 정적으로 서빙한다.
-```
+Vite가 `src/frontend/dist`를 만들며, 백엔드는 `dist/index.html`이 있으면 그 산출물을 서빙한다.

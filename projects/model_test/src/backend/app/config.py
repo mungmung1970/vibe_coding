@@ -31,6 +31,12 @@ def _env_float(name: str, default: float) -> float:
         return default
 
 
+def _frontend_dir() -> Path:
+    """빌드 산출물이 있으면 그쪽을, 없으면 소스 디렉터리를 서빙한다."""
+    built = SRC_DIR / "frontend" / "dist"
+    return built if (built / "index.html").is_file() else SRC_DIR / "frontend"
+
+
 @dataclass(frozen=True)
 class Config:
     """Everything the server needs to know about its surroundings."""
@@ -64,7 +70,7 @@ class Config:
             host=os.environ.get("MODEL_TEST_HOST", "127.0.0.1"),
             port=_env_int("MODEL_TEST_PORT", 8080),
             models_dir=_env_path("MODEL_TEST_MODELS_DIR", PROJECT_ROOT / "models"),
-            frontend_dir=_env_path("MODEL_TEST_FRONTEND_DIR", SRC_DIR / "frontend"),
+            frontend_dir=_env_path("MODEL_TEST_FRONTEND_DIR", _frontend_dir()),
             parameters_file=_env_path("MODEL_TEST_PARAMETERS_FILE", APP_DIR / "data" / "parameters.json"),
             history_file=_env_path("MODEL_TEST_HISTORY_FILE", var_dir / "history.jsonl"),
             secrets_file=_env_path("MODEL_TEST_SECRETS_FILE", var_dir / "secrets.env"),

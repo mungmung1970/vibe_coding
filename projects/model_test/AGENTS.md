@@ -16,7 +16,7 @@
 
 ```text
 src/backend/    파이썬 표준 라이브러리만 쓰는 API + 정적 서버 (core → services → api)
-src/frontend/   빌드 없는 ES 모듈 화면 (components/data/state/services/styles/utils)
+src/frontend/   React 19 + Vite 화면 (components/features/data/state/services/styles/utils)
 models/         모델 등록부. 가중치는 공유 스토리지를 path로 참조
 .venv-vllm/     서빙 엔진(vLLM) 격리 설치. 콘솔이 이 인터프리터로 자식 프로세스를 띄운다
 ```
@@ -32,8 +32,8 @@ models/         모델 등록부. 가중치는 공유 스토리지를 path로 �
 ## 검증
 
 ```sh
-cd src/backend && python3 -m unittest discover -s tests -t .   # 37건
-sh src/frontend/tests/smoke.sh                                  # 13건
+cd src/backend && python3 -m unittest discover -s tests -t .   # 42건
+sh src/frontend/tests/smoke.sh                                  # 12개 테스트
 ```
 
 화면 변경은 실제 브라우저로 확인한다. 헤드리스 크롬의 `--virtual-time-budget`은 스트리밍 타이밍을 왜곡하므로 타이밍 확인에는 쓰지 않는다.

@@ -4,6 +4,8 @@
 
 ## 등록된 모델
 
+현재 등록부에는 로컬 5종과 외부 API 4종, 총 9종이 등록되어 있습니다. 외부 API 모델은 GPU를 사용하지 않습니다.
+
 | id | 가중치 | 크기 | 비고 |
 | --- | --- | --- | --- |
 | `gpt-oss-120b` | `openai--gpt-oss-120b` | 65GB (MXFP4) | `reasoning_effort` 지원. 기동 약 750초(실측) |
@@ -11,6 +13,10 @@
 | `thinkingcap-qwen3.6-27b` | `bottlecapai--ThinkingCap-Qwen3.6-27B` | 56GB | 사고 과정 강화 파인튜닝(3.6 기반). 기동 약 110초(실측) |
 | `gemma-4-31b-it` | `google--gemma-4-31B-it` | 63GB | 기동 약 165초(실측) |
 | `exaone-4.5-33b` | `LGAI-EXAONE--EXAONE-4.5-33B` | 69GB | 기동 약 100초(실측). 멀티모달 비활성화 필요(아래 참고) |
+| `claude-opus-5` | 외부 API (`claude-opus-5`) | — | Anthropic · VLM · reasoning |
+| `claude-sonnet-5` | 외부 API (`claude-sonnet-5`) | — | Anthropic · VLM |
+| `openai-gpt-5.4-mini` | 외부 API (`gpt-5.4-mini`) | — | OpenAI · VLM |
+| `openai-gpt-5.5` | 외부 API (`gpt-5.5`) | — | OpenAI · VLM · reasoning |
 
 `thinkingcap-qwen3.6-27b`는 Qwen3.6 기반이지만, 사고 과정을 강화한 파인튜닝이라 3.8과 비교할 대상으로 남겨두었다. 등록부 항목은 서빙과 무관하게 비용이 없으므로 유지한다. 필요 없어지면 디렉터리만 지우면 된다.
 

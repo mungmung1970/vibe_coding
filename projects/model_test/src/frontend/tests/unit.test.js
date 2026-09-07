@@ -2,8 +2,6 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import { renderMarkdown } from '../src/utils/markdown.js';
-import { createStore } from '../src/state/store.js';
-import { throttle } from '../src/utils/dom.js';
 import {
   formatParameterSummary,
   formatReasoningTokens,
@@ -36,48 +34,6 @@ test('markdown keeps a table that follows a paragraph without a blank line', () 
 
   assert.match(html, /<p>설명<\/p>/);
   assert.match(html, /<table>/);
-});
-
-test('store notifies on set and stays quiet on setQuiet', () => {
-  const store = createStore({ prompt: '', count: 0 });
-  let renders = 0;
-  store.subscribe(() => { renders += 1; });
-
-  store.setQuiet({ prompt: '타이핑 중' });
-  assert.equal(renders, 0);
-  assert.equal(store.get().prompt, '타이핑 중');
-
-  store.set({ count: 1 });
-  assert.equal(renders, 1);
-  assert.equal(store.get().prompt, '타이핑 중');
-});
-
-test('a trailing throttled paint reads current state, never a stale snapshot', async () => {
-  // Regression: streaming deltas used to queue a snapshot that landed after the
-  // finished answer and repainted the panel back to "생성 중".
-  const state = { text: '첫 조각', streaming: true };
-  const painted = [];
-  const paint = throttle(() => painted.push({ ...state }), 30);
-
-  paint();                         // leading edge paints immediately
-  paint();                         // queued while state is still mid-stream
-  state.text = '완성된 답변';
-  state.streaming = false;
-  await sleep(60);
-
-  assert.deepEqual(painted.at(-1), { text: '완성된 답변', streaming: false });
-});
-
-test('cancel drops a pending throttled paint', async () => {
-  let painted = 0;
-  const paint = throttle(() => { painted += 1; }, 30);
-
-  paint();
-  paint();
-  paint.cancel();
-  await sleep(60);
-
-  assert.equal(painted, 1);
 });
 
 test('parameter summary keeps requested order and drops empty values', () => {
