@@ -1,0 +1,25 @@
+{
+  "id": "exaone-4.5-33b",
+  "name": "EXAONE 4.5 33B",
+  "provider": "Local",
+  "description": "LG AI 33B 한국어 특화 VLM. vLLM 0.28의 비디오 경로 결함 때문에 멀티모달 입력은 비활성화한다.",
+  "path": "/NHNHOME/WORKSPACE/26mss001_H0/models/LGAI-EXAONE--EXAONE-4.5-33B",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "engine_args": {
+    "max-model-len": 32768,
+    "gpu-memory-utilization": 0.9,
+    "tensor-parallel-size": 1,
+    "trust-remote-code": true,
+    "limit-mm-per-prompt": "{\"image\": 0, \"video\": 0}",
+    "reasoning-parser": "deepseek_r1"
+  },
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 4096,
+      "max": 32768
+    }
+  }
+}

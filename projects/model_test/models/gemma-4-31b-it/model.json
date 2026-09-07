@@ -1,0 +1,17 @@
+{
+  "id": "gemma-4-31b-it",
+  "name": "Gemma 4 31B IT",
+  "provider": "Local",
+  "description": "31B 지시 수행 모델입니다.",
+  "path": "/NHNHOME/WORKSPACE/26mss001_H0/models/google--gemma-4-31B-it",
+  "capabilities": ["chat", "reasoning"],
+  "engine_args": {
+    "max-model-len": 32768,
+    "gpu-memory-utilization": 0.9,
+    "tensor-parallel-size": 1,
+    "reasoning-parser": "gemma4"
+  },
+  "parameter_overrides": {
+    "max_tokens": { "default": 4096, "max": 32768 }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "gpt-oss-120b",
+  "name": "gpt-oss-120b",
+  "provider": "Local",
+  "description": "MXFP4 양자화된 120B 추론 모델. reasoning_effort로 사고 깊이를 조절합니다.",
+  "path": "/NHNHOME/WORKSPACE/26mss001_H0/models/openai--gpt-oss-120b",
+  "capabilities": ["chat", "reasoning", "reasoning_effort"],
+  "context_length": 131072,
+  "engine_args": {
+    "max-model-len": 32768,
+    "gpu-memory-utilization": 0.9,
+    "tensor-parallel-size": 1,
+    "reasoning-parser": "openai_gptoss"
+  },
+  "parameter_overrides": {
+    "max_tokens": { "default": 8192, "max": 32768 },
+    "reasoning_effort": { "default": "low" }
+  }
+}

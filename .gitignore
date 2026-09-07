@@ -1,0 +1,59 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+!**/.env.example
+**/secrets.env
+*.pem
+*.key
+*.crt
+*.p12
+
+# Python environments, caches, and build output
+.venv/
+.venv-*/
+**/.venv/
+**/.venv-*/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Node.js dependencies and build output
+node_modules/
+**/node_modules/
+.vite/
+**/.vite/
+
+# Runtime state and logs
+var/
+**/var/
+*.log
+nohup.out
+
+# Local model weights and generated artifacts.
+# Keep model registries (model.json) and models/README.md tracked.
+**/models/**/*.safetensors
+**/models/**/*.bin
+**/models/**/*.gguf
+**/models/**/*.pt
+**/models/**/*.pth
+**/models/**/*.onnx
+**/models/**/*.ckpt
+
+# Tool and OS files
+.cache/
+**/.cache/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

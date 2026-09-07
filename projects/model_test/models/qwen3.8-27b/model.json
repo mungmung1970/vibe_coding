@@ -1,0 +1,19 @@
+{
+  "id": "qwen3.8-27b",
+  "name": "Qwen3.8-27B",
+  "provider": "Local",
+  "description": "27B 다국어 채팅 모델. enable_thinking으로 사고 과정 출력을 켜고 끕니다.",
+  "path": "/NHNHOME/WORKSPACE/26mss001_H0/models/Qwen--Qwen3.8-27B",
+  "capabilities": ["chat", "reasoning", "thinking_toggle"],
+  "context_length": 262144,
+  "engine_args": {
+    "max-model-len": 32768,
+    "gpu-memory-utilization": 0.9,
+    "tensor-parallel-size": 1,
+    "reasoning-parser": "qwen3"
+  },
+  "parameter_overrides": {
+    "max_tokens": { "default": 4096, "max": 32768 },
+    "temperature": { "default": 0.7 }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "claude-sonnet-5",
+  "name": "Claude Sonnet 5",
+  "provider": "Anthropic",
+  "provider_type": "anthropic",
+  "remote_model": "claude-sonnet-5",
+  "api_key_env": "ANTHROPIC_API_KEY",
+  "modality": "VLM",
+  "capabilities": [
+    "chat"
+  ],
+  "description": "균형 잡힌 Anthropic 모델.",
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 4096,
+      "max": 32768
+    }
+  }
+}
