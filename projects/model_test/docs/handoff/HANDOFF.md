@@ -2,6 +2,8 @@
 
 갱신일: 2026-09-07
 
+작업 완료 시 공통 [Loop Engineering](../../../../harness/docs/LOOP_ENGINEERING.md) 절차에 따라 검증 통과 후에만 commit/push한다.
+
 ## 지금 상태
 
 | 항목 | 값 |

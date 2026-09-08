@@ -11,6 +11,7 @@
 5. `src/README.md` — 구조·API·환경 변수
 
 작업은 `/home/surromind/workspace/.codex/AGENTS.md`의 PLAN → EXECUTE → VERIFY를 따르고, 기록은 `docs/runs/TASK-*/`에 남긴다.
+반복 수정·검증·커밋·push는 `/home/surromind/workspace/harness/docs/LOOP_ENGINEERING.md`를 따른다.
 
 ## 구조
 

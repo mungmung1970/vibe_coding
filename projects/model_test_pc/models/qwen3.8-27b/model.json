@@ -1,0 +1,25 @@
+{
+  "id": "qwen3.8-27b",
+  "name": "Qwen3.8-27B",
+  "provider": "HuggingFace",
+  "provider_type": "openai",
+  "base_url": "https://router.huggingface.co/v1",
+  "remote_model": "Qwen/Qwen3.8-27B:ovhcloud",
+  "api_key_env": "HF_TOKEN",
+  "description": "HuggingFace Inference Providers 경유(OpenAI 호환). 제공자를 ovhcloud로 고정했다 — 자동 선택 시 50초 이상 걸리는 경우가 있어 실측이 가장 빠른 곳을 지정한다.",
+  "modality": "VLM",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "context_length": 262144,
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 4096,
+      "max": 32768
+    },
+    "temperature": {
+      "default": 0.7
+    }
+  }
+}

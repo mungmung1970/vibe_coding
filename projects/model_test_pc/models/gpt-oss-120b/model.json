@@ -1,0 +1,26 @@
+{
+  "id": "gpt-oss-120b",
+  "name": "gpt-oss-120b",
+  "provider": "사내 엔드포인트",
+  "provider_type": "openai",
+  "base_url": "${APP_GPTOSS_BASE_URL}",
+  "remote_model": "gpt-oss-120b",
+  "description": "사내에 구성된 OpenAI 호환 엔드포인트. 주소는 APP_GPTOSS_BASE_URL 환경변수로 주입한다.",
+  "modality": "LLM",
+  "capabilities": [
+    "chat",
+    "reasoning",
+    "reasoning_effort"
+  ],
+  "context_length": 131072,
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 8192,
+      "max": 131072
+    },
+    "reasoning_effort": {
+      "default": "low"
+    }
+  },
+  "parameter_profile": "vllm"
+}

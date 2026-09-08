@@ -7,6 +7,8 @@ Current Version: 0.2
 로컬 모델을 하나씩 vLLM으로 서빙하면서, 파라미터를 바꿔가며 프롬프트 응답을 비교하는 사내 콘솔이다.
 화면 기준은 `harness/templates/frontend/doc/images`의 두 이미지다.
 
+작업 자동화는 `harness/docs/LOOP_ENGINEERING.md`의 PLAN → EXECUTE → VERIFY → commit → push 절차를 따른다.
+
 ## Canonical Documents
 
 Architecture:
