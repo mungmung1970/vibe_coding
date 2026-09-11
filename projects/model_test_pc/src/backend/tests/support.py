@@ -65,8 +65,10 @@ def make_config(root: Path, **overrides) -> Config:
         parameters_file=APP_DIR / "data" / "parameters.json",
         history_file=root / "var" / "history.jsonl",
         secrets_file=root / "var" / "secrets.env",
+        media_dir=root / "var" / "media",
         request_timeout=5.0,
         history_limit=50,
+        media_limit=10,
     )
     return replace(config, **overrides) if overrides else config
 
@@ -96,6 +98,17 @@ class FakeProviderServer:
                 if outer.status != 200:
                     payload = json.dumps({"error": {"message": "boom"}}).encode()
                     self.send_response(outer.status)
+                    self.send_header("Content-Type", "application/json")
+                    self.send_header("Content-Length", str(len(payload)))
+                    self.end_headers()
+                    self.wfile.write(payload)
+                    return
+                if not body.get("stream", True):
+                    payload = json.dumps({
+                        "choices": [{"message": {"role": "assistant", "content": "non-stream"}}],
+                        "usage": {"prompt_tokens": 1, "completion_tokens": 1, "total_tokens": 2},
+                    }).encode()
+                    self.send_response(200)
                     self.send_header("Content-Type", "application/json")
                     self.send_header("Content-Length", str(len(payload)))
                     self.end_headers()

@@ -1,0 +1,15 @@
+{
+  "id": "openai-sora-2-pro",
+  "name": "Sora 2 Pro",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "sora-2-pro",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "Sora 2 상위 모델. 더 느리고 비싸다.",
+  "modality": "VIDEO",
+  "parameter_profile": "video",
+  "capabilities": [
+    "video"
+  ]
+}

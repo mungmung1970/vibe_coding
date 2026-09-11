@@ -1,31 +1,30 @@
 #!/usr/bin/env sh
-# 구성 확인 + (의존성이 설치되어 있으면) 프로덕션 빌드까지.
+# 구성 확인 + DOM 없는 단위 테스트 + 프로덕션 빌드.
 set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 cd "$root"
 
 test -f package.json
 test -f vite.config.js
+test -f index.html
 test -f src/main.jsx
+test -f src/styles/index.css
 test -f src/features/auth/AuthContext.jsx
+test -f src/features/auth/LoginPage.jsx
 test -f src/features/admin/AdminPage.jsx
-test -f src/features/workbench/ComparePage.jsx
-test -f src/components/SideSection.jsx
-test -f src/components/CompareDialog.jsx
+test -f src/services/authService.js
+test -f server/index.js
+node -e "const p=require('./package.json'); if(!p.dependencies.react||!p.devDependencies.vite) process.exit(1)"
 node --check server/index.js
-node --check src/utils/format.js
-node --check src/services/modelService.js
+node --check src/services/authService.js
 
-# JSX 자동 런타임 플러그인이 없으면 빌드 산출물이 'React is not defined'로 죽는다.
-node -e "const p=require('./package.json');
-  if(!p.dependencies.react || !p.devDependencies.vite) process.exit(1);
-  if(!p.devDependencies['@vitejs/plugin-react']) { console.error('missing @vitejs/plugin-react'); process.exit(1); }"
-grep -q "plugins: \[react()\]" vite.config.js
+find src -name '*.js' -print0 | xargs -0 -n1 node --check
+node --test tests/*.test.js
 
 if [ -d node_modules ]; then
   npm run build >/dev/null
   test -f dist/index.html
-  echo 'react/node frontend template smoke test: ok (build 포함)'
+  echo 'react frontend smoke test: ok (build 포함)'
 else
-  echo 'react/node frontend template smoke test: ok (npm install 후 build 확인 필요)'
+  echo 'react frontend smoke test: ok (npm install 후 build 확인 필요)'
 fi

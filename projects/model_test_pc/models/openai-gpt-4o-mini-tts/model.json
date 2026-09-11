@@ -1,0 +1,15 @@
+{
+  "id": "openai-gpt-4o-mini-tts",
+  "name": "GPT-4o mini TTS",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "gpt-4o-mini-tts",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "문장을 음성으로 만든다.",
+  "modality": "TTS",
+  "parameter_profile": "tts",
+  "capabilities": [
+    "speak"
+  ]
+}

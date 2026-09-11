@@ -5,16 +5,16 @@ description: Build or extend the reusable React + Vite + Node.js frontend templa
 
 # Frontend Development
 
-Use `harness/templates/frontend` as the baseline. It is the React/Node
-generalization of `projects/model_test/src/frontend`; preserve the existing
-image-derived visual language unless the user supplies a new reference.
+Use `harness/templates/frontend` as the baseline. It generalizes the shared
+workbench behavior from `projects/model_test_pc/src/frontend` while preserving
+the template's auth/admin shell and image-derived visual language.
 
 ## Structure
 
 - `src/main.jsx`, `src/App.jsx`: application entry and composition.
 - `src/components/`: shared visual primitives and layout.
 - `src/features/`: user-facing feature slices such as auth, admin, and workbench.
-- `src/services/`: API/auth/model adapters; components do not call `fetch` directly.
+- `src/services/`: API/auth/model adapters; components do not call `fetch` directly. `api.js` owns JSON and SSE transport, while `modelService.js` may provide mock fallback for the template.
 - `src/data/`: mock data, navigation, and API-shaped defaults.
 - `src/styles/`: design tokens and component styles.
 - `server/`: small Node.js API placeholder; replace with the project's backend contract.
@@ -23,6 +23,13 @@ Keep feature state and behavior inside its feature or service boundary. Keep
 mock data replaceable by putting it in `src/data`; do not bake it into UI
 components. Add shared components only when they have more than one real
 consumer.
+
+For model workbenches, keep model/provider/modality selection, parameter
+schemas, streaming state, cancellation, saved runs, and comparison state in a
+context or feature state boundary. Document attachments and STT/TTS/video
+controls are optional and must be enabled only when the backend exposes the
+matching routes. Do not copy PC-only media behavior into a local-serving
+project without its provider and storage contract.
 
 ## Visual and access rules
 

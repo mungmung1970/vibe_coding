@@ -1,5 +1,3 @@
-/** 화면 표시용 순수 함수. DOM이나 API에 의존하지 않는다. */
-
 export const formatDateTime = (value) => {
   if (!value) return '';
   const date = new Date(value);
@@ -12,15 +10,22 @@ export const formatSeconds = (milliseconds) => (
   typeof milliseconds === 'number' ? `${(milliseconds / 1000).toFixed(2)}초` : '-'
 );
 
-export const formatValue = (value) => {
-  if (value === null || value === undefined || value === '') return '기본값';
-  if (Array.isArray(value)) return value.join(', ') || '없음';
-  if (typeof value === 'boolean') return value ? '켜짐' : '꺼짐';
-  return String(value);
+export const formatUsage = (usage) => {
+  if (!usage) return '';
+  const total = usage.total_tokens ?? 0;
+  return `${total.toLocaleString('ko-KR')}자`;
 };
 
-/** 모델 이름 옆에 유형을 괄호로 붙인다. */
-export const modelLabel = (model) => (model ? `${model.name} (${model.modality})` : '');
+/** 사고 토큰이 흐르는 동안 답변 영역에 띄우는 진행 문구. */
+export const formatThinkingProgress = ({ characters = 0, elapsedMs = 0 } = {}) => (
+  `사고 중… ${(Math.max(0, elapsedMs) / 1000).toFixed(1)}초 · ${Number(characters).toLocaleString('ko-KR')}자`
+);
+
+/** 완료 통계에 덧붙이는 사고 토큰 수. 엔진이 보고하지 않으면 빈 문자열. */
+export const formatReasoningTokens = (usage) => {
+  const tokens = usage?.completion_tokens_details?.reasoning_tokens;
+  return typeof tokens === 'number' && tokens > 0 ? `사고 ${tokens.toLocaleString('ko-KR')}토큰` : '';
+};
 
 /**
  * 심판 점수를 내림차순으로 정렬해 순위를 매긴다.
@@ -41,3 +46,29 @@ export const rankJudgements = (rankings = [], runs = []) => {
     return { ...item, rank };
   });
 };
+
+/**
+ * 공급자가 보고한 예상 비용. 보고하지 않는 공급자도 있어 값이 있을 때만 표시한다.
+ * 한 번 호출에 1센트도 안 되는 경우가 많아 소수점을 넉넉히 남긴다.
+ */
+export const formatCost = (usage) => {
+  const cost = usage?.estimated_cost;
+  if (typeof cost !== 'number' || cost <= 0) return '';
+  return cost < 0.01 ? `$${cost.toFixed(5)}` : `$${cost.toFixed(3)}`;
+};
+
+export const formatValue = (value) => {
+  if (value === null || value === undefined || value === '') return '기본값';
+  if (Array.isArray(value)) return value.join(', ') || '없음';
+  if (typeof value === 'boolean') return value ? '켜짐' : '꺼짐';
+  return String(value);
+};
+
+/** Compact "key=value" line shown under each result card, as in the reference screens. */
+export const formatParameterSummary = (parameters = {}, keys = []) => (
+  keys
+    .filter((key) => parameters[key] !== undefined && parameters[key] !== null && parameters[key] !== '')
+    .map((key) => `${key}=${Array.isArray(parameters[key]) ? parameters[key].join('|') : parameters[key]}`)
+    .join(' · ')
+);
+

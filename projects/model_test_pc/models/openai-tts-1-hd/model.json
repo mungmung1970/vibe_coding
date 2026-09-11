@@ -1,0 +1,15 @@
+{
+  "id": "openai-tts-1-hd",
+  "name": "TTS-1 HD",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "tts-1-hd",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "음질 우선 TTS 모델.",
+  "modality": "TTS",
+  "parameter_profile": "tts",
+  "capabilities": [
+    "speak"
+  ]
+}

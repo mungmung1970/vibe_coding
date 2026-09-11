@@ -81,6 +81,7 @@ class ApiTest(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual([model["id"] for model in models["models"]], ["plain", "reasoner"])
         self.assertEqual(models["providers"], ["Local"])
+        self.assertEqual(models["modalities"], ["LLM"])
 
     def test_02_generate_requires_a_served_model(self) -> None:
         status, body = self.request("POST", "/generate", {"prompt": "안녕하세요", "stream": False})

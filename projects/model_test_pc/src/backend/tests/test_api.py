@@ -1,3 +1,4 @@
+import base64
 import json
 import os
 import tempfile
@@ -11,6 +12,7 @@ from pathlib import Path
 from app.main import build_server
 
 from .support import FakeProviderServer, make_config, point_models_at
+from .test_documents import make_xlsx
 
 
 class ApiTest(unittest.TestCase):
@@ -169,10 +171,36 @@ class ApiTest(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual([item["key"] for item in comparison["parameter_differences"]], ["temperature"])
 
+        # 모범답변 없이 비교 모델만 골라도 채점이 돌아간다
+        _, judged = self.request("POST", "/runs/compare", {
+            "run_ids": [run["id"] for run in runs], "reference": "", "judge_model_id": "endpoint-llm",
+        })
+        self.assertEqual(judged["judgement"]["judge_model_id"], "endpoint-llm")
+        self.assertNotIn("[모범답변]", self.fake.requests[-1]["body"]["messages"][1]["content"])
+
+        # 모범답변만 있고 비교 모델이 없으면 안내만 한다
+        _, unjudged = self.request("POST", "/runs/compare", {
+            "run_ids": [run["id"] for run in runs], "reference": "정답", "judge_model_id": "",
+        })
+        self.assertIn("skipped", unjudged["judgement"])
+
         self.assertEqual(self.request("DELETE", f"/runs/{runs[0]['id']}")[0], 200)
         self.assertEqual(self.request("GET", f"/runs/{runs[0]['id']}")[0], 404)
 
-    def test_11_unknown_routes_and_methods(self) -> None:
+    def test_11_documents_are_parsed_on_upload(self) -> None:
+        encoded = base64.b64encode(make_xlsx()).decode()
+        status, parsed = self.request("POST", "/documents/parse", {
+            "name": "평가.xlsx", "data_url": f"data:application/octet-stream;base64,{encoded}",
+        })
+        self.assertEqual((status, parsed["kind"]), (200, "xlsx"))
+        self.assertIn("평가표", parsed["text"])
+
+        status, body = self.request("POST", "/documents/parse", {
+            "name": "그림.png", "data_url": "data:image/png;base64,AAAA",
+        })
+        self.assertEqual((status, body["error"]["code"]), (422, "unsupported_document"))
+
+    def test_12_unknown_routes_and_methods(self) -> None:
         self.assertEqual(self.request("GET", "/nope")[0], 404)
         self.assertEqual(self.request("DELETE", "/models")[0], 405)
 

@@ -114,7 +114,7 @@ def build_model(directory: Path) -> Model | None:
         provider=str(meta.get("provider") or "API"),
         provider_type=provider_type,
         base_url=base_url,
-        remote_model=str(meta.get("remote_model") or meta.get("id") or directory.name),
+        remote_model=_expand(str(meta.get("remote_model") or meta.get("id") or directory.name)) or str(meta.get("id") or directory.name),
         api_key_env=str(meta.get("api_key_env") or "").strip(),
         description=str(meta.get("description") or ""),
         modality=str(meta.get("modality") or "LLM").upper(),

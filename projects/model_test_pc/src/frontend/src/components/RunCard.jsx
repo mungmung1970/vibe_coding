@@ -1,4 +1,5 @@
 import { SUMMARY_KEYS } from '../data/defaults.js';
+import MediaPlayer from './MediaPlayer.jsx';
 import { formatCost, formatDateTime, formatParameterSummary, formatSeconds } from '../utils/format.js';
 import { renderMarkdown } from '../utils/markdown.js';
 
@@ -25,10 +26,12 @@ export default function RunCard({ run, selected, onToggle, onHide, onContextMenu
       </small>
       <p className="card-params">{formatParameterSummary(run.parameters ?? {}, SUMMARY_KEYS)}</p>
       <p className="prompt-label">PROMPT</p>
-      <div className="prompt-box">{run.prompt}</div>
+      <div className="prompt-box" title={run.prompt}>{run.prompt}</div>
       <p className="prompt-label">RESULT</p>
-      <div className="card-result" dangerouslySetInnerHTML={{ __html: renderMarkdown(run.preview ?? run.text ?? '') }} />
-      {run.truncated && <p className="answer-placeholder">… 이하 생략</p>}
+      <div className="card-result">
+        {run.media && <MediaPlayer media={run.media} />}
+        <div dangerouslySetInnerHTML={{ __html: renderMarkdown(run.preview ?? run.text ?? '') }} />
+      </div>
     </article>
   );
 }

@@ -127,7 +127,7 @@ def build_model(directory: Path) -> Model | None:
         raw_path = str(meta.get("path") or "").strip()
         if raw_path:
             candidate = Path(raw_path).expanduser()
-            serve_path = str(candidate if candidate.is_absolute() else (directory / candidate).resolve())
+            serve_path = str(candidate if candidate.is_absolute() else (directory / candidate).absolute())
         else:
             serve_path = str(meta.get("hf_id") or "").strip() or str(directory)
         weights_dir = Path(serve_path)

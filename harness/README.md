@@ -6,6 +6,9 @@
 - [Git 표준](docs/GIT_STANDARD.md): 커밋과 원격 반영 규칙
 - [Definition of Done](docs/DEFINITION_OF_DONE.md): 완료 조건
 - [Frontend Standard](docs/FRONTEND_STANDARD.md): React/Vite 프론트엔드 규칙
+- [API Standard](docs/API_STANDARD.md): JSON/SSE 경계와 오류 계약
+- [Architecture Standard](docs/ARCHITECTURE_STANDARD.md): provider/serving 계층 경계
+- [Test Standard](docs/TEST_STANDARD.md): 계약·회귀·브라우저 검증 기준
 
 프로젝트별 `AGENTS.md`가 있으면 프로젝트 규칙을 우선 적용하되, 보안·검증·데이터
 무결성 규칙은 생략하지 않습니다.

@@ -17,6 +17,7 @@ from .core.http import Router, StaticFiles, create_server
 from .services.history import HistoryStore
 from .services.inference import InferenceService
 from .services.judge import JudgeService
+from .services.media import MediaService, MediaStore
 from .services.model_registry import ModelRegistry
 from .services.parameter_catalog import ParameterCatalog
 from .services.secrets import load_secrets
@@ -34,6 +35,7 @@ class Services:
     history: HistoryStore
     inference: InferenceService
     judge: JudgeService
+    media: MediaService
     router: Router
 
 
@@ -44,8 +46,9 @@ def build_services(config: Config) -> Services:
     history = HistoryStore(config.history_file, config.history_limit)
     inference = InferenceService(config, catalog, registry, history)
     judge = JudgeService(config, registry)
-    router = build_router(config, registry, catalog, inference, history, judge)
-    return Services(config, registry, catalog, history, inference, judge, router)
+    media = MediaService(config, registry, catalog, MediaStore(config.media_dir, config.media_limit))
+    router = build_router(config, registry, catalog, inference, history, judge, media)
+    return Services(config, registry, catalog, history, inference, judge, media, router)
 
 
 def build_server(config: Config) -> tuple[ThreadingHTTPServer, Services]:

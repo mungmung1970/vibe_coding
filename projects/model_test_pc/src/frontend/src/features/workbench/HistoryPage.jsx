@@ -62,14 +62,15 @@ function ContextMenu({ menu, onDelete, onClose }) {
 }
 
 export default function HistoryPage() {
-  const { runs, runsError, loadRuns, deleteRun } = useWorkbench();
+  const { runs, runsError, loadRuns, deleteRun, loadJudges } = useWorkbench();
   const history = useHistory();
   const {
     selectedRunIds, hiddenRunIds, historyView, comparison, contextMenu,
     setHistoryView, toggleSelection, hideRun, openCompare, openContextMenu, closeContextMenu,
   } = history;
 
-  useEffect(() => { loadRuns(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  // 비교 모델 목록은 화면에 들어올 때 미리 받아둔다. 비교 창을 열 때 비어 보이지 않게.
+  useEffect(() => { loadRuns(); loadJudges(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!contextMenu) return undefined;
     const close = () => closeContextMenu();

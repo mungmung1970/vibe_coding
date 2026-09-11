@@ -8,6 +8,7 @@ import re
 
 from ..config import Config
 from ..core.errors import ApiError
+from .inference import CHAT_MODALITIES
 from .providers import create_provider
 from .model_registry import ModelRegistry
 
@@ -15,7 +16,8 @@ logger = logging.getLogger("app.judge")
 
 MAX_ANSWER_CHARS = 6000
 SYSTEM_PROMPT = (
-    "너는 모델 답변을 채점하는 심판이다. 모범답변과 각 답변을 비교해 정확성·완결성·표현을 기준으로 평가한다. "
+    "너는 모델 답변을 채점하는 심판이다. 각 답변을 정확성·완결성·표현을 기준으로 평가한다. "
+    "모범답변이 주어지면 그것을 기준으로, 없으면 질문에 대한 적절성으로 채점한다. "
     "반드시 아래 JSON 스키마만 출력한다. 설명 문장을 덧붙이지 않는다.\n"
     '{"rankings":[{"index":1,"score":0-100,"reason":"한 문장"}],"summary":"두 문장 이내"}'
 )
@@ -40,10 +42,11 @@ class JudgeService:
         self.registry = registry
 
     def candidates(self) -> list[dict]:
-        """등록된 모델 전부가 심판 후보다. 서빙 대기가 없기 때문이다."""
+        """채팅 가능한 모델이면 모두 심판 후보다. 음성·영상 모델은 채점할 수 없다."""
         return [
             {"id": model.id, "label": model.label, "provider": model.provider}
             for model in self.registry.list()
+            if model.modality in CHAT_MODALITIES
         ]
 
     def evaluate(self, judge_model_id: str, reference: str, runs: list[dict]) -> dict:
@@ -79,9 +82,16 @@ class JudgeService:
 
     @staticmethod
     def _build_prompt(reference: str, runs: list[dict]) -> str:
-        lines = [f"[질문]\n{runs[0].get('prompt', '')}", f"\n[모범답변]\n{reference}"]
+        """모범답변은 있으면 기준으로 쓰고, 없으면 질문 기준으로 채점하게 한다."""
+        lines = [f"[질문]\n{runs[0].get('prompt', '')}"]
+        if reference.strip():
+            lines.append(f"\n[모범답변]\n{reference}")
         for index, run in enumerate(runs, start=1):
             answer = str(run.get("text") or "")[:MAX_ANSWER_CHARS]
             lines.append(f"\n[답변 {index}] (모델: {run.get('model_id')})\n{answer}")
-        lines.append("\n각 답변을 모범답변과 비교해 채점하고 JSON으로만 답하라.")
+        lines.append(
+            "\n각 답변을 모범답변과 비교해 채점하고 JSON으로만 답하라."
+            if reference.strip()
+            else "\n모범답변은 없다. 질문에 대한 적절성으로 각 답변을 채점하고 JSON으로만 답하라."
+        )
         return "\n".join(lines)

@@ -5,7 +5,7 @@ import ParameterControl from './ParameterControl.jsx';
 
 export default function PromptSidebar() {
   const {
-    models, providers, modalityFilter, selectedProvider, selectedModelId, modelsError,
+    models, providers, modalities, modalityFilter, selectedProvider, selectedModelId, modelsError,
     serving, servingLogs, showLogs, schema, parameters, systemPrompt,
     setModalityFilter, setSelectedProvider, selectModel, stopServing, toggleLogs,
     setParameter, resetParameters, setSystemPrompt,
@@ -21,8 +21,7 @@ export default function PromptSidebar() {
           <span className="field-label">모델 유형</span>
           <select value={modalityFilter} aria-label="모델 유형 필터" onChange={(event) => setModalityFilter(event.target.value)}>
             <option value="">전체</option>
-            <option value="LLM">LLM (텍스트)</option>
-            <option value="VLM">VLM (텍스트+이미지)</option>
+            {modalities.map((modality) => <option key={modality} value={modality}>{modality}</option>)}
           </select>
         </label>
         <label className="field">

@@ -1,19 +1,78 @@
-import { useEffect, useState } from 'react';
-import { navigation } from '../data/navigation.js';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ANONYMOUS_USER, NAVIGATION } from '../data/defaults.js';
+import { useWorkbench } from '../state/WorkbenchContext.jsx';
+import PromptSidebar from './PromptSidebar.jsx';
+import HistorySidebar from './HistorySidebar.jsx';
 import { useAuth } from '../features/auth/AuthContext.jsx';
-import { listModels } from '../services/modelService.js';
-import { modelLabel } from '../utils/format.js';
-import SideSection from './SideSection.jsx';
+
+const MIN_WIDTH = 160;
+const MAX_WIDTH = 560;
+const DEFAULT_WIDTH = 208;
+const STORE_KEY = 'llmlab.sidebar';
+
+/** 접힘 상태와 폭을 브라우저에 기억한다. 못 읽어도 기본값으로 뜬다. */
+function useSidebarLayout() {
+  const [state, setState] = useState(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE_KEY) ?? '{}');
+      return {
+        width: Math.min(MAX_WIDTH, Math.max(MIN_WIDTH, Number(saved.width) || DEFAULT_WIDTH)),
+        collapsed: Boolean(saved.collapsed),
+      };
+    } catch {
+      return { width: DEFAULT_WIDTH, collapsed: false };
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORE_KEY, JSON.stringify(state));
+    } catch { /* 사생활 보호 모드 등에서 저장이 막혀도 화면은 그대로 쓴다 */ }
+  }, [state]);
+
+  return [state, setState];
+}
 
 export default function Layout({ menu, onMenuChange, children }) {
   const { user, can, signOut } = useAuth();
-  const visible = navigation.filter(({ permission }) => can(...permission));
+  const { notice } = useWorkbench();
+  const [{ width, collapsed }, setLayout] = useSidebarLayout();
+  const dragging = useRef(false);
+
+  const toggle = () => setLayout((current) => ({ ...current, collapsed: !current.collapsed }));
+
+  const clamp = useCallback((value) => Math.min(MAX_WIDTH, Math.max(MIN_WIDTH, value)), []);
+
+  useEffect(() => {
+    const move = (event) => {
+      if (!dragging.current) return;
+      event.preventDefault();
+      setLayout((current) => ({ ...current, width: clamp(event.clientX) }));
+    };
+    const stop = () => {
+      if (!dragging.current) return;
+      dragging.current = false;
+      document.body.classList.remove('is-resizing');
+    };
+    window.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', stop);
+    return () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', stop); };
+  }, [clamp, setLayout]);
+
   return (
-    <div className="shell">
+    <div className="shell" style={{ '--sidebar-width': collapsed ? '0px' : `${width}px` }}>
       <header className="topbar">
+        <button
+          type="button"
+          className="sidebar-toggle"
+          title={collapsed ? '사이드바 펼치기' : '사이드바 접기'}
+          aria-label={collapsed ? '사이드바 펼치기' : '사이드바 접기'}
+          aria-expanded={!collapsed}
+          onClick={toggle}
+        >{collapsed ? '»' : '«'}</button>
         <div className="brand"><span className="brand-mark">●</span><strong>LLM Lab</strong></div>
         <nav className="tabs" aria-label="주요 메뉴">
-          {visible.map((item) => (
+          {NAVIGATION.filter((item) => can(item.id)).map((item) => (
             <button
               key={item.id}
               type="button"
@@ -25,81 +84,31 @@ export default function Layout({ menu, onMenuChange, children }) {
           ))}
         </nav>
         <div className="topbar-right">
-          {/* 상단 우측은 로그인 ID를 보여준다. 로그인 전에는 anonymous. */}
-          <span className="user-badge" title={`역할: ${user?.role ?? '-'}`}>
-            <span className="user-icon" aria-hidden="true">●</span>{user?.email ?? 'anonymous'}
+          <span className="user-badge" title="현재 로그인 ID">
+            <span className="user-icon" aria-hidden="true">●</span>{user?.id ?? ANONYMOUS_USER}
           </span>
-          {user && <button type="button" className="link-btn" onClick={signOut}>로그아웃</button>}
+          <button type="button" className="btn btn-secondary" onClick={signOut}>로그아웃</button>
         </div>
       </header>
-      <div className="workspace">
-        <aside className="sidebar">{menu === 'admin' ? null : <SideControls />}</aside>
+      <div className={`workspace ${collapsed ? 'is-collapsed' : ''}`}>
+        <aside className="sidebar" hidden={collapsed}>
+          {menu === 'history' ? <HistorySidebar /> : menu === 'admin' ? null : <PromptSidebar />}
+        </aside>
+        {!collapsed && (
+          // 드래그로 폭 조절. 더블클릭하면 기본 폭으로 돌아온다.
+          <div
+            className="sidebar-handle"
+            role="separator"
+            aria-orientation="vertical"
+            aria-label="사이드바 폭 조절"
+            title="드래그로 폭 조절 · 더블클릭으로 기본 폭"
+            onMouseDown={() => { dragging.current = true; document.body.classList.add('is-resizing'); }}
+            onDoubleClick={() => setLayout((current) => ({ ...current, width: DEFAULT_WIDTH }))}
+          />
+        )}
         <main className="content">{children}</main>
       </div>
-    </div>
-  );
-}
-
-/** 모델·시스템 프롬프트·파라미터. 모든 상자는 접고 펼 수 있다. */
-function SideControls() {
-  const [models, setModels] = useState([]);
-  const [modality, setModality] = useState('');
-  const [provider, setProvider] = useState('');
-  const [temperature, setTemperature] = useState(0.3);
-
-  useEffect(() => { listModels(modality).then(setModels); }, [modality]);
-
-  const providers = [...new Set(models.map((model) => model.provider))];
-  const inProvider = models.filter((model) => !provider || model.provider === provider);
-
-  return (
-    <div className="sidebar-inner">
-      <SideSection title="모델">
-        <label className="field">
-          <span className="field-label">모델 유형</span>
-          <select value={modality} aria-label="모델 유형 필터" onChange={(event) => setModality(event.target.value)}>
-            <option value="">전체</option>
-            <option value="LLM">LLM (텍스트)</option>
-            <option value="VLM">VLM (텍스트+이미지)</option>
-          </select>
-        </label>
-        <label className="field">
-          <span className="field-label">제공자</span>
-          <select value={provider} aria-label="제공자" onChange={(event) => setProvider(event.target.value)}>
-            <option value="">전체</option>
-            {providers.map((name) => <option key={name} value={name}>{name}</option>)}
-          </select>
-        </label>
-        <label className="field">
-          <span className="field-label">모델</span>
-          <select aria-label="모델">
-            {inProvider.map((model) => <option key={model.id} value={model.id}>{modelLabel(model)}</option>)}
-          </select>
-        </label>
-      </SideSection>
-
-      <SideSection title="시스템 프롬프트">
-        <textarea aria-label="시스템 프롬프트" placeholder="예: 나는 친절한 한국어 비서다." />
-      </SideSection>
-
-      <SideSection title="파라미터">
-        <label className="check"><input type="checkbox" /> <span>thinking 표시</span></label>
-        <label className="field">
-          <span className="field-label">reasoning_effort</span>
-          <select aria-label="reasoning_effort"><option>low</option><option>medium</option><option>high</option></select>
-        </label>
-        <label className="field">
-          <span className="field-label">max_tokens</span>
-          <input type="number" defaultValue="8192" aria-label="max_tokens" />
-        </label>
-        <label className="field">
-          <span className="field-label">temperature<b className="field-value">{temperature}</b></span>
-          <input
-            type="range" min="0" max="2" step="0.01" value={temperature} aria-label="temperature"
-            onChange={(event) => setTemperature(Number(event.target.value))}
-          />
-        </label>
-      </SideSection>
+      {notice && <div className="notice" role="status">{notice}</div>}
     </div>
   );
 }

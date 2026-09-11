@@ -152,7 +152,7 @@ VLM 모델을 서빙하면 입력 패널에 이미지 첨부 버튼이 생긴다
 
 백엔드는 `core`(HTTP 원시 계층) → `services`(도메인) → `api`(경로 연결) 방향으로만 의존합니다. `services/serving_manager.py`가 "한 번에 한 모델" 불변식을 지키고, `services/engines.py`가 프로세스 기동/중단과 스트리밍을, `services/parameter_catalog.py`가 파라미터 검증을 담당합니다.
 
-프론트엔드는 하니스 표준(`harness/docs/FRONTEND_STANDARD.md`)대로 `components`(렌더링), `features`(업무 기능), `data`(상태 모양), `state`(공유 상태), `services`(API), `styles`(토큰), `utils`(순수 함수)로 나뉘며 컴포넌트에서 직접 `fetch`하지 않습니다.
+프론트엔드는 하니스 표준(`harness/docs/FRONTEND_STANDARD.md`)대로 `components`(렌더링), `features`(업무 기능), `data`(상태 모양), `state`(공유 상태), `services`(API), `styles`(토큰), `utils`(순수 함수)로 나뉘며 컴포넌트에서 직접 `fetch`하지 않습니다. 모델 유형 목록은 등록부에서 동적으로 받아오며, 문서·STT/TTS·영상 기능은 PC판의 선택적 provider/media 계약이 없으므로 이 프로젝트에서는 노출하지 않습니다.
 
 공유 상태는 `state/WorkbenchContext.jsx`(모델·서빙·파라미터·실행)와 `features/workbench/HistoryContext.jsx`(선택·숨김·탭·비교) 두 곳에 있습니다. 스트리밍 델타는 ref에 누적하고 60ms 간격으로만 커밋해, 리렌더 폭주와 "완료된 답변을 옛 스냅샷이 덮어쓰는" 회귀를 함께 막습니다.
 

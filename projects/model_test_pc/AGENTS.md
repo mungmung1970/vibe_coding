@@ -27,7 +27,7 @@
 ## 검증
 
 ```sh
-cd src/backend && python3 -m unittest discover -s tests -t .   # 41건
+cd src/backend && python3 -m unittest discover -s tests -t .   # 60건
 sh src/frontend/tests/smoke.sh                                  # 12개 + 빌드
 ```
 

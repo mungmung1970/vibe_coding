@@ -1,12 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// plugin-react가 있어야 JSX가 자동 런타임으로 변환된다. 없으면 빌드 산출물이
-// 'React is not defined'로 죽는다.
+// 개발 서버는 5173, API는 파이썬 백엔드(8080)로 프록시한다.
+// 빌드 산출물(dist)은 그 백엔드가 정적으로 서빙한다.
 export default defineConfig({
   plugins: [react()],
+  base: './',
+  build: { outDir: 'dist', emptyOutDir: true },
   server: {
     port: 5173,
-    proxy: { '/api': { target: 'http://127.0.0.1:3000', changeOrigin: true } },
+    proxy: { '/api': { target: 'http://127.0.0.1:8080', changeOrigin: true } },
   },
 });
+

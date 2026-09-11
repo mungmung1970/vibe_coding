@@ -5,7 +5,7 @@ Status: Development
 Current Version: 0.2
 
 로컬 모델을 하나씩 vLLM으로 서빙하면서, 파라미터를 바꿔가며 프롬프트 응답을 비교하는 사내 콘솔이다.
-화면 기준은 `harness/templates/frontend/doc/images`의 두 이미지다.
+화면 기준은 `harness/templates/frontend/doc/images`의 두 이미지이며, 공통 API/SSE·모델 유형 메타데이터 규칙은 `harness/docs/API_STANDARD.md`와 `harness/docs/FRONTEND_STANDARD.md`를 따른다.
 
 작업 자동화는 `harness/docs/LOOP_ENGINEERING.md`의 PLAN → EXECUTE → VERIFY → commit → push 절차를 따른다.
 
@@ -31,6 +31,7 @@ Current Work:
 - 서빙 엔진: vLLM 0.28.0 (프로젝트 루트 `.venv-vllm`에 격리 설치, torch 2.13.0+cu130)
 - GPU: NVIDIA B200 1장(183GB). 한 번에 한 모델만 서빙한다
 - 모델 가중치: `/NHNHOME/WORKSPACE/26mss001_H0/models` (등록부는 `models/`)
+- 프론트: 모델/provider/modality 선택은 API 응답을 사용하며, 서빙 상태와 provider 호출은 별도 경계로 유지한다.
 
 ## Standard Commands
 

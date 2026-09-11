@@ -40,7 +40,7 @@ function Judgement({ judgement, runs }) {
 export default function CompareDialog() {
   const { judges } = useWorkbench();
   const {
-    comparison, reference, judgeModelId, comparing,
+    comparison, reference, judgeModelId, comparing, compareError,
     setReference, setJudgeModelId, runCompare, closeComparison,
   } = useHistory();
 
@@ -60,8 +60,10 @@ export default function CompareDialog() {
             <label className="form-row">
               <span>비교 모델</span>
               <select value={judgeModelId} aria-label="심판 모델" onChange={(event) => setJudgeModelId(event.target.value)}>
-                <option value="">선택 안 함 (답변만 비교)</option>
-                {judges.map((judge) => <option key={judge.id} value={judge.id}>{judge.label}</option>)}
+                <option value="">선택 안 함 (답변만 나란히)</option>
+                {judges.map((judge) => (
+                  <option key={judge.id} value={judge.id}>{judge.label} · {judge.provider}</option>
+                ))}
               </select>
             </label>
             <label className="form-row">
@@ -69,7 +71,7 @@ export default function CompareDialog() {
               <textarea
                 rows="3"
                 value={reference}
-                placeholder="비교 기준이 되는 정답 예시를 입력하세요. 비워두면 답변만 나란히 비교합니다."
+                placeholder="선택 사항. 비워두면 비교 모델이 질문 기준으로 채점합니다."
                 onChange={(event) => setReference(event.target.value)}
               />
             </label>
@@ -78,6 +80,8 @@ export default function CompareDialog() {
                 {comparing ? '비교 중…' : '비교'}
               </button>
             </div>
+            {!judges.length && <p className="side-note">비교 모델 목록을 불러오지 못했습니다. 답변만 나란히 비교합니다.</p>}
+            {compareError && <p className="side-error">{compareError}</p>}
           </div>
 
           {ready ? (

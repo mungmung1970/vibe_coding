@@ -1,0 +1,15 @@
+{
+  "id": "openai-sora-2",
+  "name": "Sora 2",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "sora-2",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "장면 설명으로 영상을 만든다. 분 단위로 걸린다.",
+  "modality": "VIDEO",
+  "parameter_profile": "video",
+  "capabilities": [
+    "video"
+  ]
+}

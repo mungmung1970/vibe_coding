@@ -3,12 +3,15 @@
 from __future__ import annotations
 
 import itertools
+import mimetypes
 
 from ..config import Config
 from ..core.errors import ApiError
 from ..core.http import Request, Response, Router, json_response, sse_response
+from ..services.documents import parse_data_url, parse_document
 from ..services.history import HistoryStore
 from ..services.inference import InferenceService
+from ..services.media import MediaService
 from ..services.judge import JudgeService
 from ..services.model_registry import ModelRegistry
 from ..services.parameter_catalog import ParameterCatalog
@@ -42,6 +45,7 @@ def build_router(
     inference: InferenceService,
     history: HistoryStore,
     judge: JudgeService,
+    media: MediaService,
 ) -> Router:
     router = Router()
 
@@ -58,13 +62,14 @@ def build_router(
     @router.get(f"{API}/models")
     def list_models(request: Request) -> dict:
         models = registry.list()
+        registered = sorted({model.modality for model in models})
         modality = (request.query.get("modality") or "").upper()
-        if modality in {"LLM", "VLM"}:
+        if modality in registered:
             models = [model for model in models if model.modality == modality]
         return {
             "models": [model.to_dict() for model in models],
             "providers": sorted({model.provider for model in models}),
-            "modalities": ["LLM", "VLM"],
+            "modalities": registered,  # 등록된 모델에서 나온다. 목록을 코드에 박아두지 않는다
             "models_dir": str(config.models_dir),
         }
 
@@ -99,6 +104,41 @@ def build_router(
                 run = event["run"]
         return json_response({"run": run})
 
+    @router.post(f"{API}/media/transcribe")
+    def transcribe(request: Request) -> dict:
+        """STT: 오디오 → 텍스트. 결과는 채팅과 같은 run 모양이라 저장·비교가 그대로 된다."""
+        return {"run": media.transcribe(request.json())}
+
+    @router.post(f"{API}/media/speak")
+    def speak(request: Request) -> dict:
+        """TTS: 텍스트 → 오디오 파일. run.media.url로 재생한다."""
+        return {"run": media.speak(request.json())}
+
+    @router.post(f"{API}/media/video")
+    def generate_video(request: Request) -> Response:
+        """영상 생성은 분 단위라 SSE로 진행 상황을 흘려보낸다."""
+        events = media.video(request.json())
+        first = next(events)
+        return sse_response(itertools.chain([first], events))
+
+    @router.get(f"{API}/media/files/{{media_id}}")
+    def media_file(request: Request) -> Response:
+        path = media.store.path(request.params["media_id"])
+        content_type = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
+        return Response(
+            headers={"Content-Type": content_type, "Cache-Control": "no-cache"},
+            body=path.read_bytes(),
+        )
+
+    @router.post(f"{API}/documents/parse")
+    def parse_attachment(request: Request) -> dict:
+        """엑셀·한글 첨부를 평문으로 바꿔 돌려준다. 파일은 서버에 남기지 않는다."""
+        payload = request.json()
+        name = str(payload.get("name") or "").strip()
+        if not name:
+            raise ApiError(422, "name_required", "파일 이름(name)이 필요합니다.")
+        return parse_document(name, parse_data_url(name, payload.get("data_url")))
+
     @router.get(f"{API}/runs")
     def list_runs(request: Request) -> dict:
         runs = history.list(
@@ -129,10 +169,11 @@ def build_router(
         result = history.compare([str(run_id) for run_id in run_ids])
         reference = str(payload.get("reference") or "").strip()
         judge_model_id = str(payload.get("judge_model_id") or "").strip()
-        if reference and judge_model_id:
+        if judge_model_id:
+            # 모범답변은 선택 사항이다. 없으면 질문 기준으로 채점한다.
             result["judgement"] = judge.evaluate(judge_model_id, reference, result["runs"])
         elif reference:
-            result["judgement"] = {"skipped": "심판 모델을 선택하면 모범답변과 대조해 채점합니다."}
+            result["judgement"] = {"skipped": "비교 모델을 선택하면 모범답변과 대조해 채점합니다."}
         return result
 
     @router.get(f"{API}/runs/{{run_id}}")

@@ -65,7 +65,7 @@ def build_router(
         return {
             "models": [model.to_dict() for model in models],
             "providers": sorted({model.provider for model in models}),
-            "modalities": ["LLM", "VLM"],
+            "modalities": sorted({model.modality for model in models}),
             "models_dir": str(config.models_dir),
         }
 

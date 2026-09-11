@@ -42,6 +42,19 @@ class ModelRegistryTest(unittest.TestCase):
         finally:
             del os.environ["TEST_ENDPOINT_URL"]
 
+    def test_remote_model_can_come_from_an_environment_variable(self) -> None:
+        self._write("from-model-env", {
+            "id": "from-model-env",
+            "base_url": "http://endpoint.internal/v1",
+            "remote_model": "${TEST_REMOTE_MODEL}",
+        })
+
+        os.environ["TEST_REMOTE_MODEL"] = "/models/gpt-oss-120b"
+        try:
+            self.assertEqual(self.registry.get("from-model-env").remote_model, "/models/gpt-oss-120b")
+        finally:
+            del os.environ["TEST_REMOTE_MODEL"]
+
     def test_entries_without_a_base_url_are_skipped(self) -> None:
         # 주소가 비면 호출할 수 없으므로 목록에 넣지 않는다.
         self._write("no-url", {"id": "no-url"})

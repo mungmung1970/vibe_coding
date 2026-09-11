@@ -12,6 +12,8 @@
 
 `components`는 렌더링, `features`는 업무 기능, `data`는 목업/응답 모양, `services`는 API 연동, `styles`는 시각 토큰, `utils`는 표시용 순수 함수만 둔다. 컴포넌트에서 직접 API를 호출하지 않는다.
 
+실제 모델 워크벤치는 `services/api.js`에서 JSON과 SSE를 처리하고, context/state에서 모델·provider·modality·파라미터·스트리밍·취소·저장·비교 상태를 관리한다. 문서 첨부와 STT/TTS/VIDEO는 백엔드 계약이 있는 프로젝트에서만 함께 활성화하며, local serving 상태와 provider 호출을 같은 상태로 뭉개지 않는다.
+
 기본 인증/권한 예시는 `features/auth`에 있으며 `admin`, `operator`, `viewer` 역할과 메뉴별 `read/manage` 권한을 제공한다. 프론트 권한은 UX 제어용이고, 실제 권한 검증은 Node API에서 세션과 함께 다시 수행해야 한다.
 
 ## 화면 규칙

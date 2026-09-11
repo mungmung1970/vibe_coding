@@ -1,0 +1,18 @@
+{
+  "id": "gemini-3.7-flash",
+  "name": "Gemini 3.7 Flash",
+  "provider": "Google Gemini",
+  "provider_type": "openai",
+  "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
+  "remote_model": "gemini-3.7-flash",
+  "api_key_env": "GEMINI_API_KEY",
+  "description": "Google Gemini OpenAI 호환 엔드포인트.",
+  "modality": "VLM",
+  "capabilities": ["chat", "reasoning", "reasoning_effort"],
+  "unsupported_fields": ["n", "frequency_penalty", "presence_penalty", "logprobs", "top_logprobs"],
+  "context_length": 1048576,
+  "parameter_overrides": {
+    "max_tokens": {"default": 8192, "max": 65536},
+    "stream": {"default": false}
+  }
+}

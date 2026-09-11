@@ -11,14 +11,14 @@
 | `claude-opus-5` | Anthropic | api.anthropic.com | 사용 가능 |
 | `claude-sonnet-5` | Anthropic | api.anthropic.com | 사용 가능 |
 | `qwen3.8-27b` | HuggingFace | router.huggingface.co | **`HF_TOKEN` 필요** |
-| `gpt-oss-120b` | 사내 엔드포인트 | `${APP_GPTOSS_BASE_URL}` | **내부망에서만 호출 가능** |
+| `gpt-oss-120b` | 사내 엔드포인트 | `${DEMO_MSA_LLM_API_BASE}` | **내부망에서만 호출 가능** |
 
 ### gpt-oss-120b
 
 사내 방화벽 때문에 **내부망 밖에서는 호출되지 않습니다.** 외부에서 실행하면 주소가 없어 목록에서 빠지고, 주소를 넣어도 `provider_unreachable` 오류가 납니다. 내부망 PC에서 아래처럼 실행하면 그때 목록에 나타납니다.
 
 ```sh
-APP_GPTOSS_BASE_URL="http://<사내 엔드포인트>/v1" sh src/backend/run.sh --host 0.0.0.0
+DEMO_MSA_LLM_API_BASE="http://<사내 엔드포인트>/v1" sh src/backend/run.sh --host 0.0.0.0
 ```
 
 키가 필요하면 `model.json`에 `"api_key_env": "<환경변수 이름>"`만 추가합니다. 그 엔드포인트가 vLLM이 아니라면 `parameter_profile`을 `openai`로 바꾸는 편이 안전합니다(확장 필드 미노출).

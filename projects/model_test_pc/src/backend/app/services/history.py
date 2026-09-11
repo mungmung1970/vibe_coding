@@ -12,8 +12,8 @@ from ..core.errors import ApiError
 
 logger = logging.getLogger("app.history")
 
-SUMMARY_FIELDS = ("id", "created_at", "model_id", "provider", "engine", "prompt", "parameters", "latency_ms", "usage")
-PREVIEW_CHARS = 400
+SUMMARY_FIELDS = ("id", "created_at", "model_id", "provider", "engine", "prompt", "parameters", "latency_ms",
+                  "usage", "modality", "media")
 
 
 class HistoryStore:
@@ -89,9 +89,8 @@ class HistoryStore:
     @staticmethod
     def _summarize(run: dict) -> dict:
         summary: dict[str, Any] = {key: run.get(key) for key in SUMMARY_FIELDS}
-        text = str(run.get("text") or "")
-        summary["preview"] = text[:PREVIEW_CHARS]
-        summary["truncated"] = len(text) > PREVIEW_CHARS
+        # 화면에서 잘라 보여주지 않는다. 카드가 스크롤로 전문을 보여준다.
+        summary["preview"] = str(run.get("text") or "")
         return summary
 
     def get(self, run_id: str) -> dict:

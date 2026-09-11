@@ -16,8 +16,10 @@ export function HistoryProvider({ children }) {
   const [reference, setReference] = useState('');
   const [judgeModelId, setJudgeModelId] = useState('');
   const [comparing, setComparing] = useState(false);
+  const [compareError, setCompareError] = useState('');
 
   const toggleSelection = useCallback((runId) => {
+    setHiddenRunIds((current) => current.filter((id) => id !== runId)); // 리스트에서 다시 고르면 화면으로 돌아온다
     setSelectedRunIds((current) => (current.includes(runId) ? current.filter((id) => id !== runId) : [...current, runId]));
   }, []);
 
@@ -39,31 +41,35 @@ export function HistoryProvider({ children }) {
 
   const openCompare = useCallback(async () => {
     if (selectedRunIds.length < 2) { setNotice('비교할 결과를 두 개 이상 선택해 주세요.'); return; }
+    setCompareError('');
     await loadJudges();
     setComparison({ pending: true });
   }, [loadJudges, selectedRunIds.length, setNotice]);
 
+  /** 오류는 창 안에 남긴다. 토스트로 흘려보내면 왜 비교가 안 됐는지 알 수 없다. */
   const runCompare = useCallback(async () => {
     setComparing(true);
+    setCompareError('');
     try {
       setComparison(await api.compareRuns(selectedRunIds, { reference, judgeModelId }));
     } catch (error) {
-      setNotice(error.message);
+      setCompareError(error.message);
     } finally {
       setComparing(false);
     }
-  }, [judgeModelId, reference, selectedRunIds, setNotice]);
+  }, [judgeModelId, reference, selectedRunIds]);
 
   const value = useMemo(() => ({
     selectedRunIds, hiddenRunIds, historyView, activeRunId, contextMenu, comparison, reference, judgeModelId, comparing,
+    compareError,
     toggleSelection, hideRun, closeTab, openCompare, runCompare,
     setHistoryView, setActiveRunId, setReference, setJudgeModelId,
     showAllRuns: () => setHiddenRunIds([]),
     openContextMenu: setContextMenu,
     closeContextMenu: () => setContextMenu(null),
-    closeComparison: () => setComparison(null),
+    closeComparison: () => { setComparison(null); setCompareError(''); },
   }), [selectedRunIds, hiddenRunIds, historyView, activeRunId, contextMenu, comparison, reference, judgeModelId,
-    comparing, toggleSelection, hideRun, closeTab, openCompare, runCompare]);
+    comparing, compareError, toggleSelection, hideRun, closeTab, openCompare, runCompare]);
 
   return <HistoryContext.Provider value={value}>{children}</HistoryContext.Provider>;
 }

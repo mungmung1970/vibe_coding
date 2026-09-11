@@ -51,6 +51,11 @@ export const listRuns = (filters = {}) => request(`/runs${query(filters)}`);
 export const getRun = (runId) => request(`/runs/${encodeURIComponent(runId)}`);
 export const deleteRun = (runId) => request(`/runs/${encodeURIComponent(runId)}`, { method: 'DELETE' });
 export const saveRun = (run) => request('/runs', { method: 'POST', body: { run } });
+/** 엑셀·한글 첨부를 서버에서 평문으로 파싱한다. 파일은 저장되지 않는다. */
+export const parseDocument = (name, dataUrl) => request('/documents/parse', {
+  method: 'POST',
+  body: { name, data_url: dataUrl },
+});
 export const compareRuns = (runIds, { reference = '', judgeModelId = '' } = {}) => request('/runs/compare', {
   method: 'POST',
   body: { run_ids: runIds, reference, judge_model_id: judgeModelId },
@@ -63,18 +68,29 @@ export const generateOnce = (payload, signal) => request('/generate', {
   signal,
 });
 
+/** STT: 오디오 첨부 하나를 텍스트로 옮긴다. */
+export const transcribeAudio = (payload, signal) => request('/media/transcribe', { method: 'POST', body: payload, signal });
+
+/** TTS: 문장을 음성 파일로 만든다. run.media.url로 재생한다. */
+export const synthesizeSpeech = (payload, signal) => request('/media/speak', { method: 'POST', body: payload, signal });
+
+/** 영상 생성: 분 단위로 걸려 SSE로 진행 상황이 온다. */
+export const generateVideo = (payload, handlers, signal) => streamPost('/media/video', payload, handlers, signal);
+
 /**
  * Streaming generation over SSE.
  * `handlers` receives start/reasoning/delta/done/error events as they arrive.
  */
-export async function generateStream(payload, handlers = {}, signal) {
+export const generateStream = (payload, handlers = {}, signal) => streamPost('/generate', { ...payload, stream: true }, handlers, signal);
+
+async function streamPost(path, payload, handlers = {}, signal) {
   let response;
   try {
-    response = await fetch(`${BASE}/generate`, {
+    response = await fetch(`${BASE}${path}`, {
       method: 'POST',
       signal,
       headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
-      body: JSON.stringify({ ...payload, stream: true }),
+      body: JSON.stringify(payload),
     });
   } catch (cause) {
     if (cause.name === 'AbortError') throw cause;

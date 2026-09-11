@@ -5,9 +5,10 @@ description: Build or extend the reusable Python backend template when API routi
 
 # Backend Development
 
-Use `harness/templates/backend` as the baseline for new projects. It mirrors
-`projects/model_test/src/backend` and intentionally uses the Python standard
-library so the starter runs before a dependency manager is introduced.
+Use `harness/templates/backend` as the baseline for new projects. It follows
+the serving-oriented contract of `projects/model_test/src/backend` and
+intentionally uses the Python standard library so the starter runs before a
+dependency manager is introduced.
 
 ## Structure
 
@@ -22,6 +23,12 @@ Keep domain logic out of route handlers. Add a service only when behavior has
 more than one caller or has its own lifecycle/state. Keep persistence and
 external integrations behind a service boundary so they can later be replaced
 without changing the API contract.
+
+Provider-backed projects may add OpenAI-compatible or Anthropic adapters,
+model metadata, secret readiness, document parsing, and media storage as
+explicit services. These are optional capabilities, not replacements for the
+local `ServingManager`; never add `/serving` to a provider-only project or
+media routes without matching registry metadata and tests.
 
 ## Runtime
 

@@ -19,6 +19,7 @@ logger = logging.getLogger("app.inference")
 
 MAX_PROMPT_CHARS = 200_000
 MAX_IMAGES = 4
+CHAT_MODALITIES = ("LLM", "VLM")  # /generate는 채팅 규격만 호출한다
 MAX_IMAGE_BYTES = 6 * 1024 * 1024
 MAX_IMAGE_CHARS = MAX_IMAGE_BYTES * 4 // 3 + 1024  # base64 팽창분
 
@@ -58,6 +59,7 @@ class InferenceService:
         system_prompt: str,
         resolved: ResolvedParameters,
         images: list[dict] | None = None,
+        stream: bool = True,
     ) -> dict:
         messages = []
         if system_prompt.strip():
@@ -72,8 +74,7 @@ class InferenceService:
         payload: dict[str, Any] = {
             "model": model_id,
             "messages": messages,
-            "stream": True,
-            "stream_options": {"include_usage": True},
+            "stream": stream,
             **resolved.body,
             **resolved.extra_body,
         }
@@ -93,10 +94,19 @@ class InferenceService:
         if not model_id:
             raise ApiError(422, "model_id_required", "사용할 model_id가 필요합니다.")
         model = self.registry.get(model_id)
+        if model.modality not in CHAT_MODALITIES:
+            raise ApiError(
+                422,
+                "modality_not_chat",
+                f"'{model.id}'는 {model.modality} 모델이라 프롬프트 실행(채팅) 규격으로 호출할 수 없습니다.",
+            )
         system_prompt = str(request.get("system_prompt") or "")
         resolved = self.catalog.resolve(model, request.get("parameters"))
         images = self._validate_images(model, request.get("images"))
-        payload = self.build_payload(model.id, prompt, system_prompt, resolved, images)
+        stream = request.get("stream")
+        if stream is None:
+            stream = resolved.client.get("stream", True)
+        payload = self.build_payload(model.id, prompt, system_prompt, resolved, images, bool(stream))
         run = {
             "id": uuid.uuid4().hex[:12],
             "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

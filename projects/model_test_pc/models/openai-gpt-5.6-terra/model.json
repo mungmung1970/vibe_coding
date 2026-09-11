@@ -1,0 +1,32 @@
+{
+  "id": "openai-gpt-5.6-terra",
+  "name": "GPT-5.6 Terra",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "gpt-5.6-terra",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "GPT-5.6 계열. 추론 강도 조절이 된다.",
+  "modality": "LLM",
+  "capabilities": [
+    "chat",
+    "reasoning",
+    "reasoning_effort"
+  ],
+  "uses_completion_tokens": true,
+  "unsupported_fields": [
+    "stop",
+    "temperature",
+    "top_p",
+    "frequency_penalty",
+    "presence_penalty",
+    "logprobs",
+    "top_logprobs"
+  ],
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 4096,
+      "max": 32768
+    }
+  }
+}

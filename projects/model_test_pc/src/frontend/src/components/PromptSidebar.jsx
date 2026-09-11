@@ -1,10 +1,11 @@
+import { MODALITY_LABELS } from '../data/defaults.js';
 import { useWorkbench } from '../state/WorkbenchContext.jsx';
 import SideSection from './SideSection.jsx';
 import ParameterControl from './ParameterControl.jsx';
 
 export default function PromptSidebar() {
   const {
-    models, providers, modalityFilter, selectedProvider, selectedModelId, selectedModel, modelsError,
+    models, providers, modalities, modalityFilter, selectedProvider, selectedModelId, selectedModel, modelsError,
     schema, parameters, systemPrompt,
     setModalityFilter, setSelectedProvider, selectModel, setParameter, resetParameters, setSystemPrompt,
   } = useWorkbench();
@@ -18,8 +19,9 @@ export default function PromptSidebar() {
           <span className="field-label">모델 유형</span>
           <select value={modalityFilter} aria-label="모델 유형 필터" onChange={(event) => setModalityFilter(event.target.value)}>
             <option value="">전체</option>
-            <option value="LLM">LLM (텍스트)</option>
-            <option value="VLM">VLM (텍스트+이미지)</option>
+            {modalities.map((modality) => (
+              <option key={modality} value={modality}>{MODALITY_LABELS[modality] ?? modality}</option>
+            ))}
           </select>
         </label>
         <label className="field">

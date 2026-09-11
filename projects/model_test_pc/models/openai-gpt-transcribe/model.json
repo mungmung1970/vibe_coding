@@ -1,0 +1,15 @@
+{
+  "id": "openai-gpt-transcribe",
+  "name": "GPT Transcribe",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "gpt-transcribe",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "오디오를 텍스트로 옮긴다(최신 전사 모델).",
+  "modality": "STT",
+  "parameter_profile": "stt",
+  "capabilities": [
+    "transcribe"
+  ]
+}

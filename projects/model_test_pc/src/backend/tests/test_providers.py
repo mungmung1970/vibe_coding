@@ -7,6 +7,7 @@ from pathlib import Path
 from app.core.errors import ApiError
 from app.services.model_registry import ModelRegistry
 from app.services.providers import create_provider
+from app.services.secrets import scrub
 
 from .support import FakeProviderServer, make_config
 
@@ -48,6 +49,18 @@ class ProviderTest(unittest.TestCase):
         self.assertEqual(sent["body"]["reasoning_effort"], "high")
         self.assertTrue(sent["body"]["stream"])
         self.assertEqual(len(chunks), 4)
+
+    def test_openai_compatible_call_can_be_non_streaming(self) -> None:
+        chunks = self._collect(self._model("endpoint-llm"), {
+            "messages": [{"role": "user", "content": "안녕"}],
+            "stream": False,
+            "max_tokens": 1,
+        })
+
+        sent = self.fake.requests[-1]
+        self.assertFalse(sent["body"]["stream"])
+        self.assertNotIn("stream_options", sent["body"])
+        self.assertEqual(chunks[0]["choices"][0]["message"]["content"], "non-stream")
 
     def test_api_key_is_sent_and_max_tokens_is_renamed(self) -> None:
         self._collect(self._model("vision-api"), {
@@ -108,6 +121,13 @@ class ProviderTest(unittest.TestCase):
         with self.assertRaises(ApiError) as caught:
             self._collect(self._model("endpoint-llm"), {"messages": [{"role": "user", "content": "안녕"}]})
         self.assertEqual((caught.exception.status, caught.exception.code), (502, "provider_error"))
+
+    def test_custom_api_keys_are_scrubbed_from_errors(self) -> None:
+        os.environ["DEMO_MSA_LLM_API_KEY"] = "default-api-key"
+        try:
+            self.assertNotIn("default-api-key", scrub("provider said default-api-key"))
+        finally:
+            del os.environ["DEMO_MSA_LLM_API_KEY"]
 
     def test_unreachable_endpoint_names_the_address(self) -> None:
         model = replace(self.registry.get("endpoint-llm"), base_url="http://127.0.0.1:9/v1")

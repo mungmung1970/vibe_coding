@@ -1,0 +1,23 @@
+# TASK-002 VERIFICATION
+
+- `gpt-oss-120b` 등록 로딩 확인: `http://10.10.20.20:8001/v1`, `DEMO_MSA_LLM_API_KEY`, 원격 모델 `gpt-oss-120b`
+- 백엔드 변경 관련 테스트: 43건 통과
+- 프론트 단위 테스트: 13건 통과
+- 전체 백엔드 테스트: 44건 중 43건 통과. 남은 1건은 Windows SIGTERM 종료 테스트가 `exit 1`로 실패했으며 변경과 무관함
+- 프론트 빌드: `vite`가 설치되지 않아 실행하지 못함 (`node_modules` 없음)
+- 내부 엔드포인트 실호출: 수행하지 않음. 내부망 주소이므로 가짜 서버 경계 테스트와 등록 로딩만 검증함
+- `DEMO_MSA_LLM_MODEL` 후보 payload 검증: `gpt-oss-120b`, `model/gpt-oss-120b`, `/models/gpt-oss-120b` 모두 요청의 `model` 필드에 그대로 전달됨
+- 비교 대상 `demo_mockup`은 현재 실행 소스 없이 `.env`/README/설정 템플릿만 존재하며, README의 LLM 호출 경로는 `{DEMO_MSA_LLM_API_BASE}/chat/completions`로 확인함
+- `demo_mockup/app` 비교 후 `gpt-oss-120b`는 non-stream 기본값으로 설정하고, `stream=false`일 때 upstream JSON 응답을 처리하도록 수정함
+- 수정 후 backend 관련 테스트 45건 통과, frontend 단위 테스트 13건 통과
+- `src/frontend`에서 `npm install` 완료: 65개 패키지 설치, 취약점 0건
+- `npm run build` 성공: Vite 7.3.6, production bundle 생성 완료
+- 실제 네트워크 권한으로 backend를 기동해 검증: `/` HTTP 200, `gpt-oss-120b` 모델 목록/파라미터 정상
+- 실제 `gpt-oss-120b` non-stream 생성 성공: 응답 본문과 usage 수신, 모델 ID `gpt-oss-120b` 확인
+- 테스트용 backend 프로세스는 검증 후 종료함
+- `HF_TOKEN` 설정 후 웹 서비스 재기동: `qwen3.8-27b`의 `key_ready=true` 확인
+- 실제 Hugging Face Qwen non-stream 호출 성공: 본문 `OK`, reasoning, usage 수신
+- 제공된 HF 토큰은 로그에 노출되지 않음을 확인함
+- OpenAI/Anthropic 키 및 Gemini 키 추가 후 8개 모델 목록과 요청 대상 모델의 `key_ready=true` 확인
+- 실제 공급자 호출: OpenAI 2종, Anthropic 2종, Gemini 2종 모두 non-stream 성공
+- Gemini 오류 원인: 지원하지 않는 `n`, penalty, logprobs 계열 파라미터를 모델별 `unsupported_fields`로 제외해 해결

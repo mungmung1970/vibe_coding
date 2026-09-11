@@ -47,8 +47,7 @@ def mask(value: str | None) -> str:
 
 def scrub(text: str) -> str:
     """문자열에 섞인 키 값을 마스킹한다. 외부 오류 본문을 그대로 노출하지 않기 위함."""
-    for name in ("OPENAI_API_KEY", "ANTHROPIC_API_KEY"):
-        value = os.environ.get(name)
-        if value and value in text:
+    for name, value in os.environ.items():
+        if "KEY" in name and value and value in text:
             text = text.replace(value, mask(value))
     return text

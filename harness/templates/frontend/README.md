@@ -1,6 +1,6 @@
 # Frontend template
 
-`projects/model_test/src/frontend`에서 실사용하며 다듬은 화면 규칙을 React + Vite + Node.js 기준으로 일반화한 템플릿입니다. `doc/images`의 색상과 밀도를 기준으로 스타일 토큰을 구성했습니다.
+`projects/model_test_pc/src/frontend`와 `projects/model_test/src/frontend`에서 실사용하며 다듬은 화면 규칙을 React + Vite + Node.js 기준으로 일반화한 템플릿입니다. `doc/images`의 색상과 밀도를 기준으로 스타일 토큰을 구성했습니다.
 
 ```sh
 npm install
@@ -44,7 +44,9 @@ src/
 
 ## 실제 API로 교체하기
 
-`src/services/modelService.js`와 `authService.js`가 유일한 연동 지점입니다. 각 함수에 교체할 엔드포인트를 주석으로 적어 두었습니다. 목업 데이터는 `src/data/sample.js`에 모여 있어 통째로 지우면 됩니다.
+`src/services/modelService.js`와 `authService.js`가 유일한 연동 지점입니다. `src/services/api.js`는 PC판과 같은 JSON/SSE 오류·취소 처리를 제공하며, `MODEL_TEST_API_BASE`가 설정된 실행에서는 실제 `/api/v1` 모델 API를 사용합니다. 설정하지 않으면 목업 데이터로 동작합니다.
+
+문서 첨부와 STT/TTS 같은 미디어 기능은 백엔드가 해당 라우트를 구현한 프로젝트에서만 서비스 어댑터와 UI를 함께 활성화합니다. 로컬 vLLM 프로젝트의 서빙 상태는 별도 상태 경계로 유지합니다.
 
 로그인 데모 계정은 `admin@example.com / admin`입니다. 프론트의 메뉴 권한은 UX 제어일 뿐이므로, `server/index.js`에 세션과 RBAC 검증을 반드시 다시 구현해야 합니다.
 

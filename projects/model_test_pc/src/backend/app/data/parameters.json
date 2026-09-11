@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "groups": [
     {
       "id": "reasoning",
@@ -25,6 +25,11 @@
       "id": "advanced",
       "label": "고급",
       "order": 5
+    },
+    {
+      "id": "media",
+      "label": "음성·영상",
+      "order": 6
     }
   ],
   "parameters": [
@@ -80,7 +85,12 @@
       "max": 131072,
       "step": 1,
       "target": "body",
-      "help": "생성할 최대 토큰 수입니다."
+      "help": "생성할 최대 토큰 수입니다.",
+      "providers": [
+        "vllm",
+        "openai",
+        "anthropic"
+      ]
     },
     {
       "key": "min_tokens",
@@ -276,7 +286,12 @@
       "type": "bool",
       "default": true,
       "target": "client",
-      "help": "응답을 생성되는 대로 화면에 흘려보냅니다."
+      "help": "응답을 생성되는 대로 화면에 흘려보냅니다.",
+      "providers": [
+        "vllm",
+        "openai",
+        "anthropic"
+      ]
     },
     {
       "key": "ignore_eos",
@@ -325,6 +340,119 @@
         "vllm",
         "openai"
       ]
+    },
+    {
+      "key": "language",
+      "label": "language",
+      "group": "media",
+      "control": "text",
+      "type": "string",
+      "default": "",
+      "nullable": true,
+      "target": "client",
+      "providers": [
+        "stt"
+      ],
+      "help": "전사 언어 코드(ko, en 등). 비워두면 자동 감지합니다."
+    },
+    {
+      "key": "voice",
+      "label": "voice",
+      "group": "media",
+      "control": "select",
+      "type": "string",
+      "default": "alloy",
+      "target": "client",
+      "providers": [
+        "tts"
+      ],
+      "options": [
+        "alloy",
+        "ash",
+        "ballad",
+        "coral",
+        "echo",
+        "fable",
+        "nova",
+        "onyx",
+        "sage",
+        "shimmer",
+        "verse"
+      ],
+      "help": "합성 음색입니다."
+    },
+    {
+      "key": "audio_format",
+      "label": "audio_format",
+      "group": "media",
+      "control": "select",
+      "type": "string",
+      "default": "mp3",
+      "target": "client",
+      "providers": [
+        "tts"
+      ],
+      "options": [
+        "mp3",
+        "wav",
+        "opus",
+        "aac",
+        "flac"
+      ],
+      "help": "생성할 오디오 파일 형식입니다."
+    },
+    {
+      "key": "speed",
+      "label": "speed",
+      "group": "media",
+      "control": "slider",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.25,
+      "max": 4.0,
+      "step": 0.05,
+      "target": "client",
+      "providers": [
+        "tts"
+      ],
+      "help": "말하기 속도입니다. 1이 기본입니다."
+    },
+    {
+      "key": "seconds",
+      "label": "seconds",
+      "group": "media",
+      "control": "select",
+      "type": "string",
+      "default": "4",
+      "target": "client",
+      "providers": [
+        "video"
+      ],
+      "options": [
+        "4",
+        "8",
+        "12"
+      ],
+      "help": "영상 길이(초)입니다. 길수록 오래 걸리고 비쌉니다."
+    },
+    {
+      "key": "size",
+      "label": "size",
+      "group": "media",
+      "control": "select",
+      "type": "string",
+      "default": "720x1280",
+      "target": "client",
+      "providers": [
+        "video"
+      ],
+      "options": [
+        "720x1280",
+        "1280x720",
+        "1024x1792",
+        "1792x1024"
+      ],
+      "help": "영상 해상도입니다."
     }
   ]
 }

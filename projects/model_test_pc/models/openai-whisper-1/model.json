@@ -1,0 +1,15 @@
+{
+  "id": "openai-whisper-1",
+  "name": "Whisper 1",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "whisper-1",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "고전 Whisper 전사 모델. 저렴하고 안정적이다.",
+  "modality": "STT",
+  "parameter_profile": "stt",
+  "capabilities": [
+    "transcribe"
+  ]
+}

@@ -15,3 +15,4 @@ export default function SideSection({ title, extra = null, defaultOpen = true, c
     </section>
   );
 }
+

@@ -1,0 +1,32 @@
+{
+  "id": "openai-gpt-6-astra",
+  "name": "GPT-6 Astra",
+  "provider": "OpenAI",
+  "provider_type": "openai",
+  "base_url": "https://api.openai.com/v1",
+  "remote_model": "gpt-6-astra",
+  "api_key_env": "OPENAI_API_KEY",
+  "description": "엔드포인트에 올라온 OpenAI 최신 모델.",
+  "modality": "LLM",
+  "capabilities": [
+    "chat",
+    "reasoning",
+    "reasoning_effort"
+  ],
+  "uses_completion_tokens": true,
+  "unsupported_fields": [
+    "stop",
+    "temperature",
+    "top_p",
+    "frequency_penalty",
+    "presence_penalty",
+    "logprobs",
+    "top_logprobs"
+  ],
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 4096,
+      "max": 32768
+    }
+  }
+}

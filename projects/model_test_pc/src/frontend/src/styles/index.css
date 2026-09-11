@@ -83,10 +83,30 @@ body {
 /* 사이드바와 본문이 각자 스크롤한다. 창 전체 스크롤바가 좌측 메뉴까지 끌고 가지 않도록 한다. */
 .workspace {
   display: grid;
-  grid-template-columns: 208px 1fr;
+  /* 폭은 Layout이 --sidebar-width로 넣는다. 접으면 0이 되고 손잡이도 사라진다. */
+  grid-template-columns: var(--sidebar-width, 208px) 5px 1fr;
   height: calc(100vh - 44px);
   overflow: hidden;
 }
+.workspace.is-collapsed { grid-template-columns: 0 1fr; }
+.sidebar-handle { cursor: col-resize; background: var(--line); }
+.sidebar-handle:hover { background: var(--accent); }
+body.is-resizing { cursor: col-resize; -webkit-user-select: none; user-select: none; }
+/* 흰 상단바 위에 놓이므로 .panel-icon(흰 글자)을 쓰면 안 보인다. */
+.sidebar-toggle {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #62656b;
+  border-radius: 5px;
+  width: 26px;
+  height: 24px;
+  margin-right: -20px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+}
+.sidebar-toggle:hover { border-color: var(--accent); color: var(--accent-dark); }
 .sidebar {
   background: var(--sidebar);
   color: #e7e7e8;
@@ -218,6 +238,7 @@ body {
 }
 .list-item:hover { background: #22232a; }
 .list-item.is-selected { background: #3a231c; }
+.list-item.is-hidden-run { opacity: 0.5; } /* 화면에서만 숨긴 항목 */
 .list-item strong { font-size: 11px; }
 .list-item span { float: right; color: #8b8e95; font-size: 10px; }
 .list-item em { display: block; margin-top: 3px; color: #9a9da4; font-size: 10px; font-style: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -262,6 +283,8 @@ body {
   line-height: 1;
 }
 .panel-icon:hover { background: #ffffff40; }
+.panel-icon.is-stop { background: var(--danger); } /* 실행 중 ➤가 중단으로 바뀐 상태 */
+.panel-icon.is-stop:hover { background: #c85440; }
 .input-panel textarea { flex: 1; border: 0; outline: 0; resize: none; padding: 15px 12px; font: inherit; line-height: 1.6; }
 .panel-footer {
   border-top: 1px solid var(--line);
@@ -361,7 +384,13 @@ th { background: #ebebee; }
 .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
 .toolbar-actions { display: flex; gap: 6px; }
 .toolbar-actions .btn { width: 116px; margin-left: 0; text-align: center; }
-.result-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; align-items: start; }
+/* 3열 × 2행 = 한 화면에 6개. 카드 높이는 고정, 답변만 카드 안에서 스크롤한다. */
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: calc((100vh - 136px) / 2);
+  gap: 10px;
+}
 .result-cards.is-single { grid-template-columns: 1fr; }
 .result-card {
   background: #fff;
@@ -369,6 +398,10 @@ th { background: #ebebee; }
   border-radius: var(--radius);
   padding: 10px;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
 }
 .result-card.is-selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-soft); }
 .card-head { display: flex; justify-content: space-between; align-items: center; }
@@ -377,9 +410,21 @@ th { background: #ebebee; }
 .result-card small { display: block; color: var(--muted); font-size: 10px; }
 .card-metrics { margin-top: 2px; }
 .card-params { color: var(--muted); font-size: 10px; margin: 6px 0 0; word-break: break-all; }
-.prompt-label { font-size: 10px; color: var(--muted); margin: 13px 0 4px; letter-spacing: 0.04em; }
-.prompt-box { background: #fafafa; border: 1px solid var(--line); padding: 8px; font-size: 12px; }
-.card-result { font-size: 12px; }
+.prompt-label { font-size: 10px; color: var(--muted); margin: 13px 0 4px; letter-spacing: 0.04em; flex: none; }
+/* 프롬프트는 3줄까지만, 나머지는 말줄임(전문은 hover 툴팁) */
+.prompt-box {
+  background: #fafafa;
+  border: 1px solid var(--line);
+  padding: 8px;
+  font-size: 12px;
+  flex: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-result { font-size: 12px; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.run-tab-panel .card-result { max-height: 68vh; }
 .card-result h2 { font-size: 15px; }
 .card-result h3 { font-size: 13px; }
 
@@ -481,6 +526,13 @@ th { background: #ebebee; }
   font-size: 11px;
 }
 .chip button { border: 0; background: transparent; color: inherit; cursor: pointer; font-size: 13px; line-height: 1; }
+.chip-doc { background: #e6eef7; color: #2c4d75; } /* 파싱된 문서 첨부 */
+
+/* ---------- 음성·영상 결과 ---------- */
+.media-result { margin: 4px 0 10px; }
+.media-player { width: 100%; max-height: 320px; border-radius: 4px; background: #000; }
+audio.media-player { height: 36px; background: transparent; }
+.media-result small { display: block; color: var(--muted); font-size: 10px; margin-top: 4px; }
 
 /* ---------- 결과 탭 보기 ---------- */
 .run-tab-strip { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }

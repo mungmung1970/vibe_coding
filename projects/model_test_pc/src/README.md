@@ -14,7 +14,7 @@ var/secrets.env API 키 (저장소 제외)
 
 ```sh
 cd src/frontend && npm install && npm run build     # 최초 1회
-APP_GPTOSS_BASE_URL="http://<사내 엔드포인트>/v1" sh src/backend/run.sh --host 0.0.0.0
+DEMO_MSA_LLM_API_BASE="http://<사내 엔드포인트>/v1" sh src/backend/run.sh --host 0.0.0.0
 ```
 
 `http://<PC IP>:8080/`으로 접속한다. 개발 중에는 `cd src/frontend && npm run dev`(5173, `/api`는 8080으로 프록시)를 쓴다.
@@ -30,7 +30,7 @@ APP_GPTOSS_BASE_URL="http://<사내 엔드포인트>/v1" sh src/backend/run.sh -
   "provider": "사내 엔드포인트",
   "provider_type": "openai",
   "parameter_profile": "vllm",
-  "base_url": "${APP_GPTOSS_BASE_URL}",
+  "base_url": "${DEMO_MSA_LLM_API_BASE}",
   "remote_model": "gpt-oss-120b",
   "modality": "LLM",
   "capabilities": ["chat", "reasoning", "reasoning_effort"]
@@ -46,6 +46,26 @@ APP_GPTOSS_BASE_URL="http://<사내 엔드포인트>/v1" sh src/backend/run.sh -
 | `unsupported_fields` | 그 모델이 거부하는 필드(예: 최신 GPT의 `stop`, 최신 Claude의 `temperature`) |
 | `uses_completion_tokens` | `max_tokens` 대신 `max_completion_tokens`를 받는 모델 |
 | `modality` | `LLM` / `VLM`. VLM만 이미지 첨부가 열린다 |
+
+## 모델 유형
+
+| 유형 | 실행 방식 | 등록 예 |
+| --- | --- | --- |
+| `LLM` / `VLM` | 프롬프트 → 채팅 응답(SSE). VLM만 이미지 첨부 | gpt-oss-120b, Claude, GPT-5.x |
+| `STT` | 🎤 오디오 첨부 → 텍스트 전사 (`/audio/transcriptions`) | gpt-transcribe, whisper-1 |
+| `TTS` | 문장 → 음성 파일 + 재생 (`/audio/speech`) | gpt-4o-mini-tts, tts-1-hd |
+| `VIDEO` | 장면 설명 → 영상. 작업 폴링이라 분 단위 (`/videos`) | sora-2, sora-2-pro |
+
+`model.json`의 `modality`가 유형이고, `parameter_profile`을 `stt`/`tts`/`video`로 두면 그 유형 파라미터
+(language / voice·audio_format·speed / seconds·size)만 노출된다. 음성·영상은 **OpenAI 규격 엔드포인트만** 호출한다.
+생성된 오디오·영상은 `var/media/`에 최신 50개(`APP_MEDIA_LIMIT`)만 남고, 기록에는 파일 URL만 들어간다.
+
+## 첨부 문서
+
+입력 패널의 📎로 `xlsx`·`hwp`·`hwpx`·`csv`/`txt`/`md`/`json`을 올린다. 고르는 즉시 서버가 평문으로 파싱해
+칩에 글자 수를 보여주고, 실행할 때 `[첨부 문서: 파일명]` 블록으로 질문 앞에 붙는다. 파일당 3MB·문서당 12만 자,
+한 번에 4개까지다. 파서는 표준 라이브러리뿐이다 — xlsx/hwpx는 zip+XML, hwp 5.0은 OLE 복합문서를 직접 읽는다.
+서식·수식·이미지는 버리고 글자만 남으며, 암호가 걸린 hwp는 거부한다.
 
 ## API 키
 
@@ -68,13 +88,18 @@ ANTHROPIC_API_KEY=sk-ant-...
 | `GET`/`DELETE` | `/api/v1/runs[/{id}]` | 기록 조회·삭제 |
 | `POST` | `/api/v1/runs/compare` | 답변·파라미터 비교, 모범답변+심판 모델이면 채점 |
 | `GET` | `/api/v1/judges` | 심판 후보(등록된 모든 모델) |
+| `POST` | `/api/v1/documents/parse` | 첨부 문서를 평문으로 파싱. 파일은 서버에 남기지 않는다 |
+| `POST` | `/api/v1/media/transcribe` | STT. 오디오 → 텍스트 |
+| `POST` | `/api/v1/media/speak` | TTS. 텍스트 → 오디오 파일 |
+| `POST` | `/api/v1/media/video` | 영상 생성. SSE로 진행 상황을 흘려보낸다 |
+| `GET` | `/api/v1/media/files/{id}` | 생성된 오디오·영상 파일 |
 
 `/api/v1/serving*`은 **없다.** 서빙 개념 자체가 없기 때문이다.
 
 ## 검증
 
 ```sh
-cd src/backend && python3 -m unittest discover -s tests -t .   # 41건
+cd src/backend && python3 -m unittest discover -s tests -t .   # 60건
 sh src/frontend/tests/smoke.sh                                  # 12개 + 빌드
 ```
 

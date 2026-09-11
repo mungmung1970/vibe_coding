@@ -34,7 +34,7 @@ cd src/frontend && npm install
 
 Run:
 ```sh
-APP_GPTOSS_BASE_URL="http://<사내 엔드포인트>/v1" sh src/backend/run.sh --host 0.0.0.0
+DEMO_MSA_LLM_API_BASE="http://<사내 엔드포인트>/v1" sh src/backend/run.sh --host 0.0.0.0
 ```
 
 Test:

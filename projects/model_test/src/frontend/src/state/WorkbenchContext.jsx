@@ -17,6 +17,7 @@ const WorkbenchContext = createContext(null);
 export function WorkbenchProvider({ children }) {
   const [models, setModels] = useState([]);
   const [providers, setProviders] = useState([]);
+  const [modalities, setModalities] = useState([]);
   const [modalityFilter, setModalityFilter] = useState('');
   const [selectedProvider, setSelectedProvider] = useState('');
   const [selectedModelId, setSelectedModelId] = useState('');
@@ -101,6 +102,7 @@ export function WorkbenchProvider({ children }) {
       const listed = await api.listModels(modality);
       setModels(listed.models);
       setProviders(listed.providers);
+      if (!modality) setModalities(listed.modalities ?? []);
       setModelsError(listed.models.length ? '' : 'models 디렉터리에서 모델을 찾지 못했습니다.');
       setSelectedProvider((current) => (current && listed.providers.includes(current) ? current : listed.providers[0] ?? ''));
       setSelectedModelId((current) => (listed.models.some((model) => model.id === current) ? current : listed.models[0]?.id ?? ''));
@@ -266,7 +268,7 @@ export function WorkbenchProvider({ children }) {
   }, [notice]);
 
   const value = useMemo(() => ({
-    models, providers, modalityFilter, selectedProvider, selectedModelId, modelsError,
+    models, providers, modalities, modalityFilter, selectedProvider, selectedModelId, modelsError,
     serving, servingLogs, showLogs, schema, parameters, systemPrompt, prompt, images, answer,
     runs, runsFilter, runsError, judges, notice,
     setModalityFilter: (modality) => { setModalityFilter(modality); loadModels(modality); },
@@ -280,7 +282,7 @@ export function WorkbenchProvider({ children }) {
     toggleLogs: () => { setShowLogs((current) => { if (!current) refreshLogs(); return !current; }); },
     loadModels, selectModel, stopServing, submitPrompt, cancelPrompt, saveAnswer, clearAnswer,
     addImages, removeImage, loadRuns, deleteRun, loadJudges, refreshLogs,
-  }), [models, providers, modalityFilter, selectedProvider, selectedModelId, modelsError, serving, servingLogs,
+  }), [models, providers, modalities, modalityFilter, selectedProvider, selectedModelId, modelsError, serving, servingLogs,
     showLogs, schema, parameters, systemPrompt, prompt, images, answer, runs, runsFilter, runsError, judges, notice,
     loadModels, selectModel, stopServing, submitPrompt, cancelPrompt, saveAnswer, clearAnswer, addImages,
     removeImage, loadRuns, deleteRun, loadJudges, refreshLogs]);

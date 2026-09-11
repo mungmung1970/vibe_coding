@@ -52,8 +52,10 @@ class Config:
     parameters_file: Path
     history_file: Path
     secrets_file: Path
+    media_dir: Path
     request_timeout: float
     history_limit: int
+    media_limit: int
 
     @classmethod
     def from_env(cls) -> "Config":
@@ -66,6 +68,8 @@ class Config:
             parameters_file=_env_path("APP_PARAMETERS_FILE", APP_DIR / "data" / "parameters.json"),
             history_file=_env_path("APP_HISTORY_FILE", var_dir / "history.jsonl"),
             secrets_file=_env_path("APP_SECRETS_FILE", var_dir / "secrets.env"),
+            media_dir=_env_path("APP_MEDIA_DIR", var_dir / "media"),
             request_timeout=_env_float("APP_REQUEST_TIMEOUT", 600.0),
             history_limit=_env_int("APP_HISTORY_LIMIT", 500),
+            media_limit=_env_int("APP_MEDIA_LIMIT", 50),
         )

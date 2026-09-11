@@ -5,7 +5,7 @@ description: Build React + Node.js frontend screens using the repository's image
 
 # Frontend template
 
-Use the template as a React + Vite browser baseline with a small Node.js API placeholder. Keep presentation in `src/styles`, reusable UI in `src/components`, auth/admin/workbench behavior in `src/features`, sample or API-shaped data in `src/data`, external calls in `src/services`, and display-only pure functions in `src/utils`.
+Use the template as a React + Vite browser baseline with a small Node.js API placeholder. Keep presentation in `src/styles`, reusable UI in `src/components`, auth/admin/workbench behavior in `src/features`, sample or API-shaped data in `src/data`, external calls in `src/services`, and display-only pure functions in `src/utils`. The API adapter follows the PC workbench contract and can be enabled with `MODEL_TEST_API_BASE`.
 
 ## Visual language
 
@@ -36,6 +36,14 @@ Use React state/context for local UI state. Replace `src/services/modelService.j
 The auth example has `admin`, `operator`, and `viewer` roles with per-menu `read/manage` permissions. Client-side checks only hide or disable UI; every Node API route must enforce the same permission server-side. Never ship the demo credentials or in-memory policy to production.
 
 `@vitejs/plugin-react` must stay in `devDependencies` and in `vite.config.js` — without it the JSX build fails at runtime with `React is not defined`.
+
+## Workbench boundary
+
+For model workbenches, use a context for model/provider/modality selection,
+parameter schemas, streaming state, cancellation, saved runs, and comparison.
+Keep document parsing and media generation optional until the backend exposes
+the matching contracts. Do not replace a local-serving lifecycle with a
+provider-only flow.
 
 ## Check
 

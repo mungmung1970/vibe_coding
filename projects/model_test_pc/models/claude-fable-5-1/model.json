@@ -1,0 +1,27 @@
+{
+  "id": "claude-fable-5-1",
+  "name": "Claude Fable 5.1",
+  "provider": "Anthropic",
+  "provider_type": "anthropic",
+  "base_url": "https://api.anthropic.com/v1",
+  "remote_model": "claude-fable-5-1",
+  "api_key_env": "ANTHROPIC_API_KEY",
+  "description": "Anthropic 최상위 모델. 사고가 항상 켜져 있어 temperature/top_p를 받지 않는다.",
+  "modality": "LLM",
+  "capabilities": [
+    "chat",
+    "reasoning"
+  ],
+  "context_length": 1000000,
+  "unsupported_fields": [
+    "temperature",
+    "top_p",
+    "top_k"
+  ],
+  "parameter_overrides": {
+    "max_tokens": {
+      "default": 8192,
+      "max": 128000
+    }
+  }
+}

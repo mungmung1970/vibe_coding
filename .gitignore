@@ -3,6 +3,7 @@
 .env.*
 !.env.example
 !**/.env.example
+*.env
 **/secrets.env
 
 # Native infrastructure build sources and downloaded archives

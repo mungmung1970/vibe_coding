@@ -6,7 +6,6 @@ import SideSection from './SideSection.jsx';
 export default function HistorySidebar() {
   const { models, runs, runsFilter, setRunsFilter, loadRuns } = useWorkbench();
   const { selectedRunIds, hiddenRunIds, toggleSelection, showAllRuns, openContextMenu } = useHistory();
-  const visible = runs.filter((run) => !hiddenRunIds.includes(run.id));
   const update = (key) => (event) => setRunsFilter({ ...runsFilter, [key]: event.target.value });
 
   return (
@@ -37,12 +36,14 @@ export default function HistorySidebar() {
         </div>
       </SideSection>
 
+      {/* 리스트는 숨긴 항목까지 전부 남긴다. 지우는 건 삭제뿐이다. */}
       <SideSection title="리스트" className="side-list">
-        {visible.length === 0 ? <p className="side-note">조회된 결과가 없습니다.</p> : visible.map((run) => (
+        {runs.length === 0 ? <p className="side-note">조회된 결과가 없습니다.</p> : runs.map((run) => (
           <button
             key={run.id}
             type="button"
-            className={`list-item ${selectedRunIds.includes(run.id) ? 'is-selected' : ''}`}
+            className={`list-item ${selectedRunIds.includes(run.id) ? 'is-selected' : ''} ${hiddenRunIds.includes(run.id) ? 'is-hidden-run' : ''}`}
+            title={hiddenRunIds.includes(run.id) ? '화면에서 숨김 · 누르면 다시 표시' : run.prompt}
             onClick={() => toggleSelection(run.id)}
             onContextMenu={(event) => {
               event.preventDefault();

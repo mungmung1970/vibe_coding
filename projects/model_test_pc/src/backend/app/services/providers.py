@@ -44,6 +44,55 @@ def _iter_sse(response) -> Iterator[dict]:
             logger.warning("dropping malformed stream chunk: %s", data[:200])
 
 
+def api_key(model: Model) -> str | None:
+    """모델이 키를 요구하면 비밀값을 꺼낸다. 없으면 무엇이 빠졌는지 알려 준다."""
+    if not model.api_key_env:
+        return None
+    key = get_secret(model.api_key_env)
+    if not key:
+        raise ApiError(
+            400,
+            "api_key_missing",
+            f"'{model.id}'에 필요한 API 키({model.api_key_env})가 설정되어 있지 않습니다. "
+            "var/secrets.env를 확인해 주세요.",
+        )
+    return key
+
+
+def auth_headers(model: Model) -> dict:
+    key = api_key(model)
+    if not key:
+        return {}
+    if model.provider_type == "anthropic":
+        return {"x-api-key": key, "anthropic-version": ANTHROPIC_VERSION}
+    return {"Authorization": f"Bearer {key}"}
+
+
+def request_bytes(
+    config: Config,
+    model: Model,
+    url: str,
+    *,
+    data: bytes | None = None,
+    headers: dict | None = None,
+    method: str = "POST",
+) -> bytes:
+    """채팅이 아닌 호출(음성·영상)이 쓰는 단발 요청. 오류 변환을 한곳에 모은다."""
+    request = urllib.request.Request(url, data=data, headers=headers or {}, method=method)
+    try:
+        with urllib.request.urlopen(request, timeout=config.request_timeout) as response:
+            return response.read()
+    except urllib.error.HTTPError as exc:
+        detail = scrub(exc.read().decode("utf-8", errors="replace")[:500])
+        raise ApiError(502, "provider_error", f"'{model.id}' 호출이 거부되었습니다: {detail}") from exc
+    except (urllib.error.URLError, TimeoutError, OSError) as exc:
+        raise ApiError(
+            504,
+            "provider_unreachable",
+            f"'{model.id}' 엔드포인트({model.base_url})에 연결할 수 없습니다: {exc}",
+        ) from exc
+
+
 class Provider:
     """모델 하나를 호출하는 방법. 프로세스도 수명주기도 없다."""
 
@@ -79,17 +128,7 @@ class Provider:
             ) from exc
 
     def _key(self) -> str | None:
-        if not self.model.api_key_env:
-            return None
-        key = get_secret(self.model.api_key_env)
-        if not key:
-            raise ApiError(
-                400,
-                "api_key_missing",
-                f"'{self.model.id}'에 필요한 API 키({self.model.api_key_env})가 설정되어 있지 않습니다. "
-                "var/secrets.env를 확인해 주세요.",
-            )
-        return key
+        return api_key(self.model)
 
 
 class OpenAICompatibleProvider(Provider):
@@ -105,16 +144,21 @@ class OpenAICompatibleProvider(Provider):
         body.update({
             "model": self.model.remote_model or self.model.id,
             "messages": payload["messages"],
-            "stream": True,
-            "stream_options": {"include_usage": True},
+            "stream": bool(payload.get("stream", True)),
         })
+        if body["stream"]:
+            body["stream_options"] = {"include_usage": True}
         effort = payload.get("chat_template_kwargs", {}).get("reasoning_effort")
         if effort:
             body["reasoning_effort"] = effort
 
         key = self._key()
         headers = {"Authorization": f"Bearer {key}"} if key else {}
-        yield from _iter_sse(self._post(f"{self.model.base_url}/chat/completions", body, headers))
+        response = self._post(f"{self.model.base_url}/chat/completions", body, headers)
+        if body["stream"]:
+            yield from _iter_sse(response)
+        else:
+            yield json.loads(b"".join(response))
 
 
 class AnthropicProvider(Provider):
