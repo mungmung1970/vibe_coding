@@ -41,6 +41,10 @@ node_modules/
 **/output/
 **/*.log
 
+# mockup_surrodocs 파이프라인 산출물 (PDF 판독 결과·엑셀·문서·페이지 이미지는 재생성된다)
+projects/mockup_surrodocs/out/
+projects/mockup_surrodocs/out_*/
+
 # Generated test reports
 projects/tmax_mcp/*_result.md
 

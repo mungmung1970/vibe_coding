@@ -27,6 +27,7 @@ formats.js
 | `complex.js` | 복합 구조 문서(3단 목차·병합·중첩표) HWPX |
 | `main.js` | 문서 유형 탭, 매핑 모달 |
 | `selfcheck.js` | `node selfcheck.js` — 3종 생성 + 구조 검증 |
+| `pipeline/` | 스캔 PDF 양식 → 엑셀 → DOCX/HWPX 재생성 (`pipeline/README.md`) |
 
 ## 문서 3종
 
