@@ -4,7 +4,7 @@
 
 ```sh
 npm install
-npm run dev       # React 개발 서버 (5173, /api는 3000으로 프록시)
+npm run dev       # React 개발 서버 (5173, /api는 8080으로 프록시)
 npm run server    # Node API placeholder (:3000)
 npm run build     # dist/ 생성
 sh tests/smoke.sh # 구성 확인 + 빌드
@@ -48,6 +48,6 @@ src/
 
 문서 첨부와 STT/TTS 같은 미디어 기능은 백엔드가 해당 라우트를 구현한 프로젝트에서만 서비스 어댑터와 UI를 함께 활성화합니다. 로컬 vLLM 프로젝트의 서빙 상태는 별도 상태 경계로 유지합니다.
 
-로그인 데모 계정은 `admin@example.com / admin`입니다. 프론트의 메뉴 권한은 UX 제어일 뿐이므로, `server/index.js`에 세션과 RBAC 검증을 반드시 다시 구현해야 합니다.
+로그인 데모 계정은 `admin@example.com / admin`입니다. 역할은 `admin`, `operator`, `viewer`이며 관리자 메뉴는 권한에 따라 표시됩니다. 이 인증과 `server/index.js`는 템플릿 예시일 뿐이므로, 실제 프로젝트에서는 서버 세션과 RBAC 검증으로 교체해야 합니다.
 
 **주의**: `@vitejs/plugin-react`가 없으면 JSX가 자동 런타임으로 변환되지 않아 빌드 산출물이 `React is not defined`로 죽습니다. `vite.config.js`의 `plugins: [react()]`를 지우지 마세요. 스모크 테스트가 이 조건을 확인합니다.

@@ -1,0 +1,20 @@
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
+
+const source = '물질개념_사전_G램프_L미러_v2.json';
+const sourceOutput = 'src/data/knowledge-graph';
+const runtimeOutput = 'public/data/knowledge-graph';
+const data = JSON.parse(await readFile(source, 'utf8'));
+const stamp = new Date().toISOString();
+const baselineUpdatedAt = '2026-09-14T00:00:00.000Z';
+const nodeGroup = (node) => ['product_type', 'part', 'component', 'domain', 'process'].includes(node.node_type) ? 'structure' : ['concept', 'reference_material'].includes(node.node_type) ? 'materials' : ['label', 'surface_form', 'identifier', 'qualifier', 'spec_code'].includes(node.node_type) ? 'terminology' : 'other';
+const edgeGroup = (edge) => ['HAS_PART', 'HAS_COMPONENT', 'COMPOSED_OF', 'USED_IN_PROCESS'].includes(edge.edge_type) ? 'structure' : edge.edge_type === 'BRIDGES_TO' ? 'reference-mappings' : ['HAS_LABEL', 'HAS_SURFACE_FORM', 'HAS_IDENTIFIER', 'HAS_QUALIFIER', 'HAS_SPEC_CODE'].includes(edge.edge_type) ? 'terminology' : 'materials';
+const groupBy = (items, key) => items.reduce((groups, item) => { const group = key(item); (groups[group] ||= []).push({ ...item, revision: item.revision || 1, updated_at: item.updated_at || baselineUpdatedAt }); return groups; }, {});
+const nodes = groupBy(data.nodes, nodeGroup); const edges = groupBy(data.edges, edgeGroup);
+const save = async (file, value) => Promise.all([sourceOutput, runtimeOutput].map(async (root) => { const path = join(root, file); await mkdir(dirname(path), { recursive: true }); await writeFile(path, `${JSON.stringify(value, null, 2)}\n`, 'utf8'); }));
+const nodeFiles = Object.keys(nodes).map((name) => `nodes/${name}.json`); const edgeFiles = Object.keys(edges).map((name) => `edges/${name}.json`);
+await Promise.all([...Object.entries(nodes).map(([name, items]) => save(`nodes/${name}.json`, items)), ...Object.entries(edges).map(([name, items]) => save(`edges/${name}.json`, items))]);
+const manifest = { schema_version: 'knowledge-graph-v3', data_version: '1.0.0', generated_at: stamp, node_files: nodeFiles, edge_files: edgeFiles, versioning: { item_revision_field: 'revision', item_timestamp_field: 'updated_at', audit_store: 'browser localStorage / entity-resolution-history', production_note: '공유 버전관리는 API와 DB 변경이 필요합니다.' } };
+await save('manifest.json', manifest);
+await save('versions/baseline.json', { version: '1.0.0', created_at: stamp, change_type: 'baseline-split', source_file: source, nodes: data.nodes.length, edges: data.edges.length, note: '단일 JSON을 유형별 JSON 파일로 분리한 초기 기준 버전입니다.' });
+console.log(`Split ${data.nodes.length} nodes and ${data.edges.length} edges into source and runtime data folders.`);

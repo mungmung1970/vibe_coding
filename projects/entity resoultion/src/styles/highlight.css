@@ -1,0 +1,7 @@
+.node.related rect { stroke: #f97316; stroke-width: 2.5; }
+.node.selected rect { stroke: #e85d2c; stroke-width: 3; }
+.node.muted { opacity: .22; }
+.edge.related { stroke: #e85d2c; stroke-width: 2.5; }
+.edge.muted { opacity: .14; }
+.edges:has(.edge.muted) text { opacity: .32; }
+.dot.part, .dot.component, .dot.concept, .dot.label, .dot.surface_form, .dot.process { background: #8b95a5; }

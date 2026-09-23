@@ -1,0 +1,2996 @@
+[
+  {
+    "node_id": "REF:pc_granulate",
+    "node_type": "reference_material",
+    "name": "polycarbonate, granulate",
+    "props": {
+      "ref_id": "6829",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polycarbonate, granulate은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "polycarbonate production",
+      "lci_ref_name": "polycarbonate production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pp_granulate",
+    "node_type": "reference_material",
+    "name": "polypropylene, granulate",
+    "props": {
+      "ref_id": "6857",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polypropylene, granulate은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "polypropylene production, granulate",
+      "lci_ref_name": "polypropylene production, granulate",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:abs_granulate",
+    "node_type": "reference_material",
+    "name": "acrylonitrile-butadiene-styrene copolymer",
+    "props": {
+      "ref_id": "69",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "acrylonitrile-butadiene-styrene copolymer은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "lci_ref_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pa66_granulate",
+    "node_type": "reference_material",
+    "name": "nylon 6-6",
+    "props": {
+      "ref_id": "6523",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "nylon 6-6은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "nylon 6-6 production",
+      "lci_ref_name": "nylon 6-6 production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pa6_granulate",
+    "node_type": "reference_material",
+    "name": "nylon 6",
+    "props": {
+      "ref_id": "6521",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "nylon 6은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "nylon 6 production",
+      "lci_ref_name": "nylon 6 production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pom_granulate",
+    "node_type": "reference_material",
+    "name": "polyoxymethylene",
+    "props": {
+      "ref_id": null,
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polyoxymethylene은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pbt_granulate",
+    "node_type": "reference_material",
+    "name": "polybutylene terephthalate, granulate",
+    "props": {
+      "ref_id": null,
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polybutylene terephthalate, granulate은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pet_granulate",
+    "node_type": "reference_material",
+    "name": "polyethylene terephthalate, granulate, amorphous",
+    "props": {
+      "ref_id": "6845",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polyethylene terephthalate, granulate, amorphous은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "polyethylene terephthalate production, granulate, amorphous",
+      "lci_ref_name": "polyethylene terephthalate production, granulate, amorphous",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pvc_bulk",
+    "node_type": "reference_material",
+    "name": "polyvinylchloride, bulk polymerised",
+    "props": {
+      "ref_id": "6879",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polyvinylchloride, bulk polymerised은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "polyvinylchloride production, bulk polymerisation",
+      "lci_ref_name": "polyvinylchloride production, bulk polymerisation",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:glass_fibre",
+    "node_type": "reference_material",
+    "name": "glass fibre",
+    "props": {
+      "ref_id": "1501",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "glass fibre은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "glass fibre production",
+      "lci_ref_name": "glass fibre production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:talc",
+    "node_type": "reference_material",
+    "name": "talc",
+    "props": {
+      "ref_id": null,
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "talc은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:al_cast_alloy",
+    "node_type": "reference_material",
+    "name": "aluminium, cast alloy",
+    "props": {
+      "ref_id": "117",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "aluminium, cast alloy은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "aluminium alloy production, AlLi",
+      "lci_ref_name": "aluminium alloy production, AlLi",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:al_primary",
+    "node_type": "reference_material",
+    "name": "aluminium, primary, ingot",
+    "props": {
+      "ref_id": "145",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "aluminium, primary, ingot은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "aluminium production, primary, ingot",
+      "lci_ref_name": "aluminium production, primary, ingot",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:silicon_met",
+    "node_type": "reference_material",
+    "name": "silicon, metallurgical grade",
+    "props": {
+      "ref_id": "7166",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "silicon, metallurgical grade은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "silicon production, metallurgical grade",
+      "lci_ref_name": "silicon production, metallurgical grade",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:copper_cathode",
+    "node_type": "reference_material",
+    "name": "copper, cathode",
+    "props": {
+      "ref_id": "820",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "copper, cathode은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "copper production, cathode, solvent extraction and electrowinning process",
+      "lci_ref_name": "copper production, cathode, solvent extraction and electrowinning process",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:zinc",
+    "node_type": "reference_material",
+    "name": "zinc",
+    "props": {
+      "ref_id": "6937",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "zinc은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "primary zinc production from concentrate",
+      "lci_ref_name": "primary zinc production from concentrate",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:magnesium",
+    "node_type": "reference_material",
+    "name": "magnesium",
+    "props": {
+      "ref_id": "2087",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "magnesium은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "magnesium oxide production",
+      "lci_ref_name": "magnesium oxide production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:manganese",
+    "node_type": "reference_material",
+    "name": "manganese",
+    "props": {
+      "ref_id": "2169",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "manganese은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "manganese concentrate production",
+      "lci_ref_name": "manganese concentrate production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pig_iron",
+    "node_type": "reference_material",
+    "name": "pig iron",
+    "props": {
+      "ref_id": "6762",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "pig iron은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "pig iron production",
+      "lci_ref_name": "pig iron production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:steel_unalloyed",
+    "node_type": "reference_material",
+    "name": "steel, unalloyed",
+    "props": {
+      "ref_id": "7311",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "steel, unalloyed은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "steel production, converter, unalloyed",
+      "lci_ref_name": "steel production, converter, unalloyed",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:steel_low_alloyed",
+    "node_type": "reference_material",
+    "name": "steel, low-alloyed",
+    "props": {
+      "ref_id": "7310",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "steel, low-alloyed은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "steel production, converter, low-alloyed",
+      "lci_ref_name": "steel production, converter, low-alloyed",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:steel_cold_rolled",
+    "node_type": "reference_material",
+    "name": "steel, low-alloyed, hot rolled",
+    "props": {
+      "ref_id": "7314",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "steel, low-alloyed, hot rolled은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "steel production, low-alloyed, hot rolled",
+      "lci_ref_name": "steel production, low-alloyed, hot rolled",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:flat_glass",
+    "node_type": "reference_material",
+    "name": "flat glass, uncoated",
+    "props": {
+      "ref_id": "1396",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "flat glass, uncoated은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "flat glass production, coated",
+      "lci_ref_name": "flat glass production, coated",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:epoxy_resin",
+    "node_type": "reference_material",
+    "name": "epoxy resin, liquid",
+    "props": {
+      "ref_id": "1233",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "epoxy resin, liquid은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "epoxy resin production, liquid",
+      "lci_ref_name": "epoxy resin production, liquid",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:silicone",
+    "node_type": "reference_material",
+    "name": "silicone product",
+    "props": {
+      "ref_id": "7174",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "silicone product은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "silicone product production",
+      "lci_ref_name": "silicone product production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:ndfeb_magnet",
+    "node_type": "reference_material",
+    "name": "permanent magnet, neodymium-iron-boron",
+    "props": {
+      "ref_id": null,
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "permanent magnet, neodymium-iron-boron은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:pu_paint",
+    "node_type": "reference_material",
+    "name": "polyurethane paint",
+    "props": {
+      "ref_id": null,
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "polyurethane paint은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "REF:adhesive_metal",
+    "node_type": "reference_material",
+    "name": "adhesive, for metal",
+    "props": {
+      "ref_id": "74",
+      "unit": "kg",
+      "note": "ref_id 하위의 지역·연도별 lci_ref_id는 별도 로직",
+      "description": "adhesive, for metal은(는) 외부 LCI 또는 참조 데이터셋에서 사용하는 기준 재질 항목입니다. 실제 물질개념과 연결해 환경영향 데이터 매칭 후보로 사용합니다.",
+      "detail_schema": "entity-detail-v1",
+      "lci_db_name": "adhesive production, for metal",
+      "lci_ref_name": "adhesive production, for metal",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pc",
+    "node_type": "concept",
+    "name": "폴리카보네이트",
+    "props": {
+      "name_en": "Polycarbonate",
+      "pref_name": "폴리카보네이트",
+      "english_name": "Polycarbonate",
+      "abbreviations": [
+        "PC"
+      ],
+      "alternative_names": [
+        "비스페놀A 폴리카보네이트",
+        "폴리카"
+      ],
+      "trade_names": [
+        "Lexan",
+        "Makrolon",
+        "Panlite",
+        "Iupilon",
+        "LUPOY 1201-10",
+        "MT-PC-001"
+      ],
+      "translations": [
+        "ポリカーボネート"
+      ],
+      "identifiers": [
+        "25037-45-0",
+        "607-635-7"
+      ],
+      "qualifiers": [
+        "광학등급(optical grade)",
+        "UV 안정화",
+        "난연 UL94 V-0",
+        "펠릿"
+      ],
+      "specifications": [
+        "PC",
+        "5.1.1"
+      ],
+      "description": "비스페놀A 기반 열가소성 엔지니어링 플라스틱. 투명성과 내충격성이 높아 헤드램프 렌즈와 리플렉터 기재로 사용된다.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리염화비닐"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "25037-45-0",
+      "ec_number": "607-635-7",
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polycarbonate, granulate",
+          "lci_db_name": "polycarbonate production",
+          "ref_id": "6829",
+          "lci_ref_name": "polycarbonate production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.98
+        }
+      ],
+      "lci_db_name": "polycarbonate production",
+      "lci_ref_id": "6829",
+      "lci_reference_material_name": "polycarbonate, granulate"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pp",
+    "node_type": "concept",
+    "name": "폴리프로필렌",
+    "props": {
+      "name_en": "Polypropylene",
+      "pref_name": "폴리프로필렌",
+      "english_name": "Polypropylene",
+      "abbreviations": [
+        "PP"
+      ],
+      "alternative_names": [
+        "프로필렌 중합체",
+        "폴리프로필렌 수지"
+      ],
+      "trade_names": [
+        "SEETEC M1600",
+        "MT-PP-T20"
+      ],
+      "translations": [
+        "ポリプロピレン"
+      ],
+      "identifiers": [
+        "9003-07-0"
+      ],
+      "qualifiers": [
+        "탈크 20% (PP-T20)",
+        "유리섬유 20% (PP-GF20)",
+        "내충격 공중합(block copolymer)",
+        "펠릿"
+      ],
+      "specifications": [
+        "PP",
+        "PP-T20",
+        "5.1.2"
+      ],
+      "description": "범용 열가소성 폴리올레핀. 램프 하우징에는 탈크 20% 충전 그레이드를 써서 치수안정성을 확보한다.",
+      "broader_terms": [
+        "폴리올레핀"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리옥시메틸렌"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "9003-07-0",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polypropylene, granulate",
+          "lci_db_name": "polypropylene production, granulate",
+          "ref_id": "6857",
+          "lci_ref_name": "polypropylene production, granulate",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.88
+        }
+      ],
+      "lci_db_name": "polypropylene production, granulate",
+      "lci_ref_id": "6857",
+      "lci_reference_material_name": "polypropylene, granulate"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:talc",
+    "node_type": "concept",
+    "name": "탈크",
+    "props": {
+      "name_en": "Talc",
+      "pref_name": "탈크",
+      "english_name": "Talc",
+      "abbreviations": [],
+      "alternative_names": [
+        "활석",
+        "탈크 분말"
+      ],
+      "trade_names": [],
+      "translations": [
+        "タルク"
+      ],
+      "identifiers": [
+        "14807-96-6",
+        "238-877-9"
+      ],
+      "qualifiers": [
+        "분말",
+        "평균입경 5 µm"
+      ],
+      "specifications": [],
+      "description": "함수 규산마그네슘 광물. 폴리프로필렌의 강성·내열성 향상을 위한 충전재로 사용된다.",
+      "broader_terms": [
+        "광물 충전재"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "규소"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "14807-96-6",
+      "ec_number": "238-877-9",
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "talc",
+          "lci_db_name": null,
+          "ref_id": null,
+          "lci_ref_name": null,
+          "lci_mapping_priority": "매핑 후보 없음",
+          "match_type": "정확",
+          "confidence": 0.97
+        }
+      ],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": "talc"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:abs",
+    "node_type": "concept",
+    "name": "아크릴로니트릴-부타디엔-스티렌 공중합체",
+    "props": {
+      "name_en": "Acrylonitrile Butadiene Styrene",
+      "pref_name": "아크릴로니트릴-부타디엔-스티렌 공중합체",
+      "english_name": "Acrylonitrile Butadiene Styrene",
+      "abbreviations": [
+        "ABS"
+      ],
+      "alternative_names": [
+        "아크릴로니트릴 부타디엔 스티렌",
+        "ABS 수지"
+      ],
+      "trade_names": [
+        "Cycolac",
+        "Toyolac",
+        "TERLURAN GP-22",
+        "MT-ABS-001"
+      ],
+      "translations": [
+        "ABS樹脂"
+      ],
+      "identifiers": [
+        "9003-56-9"
+      ],
+      "qualifiers": [
+        "도장용 그레이드",
+        "내열 그레이드",
+        "펠릿"
+      ],
+      "specifications": [
+        "ABS",
+        "5.1.3"
+      ],
+      "description": "스티렌계 3원 공중합체. 도장 밀착성이 좋아 램프 베젤·미러 커버에 사용된다.",
+      "broader_terms": [
+        "스티렌계 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "아크릴로니트릴-스티렌-아크릴레이트 공중합체"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "9003-56-9",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "acrylonitrile-butadiene-styrene copolymer",
+          "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+          "ref_id": "69",
+          "lci_ref_name": "acrylonitrile-butadiene-styrene copolymer production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.97
+        }
+      ],
+      "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "lci_ref_id": "69",
+      "lci_reference_material_name": "acrylonitrile-butadiene-styrene copolymer"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:asa",
+    "node_type": "concept",
+    "name": "아크릴로니트릴-스티렌-아크릴레이트 공중합체",
+    "props": {
+      "name_en": "Acrylonitrile Styrene Acrylate",
+      "pref_name": "아크릴로니트릴-스티렌-아크릴레이트 공중합체",
+      "english_name": "Acrylonitrile Styrene Acrylate",
+      "abbreviations": [
+        "ASA"
+      ],
+      "alternative_names": [
+        "아크릴로니트릴 스티렌 아크릴레이트",
+        "ASA 수지"
+      ],
+      "trade_names": [
+        "Luran S",
+        "Geloy",
+        "MT-ASA-001"
+      ],
+      "translations": [],
+      "identifiers": [
+        "26299-47-8"
+      ],
+      "qualifiers": [
+        "내후성 그레이드",
+        "펠릿"
+      ],
+      "specifications": [
+        "ASA",
+        "5.1.4"
+      ],
+      "description": "ABS의 부타디엔 상을 아크릴레이트로 대체한 내후성 수지. 무도장 외장 미러 커버에 사용된다.",
+      "broader_terms": [
+        "스티렌계 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "아크릴로니트릴-부타디엔-스티렌 공중합체"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "26299-47-8",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "acrylonitrile-butadiene-styrene copolymer",
+          "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+          "ref_id": "69",
+          "lci_ref_name": "acrylonitrile-butadiene-styrene copolymer production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "프록시",
+          "confidence": 0.62
+        }
+      ],
+      "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "lci_ref_id": "69",
+      "lci_reference_material_name": "acrylonitrile-butadiene-styrene copolymer"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pa66",
+    "node_type": "concept",
+    "name": "폴리아미드 66",
+    "props": {
+      "name_en": "Polyamide 66",
+      "pref_name": "폴리아미드 66",
+      "english_name": "Polyamide 66",
+      "abbreviations": [
+        "PA66"
+      ],
+      "alternative_names": [
+        "나일론 66"
+      ],
+      "trade_names": [
+        "Zytel",
+        "Ultramid A",
+        "Leona",
+        "Zytel 70G30HSLR",
+        "MT-PA66-GF30"
+      ],
+      "translations": [
+        "ナイロン66"
+      ],
+      "identifiers": [
+        "32131-17-2"
+      ],
+      "qualifiers": [
+        "유리섬유 30% (PA66-GF30)",
+        "내열안정화",
+        "펠릿"
+      ],
+      "specifications": [
+        "PA66",
+        "PA66-GF30",
+        "5.1.5"
+      ],
+      "description": "헥사메틸렌디아민과 아디프산 기반 폴리아미드. GF30 강화 그레이드가 커넥터와 미러 브라켓에 쓰인다.",
+      "broader_terms": [
+        "폴리아미드"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리아미드 6"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "32131-17-2",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "nylon 6-6",
+          "lci_db_name": "nylon 6-6 production",
+          "ref_id": "6523",
+          "lci_ref_name": "nylon 6-6 production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.9
+        }
+      ],
+      "lci_db_name": "nylon 6-6 production",
+      "lci_ref_id": "6523",
+      "lci_reference_material_name": "nylon 6-6"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pa6",
+    "node_type": "concept",
+    "name": "폴리아미드 6",
+    "props": {
+      "name_en": "Polyamide 6",
+      "pref_name": "폴리아미드 6",
+      "english_name": "Polyamide 6",
+      "abbreviations": [
+        "PA6"
+      ],
+      "alternative_names": [
+        "나일론 6"
+      ],
+      "trade_names": [
+        "Ultramid B",
+        "Amilan"
+      ],
+      "translations": [
+        "ナイロン6"
+      ],
+      "identifiers": [
+        "25038-54-4"
+      ],
+      "qualifiers": [
+        "유리섬유 30%"
+      ],
+      "specifications": [
+        "PA6"
+      ],
+      "description": "카프로락탐 개환중합 폴리아미드. PA66 대비 흡습률이 높고 내열성이 낮다.",
+      "broader_terms": [
+        "폴리아미드"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리아미드 66"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "25038-54-4",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "nylon 6",
+          "lci_db_name": "nylon 6 production",
+          "ref_id": "6521",
+          "lci_ref_name": "nylon 6 production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.96
+        }
+      ],
+      "lci_db_name": "nylon 6 production",
+      "lci_ref_id": "6521",
+      "lci_reference_material_name": "nylon 6"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:gf",
+    "node_type": "concept",
+    "name": "유리섬유",
+    "props": {
+      "name_en": "Glass fibre",
+      "pref_name": "유리섬유",
+      "english_name": "Glass fibre",
+      "abbreviations": [
+        "GF"
+      ],
+      "alternative_names": [
+        "글라스파이버",
+        "글파"
+      ],
+      "trade_names": [],
+      "translations": [
+        "ガラス繊維"
+      ],
+      "identifiers": [
+        "65997-17-3"
+      ],
+      "qualifiers": [
+        "E-glass 촙 스트랜드",
+        "촙 스트랜드"
+      ],
+      "specifications": [
+        "GF"
+      ],
+      "description": "E-glass 계열 강화재. 수지 그레이드 표기(-GF30 등)의 실체이며 별도 참조물질로 분해 계상한다.",
+      "broader_terms": [
+        "유리소재"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "65997-17-3",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "glass fibre",
+          "lci_db_name": "glass fibre production",
+          "ref_id": "1501",
+          "lci_ref_name": "glass fibre production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.95
+        }
+      ],
+      "lci_db_name": "glass fibre production",
+      "lci_ref_id": "1501",
+      "lci_reference_material_name": "glass fibre"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:aldc12_1",
+    "node_type": "concept",
+    "name": "알루미늄 다이캐스팅 합금 ALDC12.1",
+    "props": {
+      "name_en": "Aluminium die casting alloy ALDC12.1",
+      "pref_name": "알루미늄 다이캐스팅 합금 ALDC12.1",
+      "english_name": "Aluminium die casting alloy ALDC12.1",
+      "abbreviations": [
+        "ALDC12.1"
+      ],
+      "alternative_names": [
+        "ADC12",
+        "A383",
+        "AC-46000",
+        "다이캐스팅 알루미늄",
+        "알루미늄 다이캐스팅"
+      ],
+      "trade_names": [
+        "ALDC12.1 INGOT",
+        "MT-ALDC-121"
+      ],
+      "translations": [
+        "アルミダイカスト ADC12"
+      ],
+      "identifiers": [],
+      "qualifiers": [
+        "Si 9.6~12.0%",
+        "Cu 1.5~3.5%",
+        "잉곳",
+        "재생지금 혼입률 미지정"
+      ],
+      "specifications": [
+        "KS D 6006 ALDC12.1",
+        "JIS H 5302 ADC12",
+        "ASTM B85 A383",
+        "EN 1706 AC-46000"
+      ],
+      "description": "Al-Si-Cu계 다이캐스팅 합금. 유동성과 열전도가 좋아 LED 헤드램프 히트싱크의 표준 소재다. 국가별 규격이 상호대응하므로 같은 개념으로 수렴시킨다.",
+      "broader_terms": [
+        "주조용 알루미늄 합금"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "알루미늄"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "aluminium, cast alloy",
+          "lci_db_name": "aluminium alloy production, AlLi",
+          "ref_id": "117",
+          "lci_ref_name": "aluminium alloy production, AlLi",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.94
+        }
+      ],
+      "lci_db_name": "aluminium alloy production, AlLi",
+      "lci_ref_id": "117",
+      "lci_reference_material_name": "aluminium, cast alloy"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:al",
+    "node_type": "concept",
+    "name": "알루미늄",
+    "props": {
+      "name_en": "Aluminium",
+      "pref_name": "알루미늄",
+      "english_name": "Aluminium",
+      "abbreviations": [
+        "Al"
+      ],
+      "alternative_names": [
+        "알루미늄 지금",
+        "알루미"
+      ],
+      "trade_names": [
+        "MT-AL-9999"
+      ],
+      "translations": [
+        "アルミニウム"
+      ],
+      "identifiers": [
+        "7429-90-5",
+        "231-072-3"
+      ],
+      "qualifiers": [
+        "99.99% (증착용 고순도)",
+        "와이어",
+        "잉곳"
+      ],
+      "specifications": [],
+      "description": "리플렉터·미러글라스 반사막의 진공증착 원소재이자 ALDC12.1의 주성분.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [
+        "주조용 알루미늄 합금"
+      ],
+      "confusing_with": [
+        "알루미늄 다이캐스팅 합금 ALDC12.1"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7429-90-5",
+      "ec_number": "231-072-3",
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "aluminium, primary, ingot",
+          "lci_db_name": "aluminium production, primary, ingot",
+          "ref_id": "145",
+          "lci_ref_name": "aluminium production, primary, ingot",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.96
+        }
+      ],
+      "lci_db_name": "aluminium production, primary, ingot",
+      "lci_ref_id": "145",
+      "lci_reference_material_name": "aluminium, primary, ingot"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:si",
+    "node_type": "concept",
+    "name": "규소",
+    "props": {
+      "name_en": "Silicon",
+      "pref_name": "규소",
+      "english_name": "Silicon",
+      "abbreviations": [
+        "Si"
+      ],
+      "alternative_names": [
+        "실리콘(원소)",
+        "규소금속",
+        "실리콘 메탈",
+        "실리콘"
+      ],
+      "trade_names": [],
+      "translations": [
+        "ケイ素"
+      ],
+      "identifiers": [
+        "7440-21-3"
+      ],
+      "qualifiers": [
+        "야금급 98.5%"
+      ],
+      "specifications": [],
+      "description": "ALDC12.1의 주 합금원소. 한글 표기 '실리콘'이 실리콘 수지와 충돌하므로 혼동쌍으로 관리한다.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "실리콘 수지",
+        "탈크"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7440-21-3",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "silicon, metallurgical grade",
+          "lci_db_name": "silicon production, metallurgical grade",
+          "ref_id": "7166",
+          "lci_ref_name": "silicon production, metallurgical grade",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.93
+        }
+      ],
+      "lci_db_name": "silicon production, metallurgical grade",
+      "lci_ref_id": "7166",
+      "lci_reference_material_name": "silicon, metallurgical grade"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:cu",
+    "node_type": "concept",
+    "name": "구리",
+    "props": {
+      "name_en": "Copper",
+      "pref_name": "구리",
+      "english_name": "Copper",
+      "abbreviations": [
+        "Cu"
+      ],
+      "alternative_names": [
+        "동",
+        "순동",
+        "전기동"
+      ],
+      "trade_names": [],
+      "translations": [
+        "銅"
+      ],
+      "identifiers": [
+        "7440-50-8",
+        "231-159-6"
+      ],
+      "qualifiers": [
+        "99.99% 전기동",
+        "권선용 에나멜선"
+      ],
+      "specifications": [
+        "KS D 5101 C1100"
+      ],
+      "description": "미러 구동모터 권선, PCB 회로층, 와이어하니스 도체의 기본 금속.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7440-50-8",
+      "ec_number": "231-159-6",
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "copper, cathode",
+          "lci_db_name": "copper production, cathode, solvent extraction and electrowinning process",
+          "ref_id": "820",
+          "lci_ref_name": "copper production, cathode, solvent extraction and electrowinning process",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.97
+        }
+      ],
+      "lci_db_name": "copper production, cathode, solvent extraction and electrowinning process",
+      "lci_ref_id": "820",
+      "lci_reference_material_name": "copper, cathode"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:fe",
+    "node_type": "concept",
+    "name": "철",
+    "props": {
+      "name_en": "Iron",
+      "pref_name": "철",
+      "english_name": "Iron",
+      "abbreviations": [
+        "Fe"
+      ],
+      "alternative_names": [
+        "철분",
+        "스틸"
+      ],
+      "trade_names": [],
+      "translations": [
+        "鉄"
+      ],
+      "identifiers": [
+        "7439-89-6"
+      ],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "합금 불순물 및 강재의 기본 원소.",
+      "broader_terms": [
+        "철강재"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7439-89-6",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "pig iron",
+          "lci_db_name": "pig iron production",
+          "ref_id": "6762",
+          "lci_ref_name": "pig iron production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.8
+        }
+      ],
+      "lci_db_name": "pig iron production",
+      "lci_ref_id": "6762",
+      "lci_reference_material_name": "pig iron"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:zn",
+    "node_type": "concept",
+    "name": "아연",
+    "props": {
+      "name_en": "Zinc",
+      "pref_name": "아연",
+      "english_name": "Zinc",
+      "abbreviations": [
+        "Zn"
+      ],
+      "alternative_names": [
+        "징크",
+        "아연도금"
+      ],
+      "trade_names": [],
+      "translations": [
+        "亜鉛"
+      ],
+      "identifiers": [
+        "7440-66-6"
+      ],
+      "qualifiers": [
+        "도금층"
+      ],
+      "specifications": [],
+      "description": "체결부품 방청 도금층 및 ALDC12.1 미량 성분.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7440-66-6",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "zinc",
+          "lci_db_name": "primary zinc production from concentrate",
+          "ref_id": "6937",
+          "lci_ref_name": "primary zinc production from concentrate",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.95
+        }
+      ],
+      "lci_db_name": "primary zinc production from concentrate",
+      "lci_ref_id": "6937",
+      "lci_reference_material_name": "zinc"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:mg",
+    "node_type": "concept",
+    "name": "마그네슘",
+    "props": {
+      "name_en": "Magnesium",
+      "pref_name": "마그네슘",
+      "english_name": "Magnesium",
+      "abbreviations": [
+        "Mg"
+      ],
+      "alternative_names": [
+        "마그"
+      ],
+      "trade_names": [],
+      "translations": [
+        "マグネシウム"
+      ],
+      "identifiers": [
+        "7439-95-4"
+      ],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "ALDC12.1 미량 합금원소.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7439-95-4",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "magnesium",
+          "lci_db_name": "magnesium oxide production",
+          "ref_id": "2087",
+          "lci_ref_name": "magnesium oxide production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.94
+        }
+      ],
+      "lci_db_name": "magnesium oxide production",
+      "lci_ref_id": "2087",
+      "lci_reference_material_name": "magnesium"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:mn",
+    "node_type": "concept",
+    "name": "망간",
+    "props": {
+      "name_en": "Manganese",
+      "pref_name": "망간",
+      "english_name": "Manganese",
+      "abbreviations": [
+        "Mn"
+      ],
+      "alternative_names": [
+        "망가니즈"
+      ],
+      "trade_names": [],
+      "translations": [
+        "マンガン"
+      ],
+      "identifiers": [
+        "7439-96-5"
+      ],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "ALDC12.1 미량 합금원소. 대한화학회 표기는 '망가니즈'.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "7439-96-5",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "manganese",
+          "lci_db_name": "manganese concentrate production",
+          "ref_id": "2169",
+          "lci_ref_name": "manganese concentrate production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.94
+        }
+      ],
+      "lci_db_name": "manganese concentrate production",
+      "lci_ref_id": "2169",
+      "lci_reference_material_name": "manganese"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pom",
+    "node_type": "concept",
+    "name": "폴리옥시메틸렌",
+    "props": {
+      "name_en": "Polyoxymethylene",
+      "pref_name": "폴리옥시메틸렌",
+      "english_name": "Polyoxymethylene",
+      "abbreviations": [
+        "POM"
+      ],
+      "alternative_names": [
+        "아세탈 수지",
+        "폴리아세탈"
+      ],
+      "trade_names": [
+        "Delrin",
+        "Duracon",
+        "Iupital",
+        "MT-POM-001"
+      ],
+      "translations": [],
+      "identifiers": [
+        "9002-81-7"
+      ],
+      "qualifiers": [
+        "호모폴리머",
+        "코폴리머"
+      ],
+      "specifications": [
+        "POM"
+      ],
+      "description": "저마찰·고강성 엔지니어링 플라스틱. 미러 구동부 기어에 사용된다.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리프로필렌"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "9002-81-7",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polyoxymethylene",
+          "lci_db_name": null,
+          "ref_id": null,
+          "lci_ref_name": null,
+          "lci_mapping_priority": "매핑 후보 없음",
+          "match_type": "정확",
+          "confidence": 0.96
+        }
+      ],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": "polyoxymethylene"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pbt",
+    "node_type": "concept",
+    "name": "폴리부틸렌테레프탈레이트",
+    "props": {
+      "name_en": "Polybutylene terephthalate",
+      "pref_name": "폴리부틸렌테레프탈레이트",
+      "english_name": "Polybutylene terephthalate",
+      "abbreviations": [
+        "PBT"
+      ],
+      "alternative_names": [
+        "PBT 수지"
+      ],
+      "trade_names": [
+        "Valox",
+        "Ultradur"
+      ],
+      "translations": [],
+      "identifiers": [
+        "24968-12-5"
+      ],
+      "qualifiers": [
+        "유리섬유 30%"
+      ],
+      "specifications": [
+        "PBT"
+      ],
+      "description": "내열·치수안정성이 좋은 폴리에스터. 램프 소켓·커넥터 대체 후보 소재.",
+      "broader_terms": [
+        "폴리에스터계 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리에틸렌테레프탈레이트"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "24968-12-5",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polybutylene terephthalate, granulate",
+          "lci_db_name": null,
+          "ref_id": null,
+          "lci_ref_name": null,
+          "lci_mapping_priority": "매핑 후보 없음",
+          "match_type": "정확",
+          "confidence": 0.95
+        }
+      ],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": "polybutylene terephthalate, granulate"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pet",
+    "node_type": "concept",
+    "name": "폴리에틸렌테레프탈레이트",
+    "props": {
+      "name_en": "Polyethylene terephthalate",
+      "pref_name": "폴리에틸렌테레프탈레이트",
+      "english_name": "Polyethylene terephthalate",
+      "abbreviations": [
+        "PET"
+      ],
+      "alternative_names": [
+        "페트"
+      ],
+      "trade_names": [
+        "Mylar",
+        "Lumirror"
+      ],
+      "translations": [],
+      "identifiers": [
+        "25038-59-9"
+      ],
+      "qualifiers": [
+        "필름 0.1 mm"
+      ],
+      "specifications": [
+        "PET"
+      ],
+      "description": "미러 열선 필름의 기재 필름.",
+      "broader_terms": [
+        "폴리에스터계 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리부틸렌테레프탈레이트"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "25038-59-9",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polyethylene terephthalate, granulate, amorphous",
+          "lci_db_name": "polyethylene terephthalate production, granulate, amorphous",
+          "ref_id": "6845",
+          "lci_ref_name": "polyethylene terephthalate production, granulate, amorphous",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.85
+        }
+      ],
+      "lci_db_name": "polyethylene terephthalate production, granulate, amorphous",
+      "lci_ref_id": "6845",
+      "lci_reference_material_name": "polyethylene terephthalate, granulate, amorphous"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pvc",
+    "node_type": "concept",
+    "name": "폴리염화비닐",
+    "props": {
+      "name_en": "Polyvinyl chloride",
+      "pref_name": "폴리염화비닐",
+      "english_name": "Polyvinyl chloride",
+      "abbreviations": [
+        "PVC"
+      ],
+      "alternative_names": [
+        "염화비닐"
+      ],
+      "trade_names": [],
+      "translations": [
+        "塩化ビニル"
+      ],
+      "identifiers": [
+        "9002-86-2"
+      ],
+      "qualifiers": [
+        "가소제 함유",
+        "전선 피복"
+      ],
+      "specifications": [
+        "PVC"
+      ],
+      "description": "와이어하니스 절연 피복재.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "폴리카보네이트"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "9002-86-2",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polyvinylchloride, bulk polymerised",
+          "lci_db_name": "polyvinylchloride production, bulk polymerisation",
+          "ref_id": "6879",
+          "lci_ref_name": "polyvinylchloride production, bulk polymerisation",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.86
+        }
+      ],
+      "lci_db_name": "polyvinylchloride production, bulk polymerisation",
+      "lci_ref_id": "6879",
+      "lci_reference_material_name": "polyvinylchloride, bulk polymerised"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:soda_lime_glass",
+    "node_type": "concept",
+    "name": "소다석회유리",
+    "props": {
+      "name_en": "Soda-lime glass",
+      "pref_name": "소다석회유리",
+      "english_name": "Soda-lime glass",
+      "abbreviations": [],
+      "alternative_names": [
+        "판유리",
+        "소다라임글라스",
+        "일반유리"
+      ],
+      "trade_names": [
+        "MT-GLS-002"
+      ],
+      "translations": [
+        "ソーダ石灰ガラス"
+      ],
+      "identifiers": [],
+      "qualifiers": [
+        "판재 2.0 mm",
+        "저철분"
+      ],
+      "specifications": [
+        "KS L 2012"
+      ],
+      "description": "미러글라스 기재. 후면에 알루미늄 반사막을 증착한다.",
+      "broader_terms": [
+        "유리소재"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "flat glass, uncoated",
+          "lci_db_name": "flat glass production, coated",
+          "ref_id": "1396",
+          "lci_ref_name": "flat glass production, coated",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.93
+        }
+      ],
+      "lci_db_name": "flat glass production, coated",
+      "lci_ref_id": "1396",
+      "lci_reference_material_name": "flat glass, uncoated"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:spcc",
+    "node_type": "concept",
+    "name": "냉간압연 강판",
+    "props": {
+      "name_en": "Cold rolled steel sheet SPCC",
+      "pref_name": "냉간압연 강판",
+      "english_name": "Cold rolled steel sheet SPCC",
+      "abbreviations": [
+        "SPCC"
+      ],
+      "alternative_names": [
+        "냉연강판",
+        "냉연"
+      ],
+      "trade_names": [
+        "MT-STL-SPCC"
+      ],
+      "translations": [
+        "冷延鋼板"
+      ],
+      "identifiers": [],
+      "qualifiers": [
+        "일반용 냉연",
+        "판재 1.2 mm"
+      ],
+      "specifications": [
+        "KS D 3512 SPCC",
+        "JIS G 3141 SPCC"
+      ],
+      "description": "램프 마운팅 브라켓용 일반 냉연강판.",
+      "broader_terms": [
+        "탄소강"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "무방향성 전기강판"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "steel, low-alloyed, hot rolled",
+          "lci_db_name": "steel production, low-alloyed, hot rolled",
+          "ref_id": "7314",
+          "lci_ref_name": "steel production, low-alloyed, hot rolled",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.88
+        }
+      ],
+      "lci_db_name": "steel production, low-alloyed, hot rolled",
+      "lci_ref_id": "7314",
+      "lci_reference_material_name": "steel, low-alloyed, hot rolled"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:swch10a",
+    "node_type": "concept",
+    "name": "냉간압조용 탄소강",
+    "props": {
+      "name_en": "Carbon steel wire rod SWCH10A",
+      "pref_name": "냉간압조용 탄소강",
+      "english_name": "Carbon steel wire rod SWCH10A",
+      "abbreviations": [
+        "SWCH10A"
+      ],
+      "alternative_names": [
+        "냉간압조용 탄소강선재",
+        "볼트강"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [
+        "저탄소 C 0.13% 이하",
+        "선재"
+      ],
+      "specifications": [
+        "KS D 3554 SWCH10A",
+        "JIS G 3507 SWCH10A"
+      ],
+      "description": "체결 볼트·스크루용 냉간압조 강선재. 표면은 아연도금 처리.",
+      "broader_terms": [
+        "탄소강"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "steel, unalloyed",
+          "lci_db_name": "steel production, converter, unalloyed",
+          "ref_id": "7311",
+          "lci_ref_name": "steel production, converter, unalloyed",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "정확",
+          "confidence": 0.9
+        }
+      ],
+      "lci_db_name": "steel production, converter, unalloyed",
+      "lci_ref_id": "7311",
+      "lci_reference_material_name": "steel, unalloyed"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:electrical_steel",
+    "node_type": "concept",
+    "name": "무방향성 전기강판",
+    "props": {
+      "name_en": "Non-oriented electrical steel",
+      "pref_name": "무방향성 전기강판",
+      "english_name": "Non-oriented electrical steel",
+      "abbreviations": [
+        "50A470"
+      ],
+      "alternative_names": [
+        "규소강판",
+        "실리콘강판",
+        "전기강판"
+      ],
+      "trade_names": [],
+      "translations": [
+        "電磁鋼板"
+      ],
+      "identifiers": [],
+      "qualifiers": [
+        "Si 약 2.5%",
+        "판재 0.5 mm"
+      ],
+      "specifications": [
+        "JIS C 2552 50A470"
+      ],
+      "description": "미러 구동모터 코어용 규소강판.",
+      "broader_terms": [
+        "합금강"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "냉간압연 강판"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "steel, low-alloyed",
+          "lci_db_name": "steel production, converter, low-alloyed",
+          "ref_id": "7310",
+          "lci_ref_name": "steel production, converter, low-alloyed",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "프록시",
+          "confidence": 0.58
+        }
+      ],
+      "lci_db_name": "steel production, converter, low-alloyed",
+      "lci_ref_id": "7310",
+      "lci_reference_material_name": "steel, low-alloyed"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:ndfeb",
+    "node_type": "concept",
+    "name": "네오디뮴 자석",
+    "props": {
+      "name_en": "Neodymium-iron-boron magnet",
+      "pref_name": "네오디뮴 자석",
+      "english_name": "Neodymium-iron-boron magnet",
+      "abbreviations": [
+        "NdFeB"
+      ],
+      "alternative_names": [
+        "희토류 자석",
+        "네오디움 자석"
+      ],
+      "trade_names": [],
+      "translations": [
+        "ネオジム磁石"
+      ],
+      "identifiers": [],
+      "qualifiers": [
+        "N35"
+      ],
+      "specifications": [],
+      "description": "미러 구동모터 영구자석.",
+      "broader_terms": [
+        "비철금속"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "permanent magnet, neodymium-iron-boron",
+          "lci_db_name": null,
+          "ref_id": null,
+          "lci_ref_name": null,
+          "lci_mapping_priority": "매핑 후보 없음",
+          "match_type": "정확",
+          "confidence": 0.92
+        }
+      ],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": "permanent magnet, neodymium-iron-boron"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:silicone_resin",
+    "node_type": "concept",
+    "name": "실리콘 수지",
+    "props": {
+      "name_en": "Silicone resin",
+      "pref_name": "실리콘 수지",
+      "english_name": "Silicone resin",
+      "abbreviations": [
+        "PDMS"
+      ],
+      "alternative_names": [
+        "폴리실록산",
+        "실리콘 고무",
+        "실리콘"
+      ],
+      "trade_names": [
+        "KER-2600"
+      ],
+      "translations": [
+        "シリコーン樹脂"
+      ],
+      "identifiers": [
+        "63148-62-9"
+      ],
+      "qualifiers": [
+        "광학용 2액형",
+        "액상"
+      ],
+      "specifications": [],
+      "description": "LED 패키지 봉지재 및 램프 실링재. 한글 '실리콘'이 원소 규소(Si)와 충돌한다.",
+      "broader_terms": [
+        "열경화성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [
+        "규소"
+      ],
+      "detail_schema": "material-detail-v1",
+      "cas_number": "63148-62-9",
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "silicone product",
+          "lci_db_name": "silicone product production",
+          "ref_id": "7174",
+          "lci_ref_name": "silicone product production",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.84
+        }
+      ],
+      "lci_db_name": "silicone product production",
+      "lci_ref_id": "7174",
+      "lci_reference_material_name": "silicone product"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:epoxy_fr4",
+    "node_type": "concept",
+    "name": "FR-4 유리섬유 에폭시 적층판",
+    "props": {
+      "name_en": "FR-4 epoxy glass laminate",
+      "pref_name": "FR-4 유리섬유 에폭시 적층판",
+      "english_name": "FR-4 epoxy glass laminate",
+      "abbreviations": [
+        "FR-4"
+      ],
+      "alternative_names": [
+        "에폭시 적층판",
+        "글라스에폭시",
+        "PCB 원판"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [
+        "판재 1.6 mm",
+        "난연 UL94 V-0"
+      ],
+      "specifications": [],
+      "description": "LED 구동 PCB 기판. 에폭시 수지와 유리섬유로 분해 계상한다.",
+      "broader_terms": [
+        "열경화성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "epoxy resin, liquid",
+          "lci_db_name": "epoxy resin production, liquid",
+          "ref_id": "1233",
+          "lci_ref_name": "epoxy resin production, liquid",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "유사",
+          "confidence": 0.72
+        }
+      ],
+      "lci_db_name": "epoxy resin production, liquid",
+      "lci_ref_id": "1233",
+      "lci_reference_material_name": "epoxy resin, liquid"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:hotmelt_pa",
+    "node_type": "concept",
+    "name": "폴리아미드계 핫멜트 접착제",
+    "props": {
+      "name_en": "Polyamide hot-melt adhesive",
+      "pref_name": "폴리아미드계 핫멜트 접착제",
+      "english_name": "Polyamide hot-melt adhesive",
+      "abbreviations": [
+        "HMA"
+      ],
+      "alternative_names": [
+        "핫멜트 실란트",
+        "열용융 접착제",
+        "핫멜트"
+      ],
+      "trade_names": [
+        "MT-ADH-HM1"
+      ],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [
+        "고상 → 용융 도포"
+      ],
+      "specifications": [],
+      "description": "램프 렌즈-하우징 접합 실링재.",
+      "broader_terms": [
+        "열경화성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "adhesive, for metal",
+          "lci_db_name": "adhesive production, for metal",
+          "ref_id": "74",
+          "lci_ref_name": "adhesive production, for metal",
+          "lci_mapping_priority": "production 우선",
+          "match_type": "프록시",
+          "confidence": 0.55
+        }
+      ],
+      "lci_db_name": "adhesive production, for metal",
+      "lci_ref_id": "74",
+      "lci_reference_material_name": "adhesive, for metal"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:pu_paint",
+    "node_type": "concept",
+    "name": "2액형 폴리우레탄 도료",
+    "props": {
+      "name_en": "Two-component polyurethane paint",
+      "pref_name": "2액형 폴리우레탄 도료",
+      "english_name": "Two-component polyurethane paint",
+      "abbreviations": [
+        "2K PU"
+      ],
+      "alternative_names": [
+        "폴리우레탄 페인트",
+        "2액형 우레탄",
+        "우레탄 도료"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [
+        "고형분 50%",
+        "액상"
+      ],
+      "specifications": [],
+      "description": "램프 베젤·미러 커버 외장 도장재.",
+      "broader_terms": [
+        "열경화성 수지"
+      ],
+      "narrower_terms": [],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [
+        {
+          "reference_material": "polyurethane paint",
+          "lci_db_name": null,
+          "ref_id": null,
+          "lci_ref_name": null,
+          "lci_mapping_priority": "매핑 후보 없음",
+          "match_type": "정확",
+          "confidence": 0.9
+        }
+      ],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": "polyurethane paint"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:material",
+    "node_type": "concept",
+    "name": "소재",
+    "props": {
+      "name_en": "Material",
+      "pref_name": "소재",
+      "is_abstract": true,
+      "english_name": "Material",
+      "abbreviations": [],
+      "alternative_names": [],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "소재 물질개념입니다. 검색·매칭에 사용하는 명칭은 소재, Material입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [],
+      "narrower_terms": [
+        "금속",
+        "고분자",
+        "무기소재"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:metal",
+    "node_type": "concept",
+    "name": "금속",
+    "props": {
+      "name_en": "Metal",
+      "pref_name": "금속",
+      "is_abstract": true,
+      "english_name": "Metal",
+      "abbreviations": [],
+      "alternative_names": [
+        "금속재",
+        "메탈"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "금속 물질개념입니다. 검색·매칭에 사용하는 명칭은 금속, Metal, 메탈, 금속재입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "소재"
+      ],
+      "narrower_terms": [
+        "철강재",
+        "비철금속"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:ferrous",
+    "node_type": "concept",
+    "name": "철강재",
+    "props": {
+      "name_en": "Ferrous metal",
+      "pref_name": "철강재",
+      "is_abstract": true,
+      "english_name": "Ferrous metal",
+      "abbreviations": [],
+      "alternative_names": [
+        "철계 금속",
+        "강재",
+        "철강"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "철강재 물질개념입니다. 검색·매칭에 사용하는 명칭은 철강재, Ferrous metal, 철계 금속, 철강입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "금속"
+      ],
+      "narrower_terms": [
+        "탄소강",
+        "합금강",
+        "철"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:carbon_steel",
+    "node_type": "concept",
+    "name": "탄소강",
+    "props": {
+      "name_en": "Carbon steel",
+      "pref_name": "탄소강",
+      "is_abstract": true,
+      "english_name": "Carbon steel",
+      "abbreviations": [],
+      "alternative_names": [
+        "보통강",
+        "연강"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "탄소강 물질개념입니다. 검색·매칭에 사용하는 명칭은 탄소강, Carbon steel, 연강, 보통강입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "철강재"
+      ],
+      "narrower_terms": [
+        "냉간압연 강판",
+        "냉간압조용 탄소강"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:alloy_steel",
+    "node_type": "concept",
+    "name": "합금강",
+    "props": {
+      "name_en": "Alloy steel",
+      "pref_name": "합금강",
+      "is_abstract": true,
+      "english_name": "Alloy steel",
+      "abbreviations": [],
+      "alternative_names": [
+        "특수강"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "합금강 물질개념입니다. 검색·매칭에 사용하는 명칭은 합금강, Alloy steel, 특수강입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "철강재"
+      ],
+      "narrower_terms": [
+        "무방향성 전기강판"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:nonferrous",
+    "node_type": "concept",
+    "name": "비철금속",
+    "props": {
+      "name_en": "Non-ferrous metal",
+      "pref_name": "비철금속",
+      "is_abstract": true,
+      "english_name": "Non-ferrous metal",
+      "abbreviations": [],
+      "alternative_names": [
+        "비철",
+        "논페러스"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "비철금속 물질개념입니다. 검색·매칭에 사용하는 명칭은 비철금속, Non-ferrous metal, 비철, 논페러스입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "금속"
+      ],
+      "narrower_terms": [
+        "알루미늄",
+        "구리",
+        "아연",
+        "마그네슘",
+        "망간",
+        "규소",
+        "네오디뮴 자석"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:al_cast_group",
+    "node_type": "concept",
+    "name": "주조용 알루미늄 합금",
+    "props": {
+      "name_en": "Aluminium casting alloy",
+      "pref_name": "주조용 알루미늄 합금",
+      "is_abstract": true,
+      "english_name": "Aluminium casting alloy",
+      "abbreviations": [],
+      "alternative_names": [
+        "알루미늄 주물합금",
+        "다이캐스팅 합금"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "주조용 알루미늄 합금 물질개념입니다. 검색·매칭에 사용하는 명칭은 주조용 알루미늄 합금, Aluminium casting alloy, 다이캐스팅 합금, 알루미늄 주물합금입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "알루미늄"
+      ],
+      "narrower_terms": [
+        "알루미늄 다이캐스팅 합금 ALDC12.1"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:polymer",
+    "node_type": "concept",
+    "name": "고분자",
+    "props": {
+      "name_en": "Polymer",
+      "pref_name": "고분자",
+      "is_abstract": true,
+      "english_name": "Polymer",
+      "abbreviations": [],
+      "alternative_names": [
+        "수지",
+        "폴리머",
+        "플라스틱"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "고분자 물질개념입니다. 검색·매칭에 사용하는 명칭은 고분자, Polymer, 수지, 플라스틱입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "소재"
+      ],
+      "narrower_terms": [
+        "열가소성 수지",
+        "열경화성 수지"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:thermoplastic",
+    "node_type": "concept",
+    "name": "열가소성 수지",
+    "props": {
+      "name_en": "Thermoplastic",
+      "pref_name": "열가소성 수지",
+      "is_abstract": true,
+      "english_name": "Thermoplastic",
+      "abbreviations": [],
+      "alternative_names": [
+        "열가소성 플라스틱",
+        "열가소성"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "열가소성 수지 물질개념입니다. 검색·매칭에 사용하는 명칭은 열가소성 수지, Thermoplastic, 열가소성 플라스틱, 열가소성입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "고분자"
+      ],
+      "narrower_terms": [
+        "폴리올레핀",
+        "폴리아미드",
+        "폴리에스터계 수지",
+        "스티렌계 수지",
+        "폴리카보네이트",
+        "폴리옥시메틸렌",
+        "폴리염화비닐"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:thermoset",
+    "node_type": "concept",
+    "name": "열경화성 수지",
+    "props": {
+      "name_en": "Thermoset",
+      "pref_name": "열경화성 수지",
+      "is_abstract": true,
+      "english_name": "Thermoset",
+      "abbreviations": [],
+      "alternative_names": [
+        "열경화성 플라스틱",
+        "열경화성"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "열경화성 수지 물질개념입니다. 검색·매칭에 사용하는 명칭은 열경화성 수지, Thermoset, 열경화성 플라스틱, 열경화성입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "고분자"
+      ],
+      "narrower_terms": [
+        "FR-4 유리섬유 에폭시 적층판",
+        "2액형 폴리우레탄 도료",
+        "실리콘 수지",
+        "폴리아미드계 핫멜트 접착제"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:polyolefin",
+    "node_type": "concept",
+    "name": "폴리올레핀",
+    "props": {
+      "name_en": "Polyolefin",
+      "pref_name": "폴리올레핀",
+      "is_abstract": true,
+      "english_name": "Polyolefin",
+      "abbreviations": [],
+      "alternative_names": [
+        "올레핀계 수지"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "폴리올레핀 물질개념입니다. 검색·매칭에 사용하는 명칭은 폴리올레핀, Polyolefin, 올레핀계 수지입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [
+        "폴리프로필렌"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:polyamide",
+    "node_type": "concept",
+    "name": "폴리아미드",
+    "props": {
+      "name_en": "Polyamide",
+      "pref_name": "폴리아미드",
+      "is_abstract": true,
+      "english_name": "Polyamide",
+      "abbreviations": [
+        "PA"
+      ],
+      "alternative_names": [
+        "폴리아마이드",
+        "나일론"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "폴리아미드 물질개념입니다. 검색·매칭에 사용하는 명칭은 폴리아미드, Polyamide, 나일론, PA입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [
+        "폴리아미드 6",
+        "폴리아미드 66"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:polyester_resin",
+    "node_type": "concept",
+    "name": "폴리에스터계 수지",
+    "props": {
+      "name_en": "Polyester resin",
+      "pref_name": "폴리에스터계 수지",
+      "is_abstract": true,
+      "english_name": "Polyester resin",
+      "abbreviations": [],
+      "alternative_names": [
+        "포화 폴리에스터",
+        "폴리에스테르"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "폴리에스터계 수지 물질개념입니다. 검색·매칭에 사용하는 명칭은 폴리에스터계 수지, Polyester resin, 포화 폴리에스터, 폴리에스테르입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [
+        "폴리에틸렌테레프탈레이트",
+        "폴리부틸렌테레프탈레이트"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:styrenic",
+    "node_type": "concept",
+    "name": "스티렌계 수지",
+    "props": {
+      "name_en": "Styrenic resin",
+      "pref_name": "스티렌계 수지",
+      "is_abstract": true,
+      "english_name": "Styrenic resin",
+      "abbreviations": [],
+      "alternative_names": [
+        "스티렌 공중합체",
+        "스타이렌계 수지"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "스티렌계 수지 물질개념입니다. 검색·매칭에 사용하는 명칭은 스티렌계 수지, Styrenic resin, 스티렌 공중합체, 스타이렌계 수지입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "열가소성 수지"
+      ],
+      "narrower_terms": [
+        "아크릴로니트릴-부타디엔-스티렌 공중합체",
+        "아크릴로니트릴-스티렌-아크릴레이트 공중합체"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:inorganic",
+    "node_type": "concept",
+    "name": "무기소재",
+    "props": {
+      "name_en": "Inorganic material",
+      "pref_name": "무기소재",
+      "is_abstract": true,
+      "english_name": "Inorganic material",
+      "abbreviations": [],
+      "alternative_names": [
+        "무기재료"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "무기소재 물질개념입니다. 검색·매칭에 사용하는 명칭은 무기소재, Inorganic material, 무기재료입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "소재"
+      ],
+      "narrower_terms": [
+        "유리소재",
+        "광물 충전재"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:glass_material",
+    "node_type": "concept",
+    "name": "유리소재",
+    "props": {
+      "name_en": "Glass material",
+      "pref_name": "유리소재",
+      "is_abstract": true,
+      "english_name": "Glass material",
+      "abbreviations": [],
+      "alternative_names": [
+        "유리",
+        "글라스"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "유리소재 물질개념입니다. 검색·매칭에 사용하는 명칭은 유리소재, Glass material, 유리, 글라스입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "무기소재"
+      ],
+      "narrower_terms": [
+        "소다석회유리",
+        "유리섬유"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CON:mineral_filler",
+    "node_type": "concept",
+    "name": "광물 충전재",
+    "props": {
+      "name_en": "Mineral filler",
+      "pref_name": "광물 충전재",
+      "is_abstract": true,
+      "english_name": "Mineral filler",
+      "abbreviations": [],
+      "alternative_names": [
+        "무기 충전재",
+        "필러"
+      ],
+      "trade_names": [],
+      "translations": [],
+      "identifiers": [],
+      "qualifiers": [],
+      "specifications": [],
+      "description": "광물 충전재 물질개념입니다. 검색·매칭에 사용하는 명칭은 광물 충전재, Mineral filler, 무기 충전재, 필러입니다. 물질명, 약어, 대체어 및 한정자를 함께 관리하여 LCI 물질명 매칭의 정확도를 높입니다.",
+      "broader_terms": [
+        "무기소재"
+      ],
+      "narrower_terms": [
+        "탈크"
+      ],
+      "confusing_with": [],
+      "detail_schema": "material-detail-v1",
+      "cas_number": null,
+      "ec_number": null,
+      "un_number": null,
+      "chemical_formula": null,
+      "inchi_key": null,
+      "internal_material_code": null,
+      "lci_bridge_mappings": [],
+      "lci_db_name": null,
+      "lci_ref_id": null,
+      "lci_reference_material_name": null
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  }
+]

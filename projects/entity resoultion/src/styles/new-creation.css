@@ -1,0 +1,6 @@
+.new-creation { padding: 18px 28px 28px; overflow: auto; }
+.creation-form { display: grid; max-width: 760px; gap: 12px; padding: 16px; border: 1px solid #dfe5ed; border-radius: 7px; background: #fff; }
+.creation-form label { display: grid; gap: 6px; color: #263348; font-size: 12px; font-weight: 700; }
+.creation-form input, .creation-form select, .creation-form textarea { width: 100%; padding: 9px 10px; border: 1px solid #cfd7e3; border-radius: 5px; font: inherit; font-weight: 400; }
+.creation-form textarea { min-height: 90px; resize: vertical; }.creation-form small { color: #718096; font-weight: 400; }
+.duplicate-dialog { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; background: #17203355; }.duplicate-dialog > div { width: min(400px, calc(100vw - 32px)); padding: 20px; border-radius: 8px; background: #fff; box-shadow: 0 15px 40px #17203333; }.duplicate-dialog h3 { margin: 0 0 8px; }.duplicate-dialog p { color: #596579; line-height: 1.5; }.duplicate-dialog button { margin: 6px 6px 0 0; padding: 8px 10px; border: 1px solid #d5dce6; border-radius: 5px; background: #fff; cursor: pointer; }.duplicate-dialog button:first-of-type { border-color: #e85d2c; background: #e85d2c; color: #fff; }

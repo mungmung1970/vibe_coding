@@ -1,0 +1,23 @@
+{
+  "schema_version": "knowledge-graph-v3",
+  "data_version": "1.0.0",
+  "generated_at": "2026-09-14T06:59:13.116Z",
+  "node_files": [
+    "nodes/structure.json",
+    "nodes/materials.json",
+    "nodes/terminology.json",
+    "nodes/other.json"
+  ],
+  "edge_files": [
+    "edges/materials.json",
+    "edges/terminology.json",
+    "edges/structure.json",
+    "edges/reference-mappings.json"
+  ],
+  "versioning": {
+    "item_revision_field": "revision",
+    "item_timestamp_field": "updated_at",
+    "audit_store": "browser localStorage / entity-resolution-history",
+    "production_note": "공유 버전관리는 API와 DB 변경이 필요합니다."
+  }
+}

@@ -1,0 +1,642 @@
+[
+  {
+    "edge_id": "E0052",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pc",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0095",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pp",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0118",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:talc",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0162",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:abs",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0163",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:abs",
+    "to": "PRC:painting",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0206",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:asa",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0257",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pa66",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0297",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pa6",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0331",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:gf",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0382",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "PRC:diecasting",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0418",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:al",
+    "to": "PRC:vacuum_dep",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0419",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:al",
+    "to": "PRC:diecasting",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0481",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:cu",
+    "to": "PRC:winding",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0482",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:cu",
+    "to": "PRC:extrusion",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0621",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pom",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0657",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pbt",
+    "to": "PRC:injection",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0693",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pet",
+    "to": "PRC:extrusion",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0725",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pvc",
+    "to": "PRC:extrusion",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0749",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:soda_lime_glass",
+    "to": "PRC:glass_forming",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0750",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:soda_lime_glass",
+    "to": "PRC:vacuum_dep",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0782",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:spcc",
+    "to": "PRC:stamping",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0813",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:swch10a",
+    "to": "PRC:coldheading",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0846",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:electrical_steel",
+    "to": "PRC:stamping",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0945",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:epoxy_fr4",
+    "to": "PRC:smt",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1012",
+    "edge_type": "USED_IN_PROCESS",
+    "cardinality": "m:n",
+    "from": "CON:pu_paint",
+    "to": "PRC:painting",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1216",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:al",
+    "props": {
+      "ratio_min_pct": 82,
+      "ratio_max_pct": 88,
+      "basis": "질량%",
+      "note": "잔량"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1217",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:si",
+    "props": {
+      "ratio_min_pct": 9.6,
+      "ratio_max_pct": 12,
+      "basis": "질량%",
+      "note": "주 합금원소"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1218",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:cu",
+    "props": {
+      "ratio_min_pct": 1.5,
+      "ratio_max_pct": 3.5,
+      "basis": "질량%",
+      "note": "주 합금원소"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1219",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:fe",
+    "props": {
+      "ratio_min_pct": 0,
+      "ratio_max_pct": 1.3,
+      "basis": "질량%",
+      "note": "불순물 상한"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1220",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:zn",
+    "props": {
+      "ratio_min_pct": 0,
+      "ratio_max_pct": 1,
+      "basis": "질량%",
+      "note": "불순물 상한"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1221",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:mg",
+    "props": {
+      "ratio_min_pct": 0,
+      "ratio_max_pct": 0.3,
+      "basis": "질량%",
+      "note": "불순물 상한"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1222",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "CON:mn",
+    "props": {
+      "ratio_min_pct": 0,
+      "ratio_max_pct": 0.5,
+      "basis": "질량%",
+      "note": "불순물 상한"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1223",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:epoxy_fr4",
+    "to": "CON:gf",
+    "props": {
+      "ratio_min_pct": 55,
+      "ratio_max_pct": 65,
+      "basis": "질량%",
+      "note": "보강 유리섬유"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1224",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:epoxy_fr4",
+    "to": "CON:cu",
+    "props": {
+      "ratio_min_pct": 2,
+      "ratio_max_pct": 5,
+      "basis": "질량%",
+      "note": "동박층"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1225",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:electrical_steel",
+    "to": "CON:si",
+    "props": {
+      "ratio_min_pct": 2,
+      "ratio_max_pct": 3,
+      "basis": "질량%",
+      "note": "규소 첨가"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1226",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:ndfeb",
+    "to": "CON:fe",
+    "props": {
+      "ratio_min_pct": 60,
+      "ratio_max_pct": 70,
+      "basis": "질량%",
+      "note": "주성분"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1227",
+    "edge_type": "COMPOSED_OF",
+    "cardinality": "m:n",
+    "from": "CON:soda_lime_glass",
+    "to": "CON:si",
+    "props": {
+      "ratio_min_pct": 30,
+      "ratio_max_pct": 35,
+      "basis": "질량%",
+      "note": "규소 산화물 환산"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1243",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_lens",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1245",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_housing",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1248",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_reflector",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1251",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_heatsink",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1253",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_bezel",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1256",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_pcb",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1260",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_led",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1262",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_connector",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1266",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_sealing",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1268",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_bracket",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1270",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:auto_lamp_G",
+    "to": "CMP:glamp_bolt",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1273",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1276",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_cover",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1278",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_bracket",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1281",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_motor",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1285",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_gear",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1287",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_harness",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1290",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_heater",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1292",
+    "edge_type": "HAS_COMPONENT",
+    "cardinality": "1:n",
+    "from": "PART:mirror_L",
+    "to": "CMP:mirror_bolt",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E:PRODUCT_TYPE:automotive:PART:auto_lamp_G",
+    "edge_type": "HAS_PART",
+    "cardinality": "1:n",
+    "from": "PT:automotive",
+    "to": "PART:auto_lamp_G",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E:PRODUCT_TYPE:automotive:PART:mirror_L",
+    "edge_type": "HAS_PART",
+    "cardinality": "1:n",
+    "from": "PT:automotive",
+    "to": "PART:mirror_L",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  }
+]

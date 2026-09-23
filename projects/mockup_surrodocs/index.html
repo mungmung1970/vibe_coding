@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>surrodocs · 문서 생성</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+    <div class="brand"><span class="brand-mark">s</span><span>surrodocs</span><small>문서 자동화</small></div>
+    <div class="top-actions"><span class="saved-dot"></span> 자동 저장됨 <button class="ghost-button" id="resetButton">새 보고서</button></div>
+    </header>
+
+    <main class="workspace">
+      <div class="doctype-tabs" id="docTypeTabs">
+        <button class="doctype selected" data-doc="incident"><b>장애보고서</b><span>DOCX / HWPX</span></button>
+        <button class="doctype" data-doc="trend"><b>최신 기술동향</b><span>PPTX</span></button>
+        <button class="doctype" data-doc="complex"><b>복합 구조 문서</b><span>HWPX · 3단 목차 / 병합 / 중첩표</span></button>
+      </div>
+      <details class="llm-conn global"><summary>LLM 엔드포인트 설정 · gpt-oss-120b (3종 공통)</summary>
+        <div class="field-row"><label>Base URL<input id="llmBase" value="http://10.10.20.20:8001/v1" /></label><label>모델<input id="llmModel" value="gpt-oss-120b" /></label></div>
+        <label>API Key<input id="llmKey" type="password" placeholder="DEMO_MSA_LLM_API_KEY 값" /></label>
+      </details>
+      <section class="intro">
+        <div><p class="eyebrow">DOCUMENT BUILDER</p><h1>문서 생성<br><em>DOCX · PPTX · HWPX</em></h1><p class="intro-copy">내용을 입력하거나 LLM으로 생성하면<br>템플릿 서식이 적용된 XML과 문서 파일을 바로 만듭니다.</p></div>
+        <div class="progress"><span class="active">01</span><i></i><span>02</span><i></i><span>03</span><div class="progress-label">내용 생성&nbsp;&nbsp;→&nbsp;&nbsp; 템플릿 선택&nbsp;&nbsp;→&nbsp;&nbsp; XML 변환·저장</div></div>
+      </section>
+
+      <div class="content-grid" id="viewIncident">
+        <section class="panel form-panel">
+          <div class="panel-head"><div><p class="section-kicker">01 / CONTENT</p><h2>보고서 내용</h2></div><span class="status-badge">초안</span></div>
+          <form id="reportForm">
+            <div class="field-row"><label>보고서 제목<input id="title" value="2025년 6월 결제 API 장애 보고서" /></label><label>장애 등급<select id="severity"><option>심각 · P1</option><option selected>높음 · P2</option><option>보통 · P3</option></select></label></div>
+            <div class="field-row"><label>발생 일자<input id="date" type="date" value="2025-06-18" /></label><label>작성자<input id="author" value="플랫폼개발팀 김서준" /></label></div>
+            <label>장애 내용<textarea id="summary">결제 API의 응답 지연으로 일부 주문 결제가 정상적으로 완료되지 않았습니다. DB 커넥션 풀 고갈이 원인으로 확인되었으며, 트래픽 우회와 커넥션 상향 조정으로 서비스를 정상화했습니다.</textarea></label>
+            <div class="subhead"><div><p class="section-kicker">TIMELINE</p><h3>시간대별 장애 현상</h3></div><button type="button" class="add-button" id="addRow">+ 행 추가</button></div>
+            <div class="timeline-editor" id="timelineEditor"></div>
+            <label>조치 결과<textarea id="result">커넥션 풀 최대값을 100에서 300으로 상향하고 결제 트래픽을 보조 리전에 분산했습니다. 14:35 이후 오류율은 0.1% 이하로 안정화되었으며, 재발 방지를 위해 커넥션 풀 모니터링 알림을 추가했습니다.</textarea></label>
+          </form>
+        </section>
+
+        <aside class="panel template-panel">
+          <div class="panel-head"><div><p class="section-kicker">02 / TEMPLATE</p><h2>템플릿 선택</h2></div><span class="template-count">2종</span></div>
+          <div class="template-list" id="templateList">
+            <button class="template-card selected" data-template="executive"><div class="template-thumb executive-thumb"><b>INCIDENT</b><span>Executive<br>Report</span><i></i><i></i><i></i></div><div class="template-info"><strong>Executive Blue</strong><span>경영진 보고용 · 깔끔한 요약형</span><small>BLUE / LANDSCAPE TABLE</small></div><span class="check">✓</span></button>
+            <button class="template-card" data-template="ops"><div class="template-thumb ops-thumb"><b>장애보고서</b><span>Operations<br>Log</span><i></i><i></i><i></i></div><div class="template-info"><strong>Operations Red</strong><span>운영팀 기록용 · 상세 이력형</span><small>RED / DETAILED LOG</small></div><span class="check">✓</span></button>
+          </div>
+          <p class="section-kicker" style="margin:26px 0 0">03 / FORMAT</p>
+          <div class="format-pick" id="docFormat">
+            <button class="selected" data-fmt="docx"><b>워드 DOCX</b><span>OOXML · word/document.xml</span></button>
+            <button data-fmt="hwpx"><b>한글 HWPX</b><span>OWPML · Contents/section0.xml</span></button>
+          </div>
+          <div class="format-note"><span>✦</span><div><strong>템플릿 서식이 XML 태그로 매핑됩니다</strong><p>머리행 음영, 셀 병합(gridSpan / cellSpan),<br>글꼴, 여백, 용지 크기</p></div></div>
+          <button class="download-button" id="downloadButton"><span>DOCX 다운로드</span><b>↓</b></button>
+          <button class="xml-button" id="xmlButton">생성 XML 전체 다운로드 <span>↗</span></button>
+          <button class="map-link" id="mapButton">이 템플릿의 XML 구조 · 서식 매핑 보기</button>
+        </aside>
+      </div>
+
+      <div class="content-grid" id="viewTrend" hidden>
+        <section class="panel form-panel">
+          <div class="panel-head"><div><p class="section-kicker">01 / LLM QUERY</p><h2>기술동향 질의</h2></div><span class="status-badge" id="llmBadge">대기</span></div>
+          <div class="field-row"><label>문서 제목<input id="tTitle" value="2026 하반기 최신 기술 동향" /></label><label>작성자<input id="tAuthor" value="기술전략팀" /></label></div>
+          <div class="field-row"><label>질의 주제<input id="tTopic" value="생성형 AI 인프라 및 엔터프라이즈 적용" /></label><label>동향 개수<select id="tCount"><option>3</option><option selected>4</option><option>5</option></select></label></div>
+          <button type="button" class="add-button wide" id="askLLM">✦ LLM으로 기술동향 생성</button>
+          <div class="subhead"><div><p class="section-kicker">OUTLINE</p><h3>생성된 슬라이드 구성</h3></div><span class="template-count" id="slideCount">0장</span></div>
+          <label>1. 최신기술동향 개요<textarea id="tOverview" placeholder="LLM 생성 버튼을 누르면 채워집니다"></textarea></label>
+          <div class="trend-editor" id="trendEditor"></div>
+        </section>
+
+        <aside class="panel template-panel">
+          <div class="panel-head"><div><p class="section-kicker">02 / TEMPLATE</p><h2>PPT 템플릿</h2></div><span class="template-count">2종</span></div>
+          <div class="template-list" id="pptTemplateList">
+            <button class="template-card selected" data-ppt="aurora"><div class="template-thumb aurora-thumb"><b>TECH TREND</b><span>Aurora<br>Deck</span><i></i><i></i><i></i></div><div class="template-info"><strong>Aurora Navy</strong><span>기술 브리핑 · 좌 내용 / 우 체크포인트</span><small>NAVY / 16:9 WIDE</small></div><span class="check">✓</span></button>
+            <button class="template-card" data-ppt="solar"><div class="template-thumb solar-thumb"><b>기술동향</b><span>Solar<br>Brief</span><i></i><i></i><i></i></div><div class="template-info"><strong>Solar Amber</strong><span>경영보고용 · 강조형 헤더</span><small>AMBER / 16:9 WIDE</small></div><span class="check">✓</span></button>
+          </div>
+          <div class="format-note"><span>✦</span><div><strong>PPTX OOXML 규격으로 저장됩니다</strong><p>제목 페이지 · 개요 · 동향별 1장<br>상단 제목 / 좌 내용 / 우 체크포인트</p></div></div>
+          <button class="download-button" id="pptxButton"><span>PPTX 다운로드</span><b>↓</b></button>
+          <button class="xml-button" id="pptXmlButton">생성 XML 전체 다운로드 <span>↗</span></button>
+          <button class="map-link" id="pptMapButton">이 템플릿의 XML 구조 · 서식 매핑 보기</button>
+        </aside>
+      </div>
+
+      <div class="content-grid" id="viewComplex" hidden>
+        <section class="panel form-panel">
+          <div class="panel-head"><div><p class="section-kicker">01 / LLM QUERY</p><h2>복합 구조 문서</h2></div><span class="status-badge" id="cxBadge">대기</span></div>
+          <div class="field-row"><label>질의 주제<input id="cxTopic" value="사내 생성형 AI 플랫폼 구축 기술 검토" /></label><label>대제목 개수<select id="cxCount"><option>2</option><option selected>3</option><option>4</option></select></label></div>
+          <button type="button" class="add-button wide" id="cxAsk">✦ LLM으로 문서 구조 생성 (3단계 목차 · 셀병합 · 표 안의 표)</button>
+          <div class="subhead"><div><p class="section-kicker">OUTLINE</p><h3>생성된 문서 구조</h3></div><span class="template-count" id="cxStats">-</span></div>
+          <div class="cx-outline" id="cxOutline"></div>
+          <details class="cx-raw"><summary>구조 JSON 직접 편집</summary><textarea id="cxJson" spellcheck="false"></textarea></details>
+        </section>
+
+        <aside class="panel template-panel">
+          <div class="panel-head"><div><p class="section-kicker">02 / TEMPLATE</p><h2>한글 템플릿</h2></div><span class="template-count">2종</span></div>
+          <div class="template-list" id="cxTemplateList">
+            <button class="template-card selected" data-doc="executive"><div class="template-thumb executive-thumb"><b>REPORT</b><span>Executive<br>Blue</span><i></i><i></i><i></i></div><div class="template-info"><strong>Executive Blue</strong><span>기술 검토 보고서</span><small>BLUE / OWPML</small></div><span class="check">✓</span></button>
+            <button class="template-card" data-doc="ops"><div class="template-thumb ops-thumb"><b>보고서</b><span>Operations<br>Red</span><i></i><i></i><i></i></div><div class="template-info"><strong>Operations Red</strong><span>운영 검토 보고서</span><small>RED / OWPML</small></div><span class="check">✓</span></button>
+          </div>
+          <div class="format-note"><span>✦</span><div><strong>한글(OWPML) 구조로 저장됩니다</strong><p>목차 3단계 들여쓰기(hc:left),<br>hp:cellSpan 병합, hp:subList 안의 중첩 hp:tbl</p></div></div>
+          <button class="download-button" id="cxHwpxButton"><span>HWPX 다운로드</span><b>↓</b></button>
+          <button class="xml-button" id="cxXmlButton">생성 XML 전체 다운로드 <span>↗</span></button>
+          <button class="map-link" id="cxMapButton">이 템플릿의 XML 구조 · 서식 매핑 보기</button>
+        </aside>
+      </div>
+    </main>
+    <footer><span>surrodocs prototype</span><span>DOCX + XML export engine <b>●</b></span></footer>
+  </div>
+  <div class="map-modal" id="mapModal" hidden>
+    <div class="map-sheet">
+      <div class="map-head"><h3 id="mapTitle">XML 구조 · 서식 매핑</h3><button id="mapClose">✕</button></div>
+      <div class="map-body" id="mapBody"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script src="formats.js"></script>
+  <script src="llm.js"></script>
+  <script src="hwpx.js"></script>
+  <script src="trend.js"></script>
+  <script src="complex.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

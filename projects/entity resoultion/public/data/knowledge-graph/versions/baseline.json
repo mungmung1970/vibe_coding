@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-09-14T06:59:13.116Z",
+  "change_type": "baseline-split",
+  "source_file": "물질개념_사전_G램프_L미러_v2.json",
+  "nodes": 1182,
+  "edges": 1296,
+  "note": "단일 JSON을 유형별 JSON 파일로 분리한 초기 기준 버전입니다."
+}

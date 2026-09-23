@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    {
+      "node_id": "PT:automotive",
+      "node_type": "product_type",
+      "name": "자동차 부품",
+      "props": { "description": "자동차에 적용되는 조립품 및 구성품 제품군입니다." }
+    },
+    {
+      "node_id": "PART:sample_lamp_housing",
+      "node_type": "part",
+      "name": "램프 하우징",
+      "props": {
+        "product_type": "automotive",
+        "process": "사출성형",
+        "description": "자동차 전조등 외곽을 형성하고 내부 구성품을 지지하는 플라스틱 하우징입니다."
+      }
+    },
+    {
+      "node_id": "CON:pc",
+      "node_type": "concept",
+      "name": "Polycarbonate",
+      "props": {
+        "english_name": "Polycarbonate",
+        "abbreviations": ["PC"],
+        "alternative_names": ["폴리카보네이트"],
+        "cas_number": "25037-45-0",
+        "description": "투명성, 내충격성 및 내열성이 우수한 열가소성 수지입니다.",
+        "lci_db_name": "polycarbonate production",
+        "lci_ref_id": "6829",
+        "lci_reference_material_name": "polycarbonate, granulate"
+      }
+    },
+    {
+      "node_id": "LBL:pc:abbr",
+      "node_type": "label",
+      "name": "PC",
+      "props": { "label_type": "abbreviation", "lang": "ko" }
+    },
+    {
+      "node_id": "SFM:pc:abbr:01",
+      "node_type": "surface_form",
+      "name": "P.C.",
+      "props": { "variant_type": "punctuation" }
+    },
+    {
+      "node_id": "REF:pc_granulate",
+      "node_type": "reference_material",
+      "name": "polycarbonate, granulate",
+      "props": {
+        "lci_db_name": "polycarbonate production",
+        "lci_ref_name": "polycarbonate production",
+        "ref_id": "6829",
+        "lci_mapping_priority": "production 우선",
+        "unit": "kg"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "E:SAMPLE:001",
+      "edge_type": "HAS_PART",
+      "cardinality": "1:n",
+      "from": "PT:automotive",
+      "to": "PART:sample_lamp_housing",
+      "props": { "description": "제품유형과 파트의 소속 관계입니다." }
+    },
+    {
+      "edge_id": "E:SAMPLE:002",
+      "edge_type": "MADE_OF",
+      "cardinality": "m:n",
+      "from": "PART:sample_lamp_housing",
+      "to": "CON:pc",
+      "props": { "description": "파트의 주요 물질 구성입니다." }
+    },
+    {
+      "edge_id": "E:SAMPLE:003",
+      "edge_type": "HAS_LABEL",
+      "cardinality": "1:n",
+      "from": "CON:pc",
+      "to": "LBL:pc:abbr",
+      "props": { "weight": 1 }
+    },
+    {
+      "edge_id": "E:SAMPLE:004",
+      "edge_type": "HAS_SURFACE_FORM",
+      "cardinality": "1:n",
+      "from": "LBL:pc:abbr",
+      "to": "SFM:pc:abbr:01",
+      "props": {}
+    },
+    {
+      "edge_id": "E:SAMPLE:005",
+      "edge_type": "BRIDGES_TO",
+      "cardinality": "m:n",
+      "from": "CON:pc",
+      "to": "REF:pc_granulate",
+      "props": {
+        "lci_db_name": "polycarbonate production",
+        "ref_id": "6829",
+        "lci_mapping_priority": "production 우선"
+      }
+    }
+  ]
+}

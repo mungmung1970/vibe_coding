@@ -1,0 +1,4 @@
+.candidates p { color: #9da8b8; font-size: 11px; line-height: 1.5; }
+.candidates button { display: block; width: 100%; text-align: left; padding: 8px; margin: 5px 0; border: 1px solid #404958; border-radius: 4px; background: #282e39; color: #edf1f7; cursor: pointer; }
+.candidates button:hover { border-color: #e85d2c; background: #35303a; }
+.candidates small { display: block; margin-top: 2px; color: #9da8b8; font-size: 10px; }

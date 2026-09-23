@@ -1,0 +1,13 @@
+.relation-guide { padding: 0 28px 28px; overflow: auto; }
+.guide-head { padding: 6px 0 20px; }
+.guide-head h2 { margin: 5px 0; font-size: 21px; }
+.guide-head p { color: #7b8798; margin: 0; }
+.relation-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(285px, 1fr)); gap: 14px; }
+.relation-group { background: #fff; border: 1px solid #e1e6ed; border-radius: 7px; overflow: hidden; }
+.relation-group header { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; background: #f8fafc; border-bottom: 1px solid #e8edf3; font-weight: 700; }
+.relation-group code { color: #e15d2d; font-size: 10px; }
+.relation-group button { display: block; width: 100%; padding: 12px 14px; text-align: left; border: 0; border-bottom: 1px solid #eef1f5; background: #fff; cursor: pointer; }
+.relation-group button:last-child { border-bottom: 0; }
+.relation-group button:hover { background: #fff7f3; }
+.relation-group button b { display: block; color: #263348; margin-bottom: 4px; }
+.relation-group button span { color: #748196; font-size: 12px; line-height: 1.45; }

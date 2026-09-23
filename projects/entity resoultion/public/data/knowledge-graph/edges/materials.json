@@ -1,0 +1,2069 @@
+[
+  {
+    "edge_id": "E0001",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pc",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0051",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pc",
+    "to": "DSC:pc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0053",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pc:01",
+    "to": "CON:pc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0054",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pc:02",
+    "to": "CON:pc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0056",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pp",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0094",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pp",
+    "to": "DSC:pp",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0096",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pp:01",
+    "to": "CON:pp",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0097",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pp:02",
+    "to": "CON:pp",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0099",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:talc",
+    "to": "DOM:chemicals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0117",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:talc",
+    "to": "DSC:talc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0120",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:abs",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0161",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:abs",
+    "to": "DSC:abs",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0164",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:abs:01",
+    "to": "CON:abs",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0165",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:abs:02",
+    "to": "CON:abs",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0167",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:asa",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0205",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:asa",
+    "to": "DSC:asa",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0207",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:asa:01",
+    "to": "CON:asa",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0209",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pa66",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0256",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pa66",
+    "to": "DSC:pa66",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0258",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pa66:01",
+    "to": "CON:pa66",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0259",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pa66:02",
+    "to": "CON:pa66",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0261",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pa6",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0296",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pa6",
+    "to": "DSC:pa6",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0299",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:gf",
+    "to": "DOM:glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0330",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:gf",
+    "to": "DSC:gf",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0333",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:aldc12_1",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0381",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:aldc12_1",
+    "to": "DSC:aldc12_1",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0383",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:aldc12_1:01",
+    "to": "CON:aldc12_1",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0384",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:aldc12_1:02",
+    "to": "CON:aldc12_1",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0386",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:al",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0417",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:al",
+    "to": "DSC:al",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0420",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:al:01",
+    "to": "CON:al",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0422",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:si",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0448",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:si",
+    "to": "DSC:si",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0450",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:cu",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0480",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:cu",
+    "to": "DSC:cu",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0484",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:fe",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0507",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:fe",
+    "to": "DSC:fe",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0509",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:zn",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0534",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:zn",
+    "to": "DSC:zn",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0536",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:mg",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0555",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:mg",
+    "to": "DSC:mg",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0557",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:mn",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0579",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:mn",
+    "to": "DSC:mn",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0581",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pom",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0620",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pom",
+    "to": "DSC:pom",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0622",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:pom:01",
+    "to": "CON:pom",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0624",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pbt",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0656",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pbt",
+    "to": "DSC:pbt",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0659",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pet",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0692",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pet",
+    "to": "DSC:pet",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0695",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pvc",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0724",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pvc",
+    "to": "DSC:pvc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0727",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:soda_lime_glass",
+    "to": "DOM:glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0748",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:soda_lime_glass",
+    "to": "DSC:soda_lime_glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0751",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:soda_lime_glass:01",
+    "to": "CON:soda_lime_glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0753",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:spcc",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0781",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:spcc",
+    "to": "DSC:spcc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0783",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:spcc:01",
+    "to": "CON:spcc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0785",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:swch10a",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0812",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:swch10a",
+    "to": "DSC:swch10a",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0815",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:electrical_steel",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0845",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:electrical_steel",
+    "to": "DSC:electrical_steel",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0848",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:ndfeb",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0876",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:ndfeb",
+    "to": "DSC:ndfeb",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0878",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:silicone_resin",
+    "to": "DOM:chemicals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0912",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:silicone_resin",
+    "to": "DSC:silicone_resin",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0914",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:epoxy_fr4",
+    "to": "DOM:electronics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0944",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:epoxy_fr4",
+    "to": "DSC:epoxy_fr4",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0947",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:hotmelt_pa",
+    "to": "DOM:chemicals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0977",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:hotmelt_pa",
+    "to": "DSC:hotmelt_pa",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0978",
+    "edge_type": "ALIAS_OF_ITEM",
+    "cardinality": "n:1",
+    "from": "VND:hotmelt_pa:01",
+    "to": "CON:hotmelt_pa",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0980",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:pu_paint",
+    "to": "DOM:chemicals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1011",
+    "edge_type": "HAS_DESCRIPTION",
+    "cardinality": "1:n",
+    "from": "CON:pu_paint",
+    "to": "DSC:pu_paint",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1018",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:metal",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1025",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:ferrous",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1035",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:carbon_steel",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1044",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:alloy_steel",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1052",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:nonferrous",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1060",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:al_cast_group",
+    "to": "DOM:metals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1072",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:polymer",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1082",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:thermoplastic",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1093",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:thermoset",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1104",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:polyolefin",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1113",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:polyamide",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1125",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:polyester_resin",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1136",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:styrenic",
+    "to": "DOM:plastics",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1148",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:inorganic",
+    "to": "DOM:glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1155",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:glass_material",
+    "to": "DOM:glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1162",
+    "edge_type": "IN_DOMAIN",
+    "cardinality": "n:1",
+    "from": "CON:mineral_filler",
+    "to": "DOM:chemicals",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1171",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:material",
+    "to": "CON:metal",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1172",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:material",
+    "to": "CON:polymer",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1173",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:material",
+    "to": "CON:inorganic",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1174",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:metal",
+    "to": "CON:ferrous",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1175",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:metal",
+    "to": "CON:nonferrous",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1176",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:ferrous",
+    "to": "CON:carbon_steel",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1177",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:ferrous",
+    "to": "CON:alloy_steel",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1178",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:ferrous",
+    "to": "CON:fe",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1179",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:carbon_steel",
+    "to": "CON:spcc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1180",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:carbon_steel",
+    "to": "CON:swch10a",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1181",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:alloy_steel",
+    "to": "CON:electrical_steel",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1182",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:al",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1183",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:cu",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1184",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:zn",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1185",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:mg",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1186",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:mn",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1187",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:si",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1188",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:nonferrous",
+    "to": "CON:ndfeb",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1189",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:al",
+    "to": "CON:al_cast_group",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1190",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:al_cast_group",
+    "to": "CON:aldc12_1",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1191",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polymer",
+    "to": "CON:thermoplastic",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1192",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polymer",
+    "to": "CON:thermoset",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1193",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:polyolefin",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1194",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:polyamide",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1195",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:polyester_resin",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1196",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:styrenic",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1197",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:pc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1198",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:pom",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1199",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoplastic",
+    "to": "CON:pvc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1200",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polyolefin",
+    "to": "CON:pp",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1201",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polyamide",
+    "to": "CON:pa6",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1202",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polyamide",
+    "to": "CON:pa66",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1203",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polyester_resin",
+    "to": "CON:pet",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1204",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:polyester_resin",
+    "to": "CON:pbt",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1205",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:styrenic",
+    "to": "CON:abs",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1206",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:styrenic",
+    "to": "CON:asa",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1207",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoset",
+    "to": "CON:epoxy_fr4",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1208",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoset",
+    "to": "CON:pu_paint",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1209",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoset",
+    "to": "CON:silicone_resin",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1210",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:thermoset",
+    "to": "CON:hotmelt_pa",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1211",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:inorganic",
+    "to": "CON:glass_material",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1212",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:inorganic",
+    "to": "CON:mineral_filler",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1213",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:glass_material",
+    "to": "CON:soda_lime_glass",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1214",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:glass_material",
+    "to": "CON:gf",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1215",
+    "edge_type": "BROADER_THAN",
+    "cardinality": "1:n",
+    "from": "CON:mineral_filler",
+    "to": "CON:talc",
+    "props": {},
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1228",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:pet",
+    "to": "CON:pbt",
+    "props": {
+      "reason": "약어 충돌",
+      "note": "PET / PBT 3문자 약어가 유사해 오매칭 빈발",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1229",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:pa66",
+    "to": "CON:pa6",
+    "props": {
+      "reason": "규격 유사",
+      "note": "PA6 / PA66 표기 혼동. 흡습률·내열성이 다름",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1230",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:abs",
+    "to": "CON:asa",
+    "props": {
+      "reason": "약어 충돌",
+      "note": "ABS / ASA 1문자 차이. 내후성 요구 시 대체 불가",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1231",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:si",
+    "to": "CON:silicone_resin",
+    "props": {
+      "reason": "이름 유사",
+      "note": "한글 '실리콘'이 원소 규소와 실리콘 수지 양쪽에 쓰임",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1232",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:pc",
+    "to": "CON:pvc",
+    "props": {
+      "reason": "약어 충돌",
+      "note": "PC / PVC 오타 시 상호 오매칭",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1233",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:pom",
+    "to": "CON:pp",
+    "props": {
+      "reason": "용도 유사",
+      "note": "미러 기어 소재 후보로 함께 검토되어 BOM 표기 혼선",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1234",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:talc",
+    "to": "CON:si",
+    "props": {
+      "reason": "이름 유사",
+      "note": "탈크(규산마그네슘)를 규소 화합물로 잘못 정규화하는 사례",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1235",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:spcc",
+    "to": "CON:electrical_steel",
+    "props": {
+      "reason": "규격 유사",
+      "note": "둘 다 강판이나 자성 요구가 전혀 다름",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1236",
+    "edge_type": "NOT_CONFUSE_WITH",
+    "cardinality": "m:n",
+    "from": "CON:al",
+    "to": "CON:aldc12_1",
+    "props": {
+      "reason": "이름 유사",
+      "note": "'알루미늄'과 '알루미늄 다이캐스팅 합금'은 참조물질이 다름",
+      "directed": false
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1237",
+    "edge_type": "SUBSTITUTABLE_BY",
+    "cardinality": "m:n",
+    "from": "CON:abs",
+    "to": "CON:asa",
+    "props": {
+      "reason": "내후성 요구",
+      "note": "무도장 외장부에서는 ASA로 대체. 동일 물질이 아니며 원가·가공조건이 다름",
+      "reversible": false,
+      "same_substance": false,
+      "caution": "대체어는 동일 물질이 아니므로 LCI 매핑을 자동 승계하지 않는다"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1238",
+    "edge_type": "SUBSTITUTABLE_BY",
+    "cardinality": "m:n",
+    "from": "CON:pa66",
+    "to": "CON:pa6",
+    "props": {
+      "reason": "원가 대체",
+      "note": "내열·흡습 요구가 낮은 내장 브라켓에 한해 대체 가능",
+      "reversible": false,
+      "same_substance": false,
+      "caution": "대체어는 동일 물질이 아니므로 LCI 매핑을 자동 승계하지 않는다"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1239",
+    "edge_type": "SUBSTITUTABLE_BY",
+    "cardinality": "m:n",
+    "from": "CON:spcc",
+    "to": "CON:electrical_steel",
+    "props": {
+      "reason": "조달 대체",
+      "note": "자성 요구가 없는 브라켓에 한해 상호 대체 가능",
+      "reversible": false,
+      "same_substance": false,
+      "caution": "대체어는 동일 물질이 아니므로 LCI 매핑을 자동 승계하지 않는다"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1240",
+    "edge_type": "SUBSTITUTABLE_BY",
+    "cardinality": "m:n",
+    "from": "CON:pbt",
+    "to": "CON:pa66",
+    "props": {
+      "reason": "물성 동등",
+      "note": "커넥터 하우징 한정. 흡습 조건에서는 PBT가 유리",
+      "reversible": true,
+      "same_substance": false,
+      "caution": "대체어는 동일 물질이 아니므로 LCI 매핑을 자동 승계하지 않는다"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1241",
+    "edge_type": "SUBSTITUTABLE_BY",
+    "cardinality": "m:n",
+    "from": "CON:pom",
+    "to": "CON:pa66",
+    "props": {
+      "reason": "물성 동등",
+      "note": "저하중 기어에 한해 대체 가능. 마찰계수 차이 확인 필요",
+      "reversible": false,
+      "same_substance": false,
+      "caution": "대체어는 동일 물질이 아니므로 LCI 매핑을 자동 승계하지 않는다"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1242",
+    "edge_type": "SUBSTITUTABLE_BY",
+    "cardinality": "m:n",
+    "from": "CON:pp",
+    "to": "CON:abs",
+    "props": {
+      "reason": "원가 대체",
+      "note": "도장 불요 내장부에 한해 대체 가능",
+      "reversible": false,
+      "same_substance": false,
+      "caution": "대체어는 동일 물질이 아니므로 LCI 매핑을 자동 승계하지 않는다"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1244",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_lens",
+    "to": "CON:pc",
+    "props": {
+      "mass_g": 185,
+      "ratio_pct": 100,
+      "process": "PRC:injection",
+      "note": "광학등급 PC"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1246",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_housing",
+    "to": "CON:pp",
+    "props": {
+      "mass_g": 420,
+      "ratio_pct": 80,
+      "process": "PRC:injection",
+      "note": "PP-T20 기저수지"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1247",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_housing",
+    "to": "CON:talc",
+    "props": {
+      "mass_g": 105,
+      "ratio_pct": 20,
+      "process": "PRC:injection",
+      "note": "탈크 충전분"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1249",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_reflector",
+    "to": "CON:pc",
+    "props": {
+      "mass_g": 96,
+      "ratio_pct": 99.4,
+      "process": "PRC:injection",
+      "note": "기재"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1250",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_reflector",
+    "to": "CON:al",
+    "props": {
+      "mass_g": 0.6,
+      "ratio_pct": 0.6,
+      "process": "PRC:vacuum_dep",
+      "note": "진공증착 반사막"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1252",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_heatsink",
+    "to": "CON:aldc12_1",
+    "props": {
+      "mass_g": 310,
+      "ratio_pct": 100,
+      "process": "PRC:diecasting",
+      "note": "다이캐스팅"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1254",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_bezel",
+    "to": "CON:abs",
+    "props": {
+      "mass_g": 88,
+      "ratio_pct": 96.7,
+      "process": "PRC:injection",
+      "note": "도장용 그레이드"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1255",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_bezel",
+    "to": "CON:pu_paint",
+    "props": {
+      "mass_g": 3,
+      "ratio_pct": 3.3,
+      "process": "PRC:painting",
+      "note": "외장 도장"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1257",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_pcb",
+    "to": "CON:epoxy_fr4",
+    "props": {
+      "mass_g": 24,
+      "ratio_pct": 60,
+      "process": "PRC:smt",
+      "note": "기판 본체"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1258",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_pcb",
+    "to": "CON:gf",
+    "props": {
+      "mass_g": 12,
+      "ratio_pct": 30,
+      "process": null,
+      "note": "보강재 분해 계상"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1259",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_pcb",
+    "to": "CON:cu",
+    "props": {
+      "mass_g": 4,
+      "ratio_pct": 10,
+      "process": null,
+      "note": "동박층"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1261",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_led",
+    "to": "CON:silicone_resin",
+    "props": {
+      "mass_g": 2.4,
+      "ratio_pct": 100,
+      "process": null,
+      "note": "봉지재"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1263",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_connector",
+    "to": "CON:pa66",
+    "props": {
+      "mass_g": 12.6,
+      "ratio_pct": 70,
+      "process": "PRC:injection",
+      "note": "PA66-GF30 기저수지"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1264",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_connector",
+    "to": "CON:gf",
+    "props": {
+      "mass_g": 5.4,
+      "ratio_pct": 30,
+      "process": null,
+      "note": "유리섬유 30%"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1265",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_connector",
+    "to": "CON:cu",
+    "props": {
+      "mass_g": 3.2,
+      "ratio_pct": null,
+      "process": null,
+      "note": "단자"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1267",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_sealing",
+    "to": "CON:hotmelt_pa",
+    "props": {
+      "mass_g": 22,
+      "ratio_pct": 100,
+      "process": null,
+      "note": "렌즈-하우징 접합"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1269",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_bracket",
+    "to": "CON:spcc",
+    "props": {
+      "mass_g": 64,
+      "ratio_pct": 100,
+      "process": "PRC:stamping",
+      "note": "프레스 성형"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1271",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_bolt",
+    "to": "CON:swch10a",
+    "props": {
+      "mass_g": 18,
+      "ratio_pct": 97,
+      "process": "PRC:coldheading",
+      "note": "M6 × 4EA"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1272",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:glamp_bolt",
+    "to": "CON:zn",
+    "props": {
+      "mass_g": 0.6,
+      "ratio_pct": 3,
+      "process": null,
+      "note": "아연도금층"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1274",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_glass",
+    "to": "CON:soda_lime_glass",
+    "props": {
+      "mass_g": 168,
+      "ratio_pct": 99.5,
+      "process": "PRC:glass_forming",
+      "note": "저철분 판유리 2.0mm"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1275",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_glass",
+    "to": "CON:al",
+    "props": {
+      "mass_g": 0.8,
+      "ratio_pct": 0.5,
+      "process": "PRC:vacuum_dep",
+      "note": "후면 반사막"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1277",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_cover",
+    "to": "CON:asa",
+    "props": {
+      "mass_g": 112,
+      "ratio_pct": 100,
+      "process": "PRC:injection",
+      "note": "무도장 내후성 그레이드"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1279",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_bracket",
+    "to": "CON:pa66",
+    "props": {
+      "mass_g": 58.8,
+      "ratio_pct": 70,
+      "process": "PRC:injection",
+      "note": "PA66-GF30 기저수지"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1280",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_bracket",
+    "to": "CON:gf",
+    "props": {
+      "mass_g": 25.2,
+      "ratio_pct": 30,
+      "process": null,
+      "note": "유리섬유 30%"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1282",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_motor",
+    "to": "CON:cu",
+    "props": {
+      "mass_g": 34,
+      "ratio_pct": 40,
+      "process": "PRC:winding",
+      "note": "권선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1283",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_motor",
+    "to": "CON:electrical_steel",
+    "props": {
+      "mass_g": 38,
+      "ratio_pct": 45,
+      "process": "PRC:stamping",
+      "note": "코어"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1284",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_motor",
+    "to": "CON:ndfeb",
+    "props": {
+      "mass_g": 12.8,
+      "ratio_pct": 15,
+      "process": null,
+      "note": "영구자석"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1286",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_gear",
+    "to": "CON:pom",
+    "props": {
+      "mass_g": 16.4,
+      "ratio_pct": 100,
+      "process": "PRC:injection",
+      "note": "저마찰 구동부"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1288",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_harness",
+    "to": "CON:cu",
+    "props": {
+      "mass_g": 21,
+      "ratio_pct": 60,
+      "process": "PRC:extrusion",
+      "note": "도체"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1289",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_harness",
+    "to": "CON:pvc",
+    "props": {
+      "mass_g": 14,
+      "ratio_pct": 40,
+      "process": "PRC:extrusion",
+      "note": "절연 피복"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1291",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_heater",
+    "to": "CON:pet",
+    "props": {
+      "mass_g": 6.2,
+      "ratio_pct": 100,
+      "process": "PRC:extrusion",
+      "note": "기재 필름"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1293",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_bolt",
+    "to": "CON:swch10a",
+    "props": {
+      "mass_g": 9,
+      "ratio_pct": 97,
+      "process": "PRC:coldheading",
+      "note": "M5 × 3EA"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1294",
+    "edge_type": "MADE_OF",
+    "cardinality": "m:n",
+    "from": "CMP:mirror_bolt",
+    "to": "CON:zn",
+    "props": {
+      "mass_g": 0.3,
+      "ratio_pct": 3,
+      "process": null,
+      "note": "아연도금층"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  }
+]

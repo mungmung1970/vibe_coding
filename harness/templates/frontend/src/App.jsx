@@ -11,11 +11,11 @@ export default function App() { return <AuthProvider><AuthenticatedApp /></AuthP
 
 function AuthenticatedApp() {
   const { user, can } = useAuth();
-  if (!user) return <LoginPage />;
   const requested = new URLSearchParams(window.location.search).get('tab');
   const initialMenu = requested === 'admin' && can('admin') ? 'admin' : requested === 'history' ? 'history' : 'prompt';
   const [menu, setMenu] = useState(initialMenu);
   useEffect(() => { document.title = menu === 'admin' ? 'LLM Lab · 관리자' : menu === 'history' ? 'LLM Lab · 결과 조회' : 'LLM Lab · 프롬프트 테스트'; }, [menu]);
+  if (!user) return <LoginPage />;
   return <HistoryProvider><Layout menu={menu} onMenuChange={setMenu}>
     {menu === 'history' ? <HistoryPage /> : menu === 'admin' ? <AdminPage /> : <PromptPage />}
   </Layout></HistoryProvider>;

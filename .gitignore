@@ -36,6 +36,14 @@ node_modules/
 .vite/
 **/.vite/
 
+# Project-local generated artifacts
+**/tmp/
+**/output/
+**/*.log
+
+# Generated test reports
+projects/tmax_mcp/*_result.md
+
 # Runtime state and logs
 var/
 **/var/

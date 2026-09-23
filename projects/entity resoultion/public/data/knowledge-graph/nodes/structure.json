@@ -1,0 +1,470 @@
+[
+  {
+    "node_id": "DOM:plastics",
+    "node_type": "domain",
+    "name": "plastics",
+    "props": {
+      "description": "고분자 수지와 복합재를 관리하는 재질 도메인입니다. 자동차 외장·조명·전장 부품의 사출, 압출, 도장 대상 수지를 포함합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DOM:metals",
+    "node_type": "domain",
+    "name": "metals",
+    "props": {
+      "description": "철강·알루미늄·구리 등 금속 및 합금을 관리하는 재질 도메인입니다. 구조부, 방열부, 체결부의 소재와 규격을 포함합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DOM:glass",
+    "node_type": "domain",
+    "name": "glass",
+    "props": {
+      "description": "평판유리·광학유리 등 유리 재질을 관리하는 도메인입니다. 미러글라스와 조명용 광학 부품의 기재를 포함합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DOM:chemicals",
+    "node_type": "domain",
+    "name": "chemicals",
+    "props": {
+      "description": "접착제·도료·실링재 등 화학 제품과 공정 보조 재료를 관리하는 도메인입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DOM:electronics",
+    "node_type": "domain",
+    "name": "electronics",
+    "props": {
+      "description": "PCB, LED, 커넥터, 자석 등 전장 및 전자 부품의 재질과 구성 정보를 관리하는 도메인입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:injection",
+    "node_type": "process",
+    "name": "사출성형",
+    "props": {
+      "name_en": "injection moulding",
+      "description": "사출성형 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:diecasting",
+    "node_type": "process",
+    "name": "다이캐스팅",
+    "props": {
+      "name_en": "die casting",
+      "description": "다이캐스팅 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:vacuum_dep",
+    "node_type": "process",
+    "name": "진공증착",
+    "props": {
+      "name_en": "vacuum metallizing",
+      "description": "진공증착 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:painting",
+    "node_type": "process",
+    "name": "도장",
+    "props": {
+      "name_en": "painting",
+      "description": "도장 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:stamping",
+    "node_type": "process",
+    "name": "프레스성형",
+    "props": {
+      "name_en": "stamping",
+      "description": "프레스성형 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:coldheading",
+    "node_type": "process",
+    "name": "냉간압조",
+    "props": {
+      "name_en": "cold heading",
+      "description": "냉간압조 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:extrusion",
+    "node_type": "process",
+    "name": "압출",
+    "props": {
+      "name_en": "extrusion",
+      "description": "압출 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:glass_forming",
+    "node_type": "process",
+    "name": "판유리 가공",
+    "props": {
+      "name_en": "flat glass processing",
+      "description": "판유리 가공 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:winding",
+    "node_type": "process",
+    "name": "권선",
+    "props": {
+      "name_en": "coil winding",
+      "description": "권선 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PRC:smt",
+    "node_type": "process",
+    "name": "SMT 실장",
+    "props": {
+      "name_en": "surface mount",
+      "description": "SMT 실장 제조 공정입니다. 연결된 부품·소재의 생산 방법을 식별하는 데 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PART:auto_lamp_G",
+    "node_type": "part",
+    "name": "G램프",
+    "props": {
+      "name_en": "Auto lamp G",
+      "product_type": "automotive",
+      "industry_class_ksic": "C30391",
+      "industry_class_isic": "2930",
+      "note": "LED 헤드램프 어셈블리",
+      "description": "자동차용 LED 헤드램프 어셈블리입니다. 렌즈, 하우징, 리플렉터, 방열판, LED 및 전장 연결부로 구성되며, 광학 성능·방열·내후성을 함께 관리합니다. 주요 구성품은 렌즈, 하우징, 리플렉터, 히트싱크입니다.",
+      "detail_schema": "entity-detail-v1",
+      "product_type_description": "자동차 산업용 완성 부품 또는 모듈 분류입니다. 차량 기능과 조립 단위 기준으로 구성품·재질·공정을 연결합니다."
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PART:mirror_L",
+    "node_type": "part",
+    "name": "L미러",
+    "props": {
+      "name_en": "Outside mirror, left",
+      "product_type": "automotive",
+      "industry_class_ksic": "C30391",
+      "industry_class_isic": "2930",
+      "note": "좌측 아웃사이드 미러 어셈블리",
+      "description": "차량 좌측 아웃사이드 미러 어셈블리입니다. 미러글라스, 커버, 구동 모터, 열선 필름, 하네스 및 체결부로 구성되며 시야 확보와 전동 조절 기능을 담당합니다. 주요 구성품은 미러글라스, 미러 커버, 미러 브라켓, 구동 모터입니다.",
+      "detail_schema": "entity-detail-v1",
+      "product_type_description": "자동차 산업용 완성 부품 또는 모듈 분류입니다. 차량 기능과 조립 단위 기준으로 구성품·재질·공정을 연결합니다."
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_lens",
+    "node_type": "component",
+    "name": "렌즈",
+    "props": {
+      "name_en": "Lens",
+      "part": "PART:auto_lamp_G",
+      "description": "광원을 투과·굴절시켜 배광을 형성하는 광학 부품입니다. 투명성, 내충격성, 내후성이 주요 관리 특성입니다. 연결된 재질·식별 정보는 폴리카보네이트입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_housing",
+    "node_type": "component",
+    "name": "하우징",
+    "props": {
+      "name_en": "Housing",
+      "part": "PART:auto_lamp_G",
+      "description": "램프 내부 부품을 지지하고 외부 환경으로부터 보호하는 구조 부품입니다. 강성, 치수 안정성 및 내열성이 중요합니다. 연결된 재질·식별 정보는 폴리프로필렌, 탈크입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_reflector",
+    "node_type": "component",
+    "name": "리플렉터",
+    "props": {
+      "name_en": "Reflector",
+      "part": "PART:auto_lamp_G",
+      "description": "광원을 반사해 목표 방향으로 유도하는 광학 구조 부품입니다. 반사막과 기재의 표면 품질을 함께 관리합니다. 연결된 재질·식별 정보는 폴리카보네이트, 알루미늄입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_heatsink",
+    "node_type": "component",
+    "name": "히트싱크",
+    "props": {
+      "name_en": "Heat sink",
+      "part": "PART:auto_lamp_G",
+      "description": "LED 등 발열 부품의 열을 외부로 방출하는 방열 부품입니다. 열전도율과 형상 안정성이 핵심 특성입니다. 연결된 재질·식별 정보는 알루미늄 다이캐스팅 합금 ALDC12.1입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_bezel",
+    "node_type": "component",
+    "name": "베젤",
+    "props": {
+      "name_en": "Bezel",
+      "part": "PART:auto_lamp_G",
+      "description": "조명 모듈의 외관과 조립 경계를 형성하는 장식·구조 부품입니다. 연결된 재질·식별 정보는 아크릴로니트릴-부타디엔-스티렌 공중합체, 2액형 폴리우레탄 도료입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_pcb",
+    "node_type": "component",
+    "name": "PCB",
+    "props": {
+      "name_en": "Printed circuit board",
+      "part": "PART:auto_lamp_G",
+      "description": "전자 회로와 전자부품을 기계적·전기적으로 연결하는 인쇄회로기판입니다. 연결된 재질·식별 정보는 FR-4 유리섬유 에폭시 적층판, 유리섬유, 구리입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_led",
+    "node_type": "component",
+    "name": "LED 패키지",
+    "props": {
+      "name_en": "LED package",
+      "part": "PART:auto_lamp_G",
+      "description": "전기에너지를 빛으로 변환하는 광원 모듈입니다. 광효율, 색좌표, 열 관리가 중요합니다. 연결된 재질·식별 정보는 실리콘 수지입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_connector",
+    "node_type": "component",
+    "name": "커넥터",
+    "props": {
+      "name_en": "Connector",
+      "part": "PART:auto_lamp_G",
+      "description": "전원과 신호를 탈부착 가능하게 연결하는 전장 인터페이스 부품입니다. 연결된 재질·식별 정보는 폴리아미드 66, 유리섬유, 구리입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_sealing",
+    "node_type": "component",
+    "name": "실링",
+    "props": {
+      "name_en": "Sealing",
+      "part": "PART:auto_lamp_G",
+      "description": "수분과 먼지의 유입을 막아 램프 내부를 밀폐하는 재료 또는 구조입니다. 연결된 재질·식별 정보는 폴리아미드계 핫멜트 접착제입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_bracket",
+    "node_type": "component",
+    "name": "마운팅 브라켓",
+    "props": {
+      "name_en": "Mounting bracket",
+      "part": "PART:auto_lamp_G",
+      "description": "어셈블리를 차량 차체에 위치·고정하는 지지 구조 부품입니다. 연결된 재질·식별 정보는 냉간압연 강판입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:glamp_bolt",
+    "node_type": "component",
+    "name": "체결 볼트",
+    "props": {
+      "name_en": "Bolt",
+      "part": "PART:auto_lamp_G",
+      "description": "부품 또는 어셈블리를 체결하는 표준 체결 부품입니다. 강도, 표면처리 및 부식 저항을 관리합니다. 연결된 재질·식별 정보는 냉간압조용 탄소강, 아연입니다. 소속 제품 또는 모듈은 G램프입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_glass",
+    "node_type": "component",
+    "name": "미러글라스",
+    "props": {
+      "name_en": "Mirror glass",
+      "part": "PART:mirror_L",
+      "description": "후방 시야를 제공하는 반사 유리 부품입니다. 반사막, 곡률 및 열선 적용 여부를 관리합니다. 연결된 재질·식별 정보는 소다석회유리, 알루미늄입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_cover",
+    "node_type": "component",
+    "name": "미러 커버",
+    "props": {
+      "name_en": "Mirror cover",
+      "part": "PART:mirror_L",
+      "description": "미러 어셈블리 외관을 형성하고 내부 구조를 보호하는 외장 부품입니다. 연결된 재질·식별 정보는 아크릴로니트릴-스티렌-아크릴레이트 공중합체입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_bracket",
+    "node_type": "component",
+    "name": "미러 브라켓",
+    "props": {
+      "name_en": "Mirror bracket",
+      "part": "PART:mirror_L",
+      "description": "미러글라스와 구동부를 지지·결합하는 구조 부품입니다. 연결된 재질·식별 정보는 폴리아미드 66, 유리섬유입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_motor",
+    "node_type": "component",
+    "name": "구동 모터",
+    "props": {
+      "name_en": "Drive motor",
+      "part": "PART:mirror_L",
+      "description": "미러 각도를 전동으로 조절하는 구동 부품입니다. 연결된 재질·식별 정보는 구리, 무방향성 전기강판, 네오디뮴 자석입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_gear",
+    "node_type": "component",
+    "name": "기어",
+    "props": {
+      "name_en": "Gear",
+      "part": "PART:mirror_L",
+      "description": "모터의 회전력을 미러 조절기구에 전달하는 동력 전달 부품입니다. 연결된 재질·식별 정보는 폴리옥시메틸렌입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_harness",
+    "node_type": "component",
+    "name": "와이어하니스",
+    "props": {
+      "name_en": "Wire harness",
+      "part": "PART:mirror_L",
+      "description": "전원·신호선을 묶어 전장 부품 사이를 연결하는 배선 어셈블리입니다. 연결된 재질·식별 정보는 구리, 폴리염화비닐입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_heater",
+    "node_type": "component",
+    "name": "열선 필름",
+    "props": {
+      "name_en": "Heater film",
+      "part": "PART:mirror_L",
+      "description": "미러 표면의 결로·성에를 제거하기 위해 발열하는 필름형 부품입니다. 연결된 재질·식별 정보는 폴리에틸렌테레프탈레이트입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "CMP:mirror_bolt",
+    "node_type": "component",
+    "name": "체결 볼트",
+    "props": {
+      "name_en": "Bolt",
+      "part": "PART:mirror_L",
+      "description": "부품 또는 어셈블리를 체결하는 표준 체결 부품입니다. 강도, 표면처리 및 부식 저항을 관리합니다. 연결된 재질·식별 정보는 냉간압조용 탄소강, 아연입니다. 소속 제품 또는 모듈은 L미러입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "PT:automotive",
+    "node_type": "product_type",
+    "name": "자동차 부품",
+    "props": {
+      "product_type": "automotive",
+      "description": "자동차 부품 제품유형입니다. 해당 제품유형에 속한 파트와 그 하위 구성물·물질개념을 탐색하는 최상위 분류 항목입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  }
+]

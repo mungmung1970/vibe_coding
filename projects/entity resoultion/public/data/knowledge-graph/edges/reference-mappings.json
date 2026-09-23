@@ -1,0 +1,600 @@
+[
+  {
+    "edge_id": "E0055",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pc",
+    "to": "REF:pc_granulate",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.98,
+      "rationale": "CAS 25037-45-0 및 ISO 1043 PC 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "polycarbonate production",
+      "ref_id": "6829",
+      "lci_ref_name": "polycarbonate production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0098",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pp",
+    "to": "REF:pp_granulate",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.88,
+      "rationale": "기저 수지는 일치하나 탈크 20% 충전분은 별도 계상 필요",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "polypropylene production, granulate",
+      "ref_id": "6857",
+      "lci_ref_name": "polypropylene production, granulate",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0119",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:talc",
+    "to": "REF:talc",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.97,
+      "rationale": "CAS 14807-96-6 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": null,
+      "ref_id": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0166",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:abs",
+    "to": "REF:abs_granulate",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.97,
+      "rationale": "CAS 9003-56-9 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "ref_id": "69",
+      "lci_ref_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0208",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:asa",
+    "to": "REF:abs_granulate",
+    "props": {
+      "match_type": "프록시",
+      "confidence": 0.62,
+      "rationale": "ASA 전용 참조물질 부재. 모노머 구성이 가장 가까운 ABS로 대체. 아크릴레이트 상 차이로 과소평가 가능",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "ref_id": "69",
+      "lci_ref_name": "acrylonitrile-butadiene-styrene copolymer production",
+      "lci_mapping_priority": "production 우선",
+      "mapping_kind": "lci_proxy",
+      "same_substance": false,
+      "proxy_reason": "ASA 전용 참조물질 부재. 모노머 구성이 가장 가까운 ABS로 대체. 아크릴레이트 상 차이로 과소평가 가능",
+      "conservatism_direction": "과소평가 가능",
+      "uncertainty_comment": "ASA 전용 참조물질 부재. 모노머 구성이 가장 가까운 ABS로 대체. 아크릴레이트 상 차이로 과소평가 가능",
+      "proxy_review_required": true
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0260",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pa66",
+    "to": "REF:pa66_granulate",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.9,
+      "rationale": "기저 수지 일치. 유리섬유 30%는 별도 참조물질로 분해 계상",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "nylon 6-6 production",
+      "ref_id": "6523",
+      "lci_ref_name": "nylon 6-6 production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0298",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pa6",
+    "to": "REF:pa6_granulate",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.96,
+      "rationale": "CAS 25038-54-4 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "nylon 6 production",
+      "ref_id": "6521",
+      "lci_ref_name": "nylon 6 production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0332",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:gf",
+    "to": "REF:glass_fibre",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.95,
+      "rationale": "CAS 65997-17-3 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "glass fibre production",
+      "ref_id": "1501",
+      "lci_ref_name": "glass fibre production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0385",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:aldc12_1",
+    "to": "REF:al_cast_alloy",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.94,
+      "rationale": "주조용 알루미늄 합금 참조물질과 합금계 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "aluminium alloy production, AlLi",
+      "ref_id": "117",
+      "lci_ref_name": "aluminium alloy production, AlLi",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0421",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:al",
+    "to": "REF:al_primary",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.96,
+      "rationale": "CAS 7429-90-5 일치, 1차 지금 기준",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "aluminium production, primary, ingot",
+      "ref_id": "145",
+      "lci_ref_name": "aluminium production, primary, ingot",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0449",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:si",
+    "to": "REF:silicon_met",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.93,
+      "rationale": "야금급 규소 기준 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "silicon production, metallurgical grade",
+      "ref_id": "7166",
+      "lci_ref_name": "silicon production, metallurgical grade",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0483",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:cu",
+    "to": "REF:copper_cathode",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.97,
+      "rationale": "CAS 7440-50-8 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "copper production, cathode, solvent extraction and electrowinning process",
+      "ref_id": "820",
+      "lci_ref_name": "copper production, cathode, solvent extraction and electrowinning process",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0508",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:fe",
+    "to": "REF:pig_iron",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.8,
+      "rationale": "원소 철의 대표 참조물질로 선철 사용",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "pig iron production",
+      "ref_id": "6762",
+      "lci_ref_name": "pig iron production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0535",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:zn",
+    "to": "REF:zinc",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.95,
+      "rationale": "CAS 7440-66-6 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "primary zinc production from concentrate",
+      "ref_id": "6937",
+      "lci_ref_name": "primary zinc production from concentrate",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0556",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:mg",
+    "to": "REF:magnesium",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.94,
+      "rationale": "CAS 7439-95-4 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "magnesium oxide production",
+      "ref_id": "2087",
+      "lci_ref_name": "magnesium oxide production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0580",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:mn",
+    "to": "REF:manganese",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.94,
+      "rationale": "CAS 7439-96-5 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "manganese concentrate production",
+      "ref_id": "2169",
+      "lci_ref_name": "manganese concentrate production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0623",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pom",
+    "to": "REF:pom_granulate",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.96,
+      "rationale": "CAS 9002-81-7 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": null,
+      "ref_id": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0658",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pbt",
+    "to": "REF:pbt_granulate",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.95,
+      "rationale": "CAS 24968-12-5 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": null,
+      "ref_id": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0694",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pet",
+    "to": "REF:pet_granulate",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.85,
+      "rationale": "granulate 기준 참조물질. 필름 가공 공정은 별도 계상",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "polyethylene terephthalate production, granulate, amorphous",
+      "ref_id": "6845",
+      "lci_ref_name": "polyethylene terephthalate production, granulate, amorphous",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0726",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pvc",
+    "to": "REF:pvc_bulk",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.86,
+      "rationale": "중합법(bulk) 기준 참조물질. 가소제분은 미포함",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "polyvinylchloride production, bulk polymerisation",
+      "ref_id": "6879",
+      "lci_ref_name": "polyvinylchloride production, bulk polymerisation",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0752",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:soda_lime_glass",
+    "to": "REF:flat_glass",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.93,
+      "rationale": "무코팅 판유리 참조물질과 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "flat glass production, coated",
+      "ref_id": "1396",
+      "lci_ref_name": "flat glass production, coated",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0784",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:spcc",
+    "to": "REF:steel_cold_rolled",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.88,
+      "rationale": "냉연 전용 참조물질 부재 시 열연 저합금강 데이터 사용, 압연 공정 별도 계상",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "steel production, low-alloyed, hot rolled",
+      "ref_id": "7314",
+      "lci_ref_name": "steel production, low-alloyed, hot rolled",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0814",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:swch10a",
+    "to": "REF:steel_unalloyed",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.9,
+      "rationale": "비합금강 기준 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "steel production, converter, unalloyed",
+      "ref_id": "7311",
+      "lci_ref_name": "steel production, converter, unalloyed",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0847",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:electrical_steel",
+    "to": "REF:steel_low_alloyed",
+    "props": {
+      "match_type": "프록시",
+      "confidence": 0.58,
+      "rationale": "전기강판 전용 참조물질 부재. 저합금강으로 대체하며 규소 첨가 및 절연코팅 공정이 누락되어 과소평가 가능",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "steel production, converter, low-alloyed",
+      "ref_id": "7310",
+      "lci_ref_name": "steel production, converter, low-alloyed",
+      "lci_mapping_priority": "production 우선",
+      "mapping_kind": "lci_proxy",
+      "same_substance": false,
+      "proxy_reason": "전기강판 전용 참조물질 부재. 저합금강으로 대체하며 규소 첨가 및 절연코팅 공정이 누락되어 과소평가 가능",
+      "conservatism_direction": "과소평가 가능",
+      "uncertainty_comment": "전기강판 전용 참조물질 부재. 저합금강으로 대체하며 규소 첨가 및 절연코팅 공정이 누락되어 과소평가 가능",
+      "proxy_review_required": true
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0877",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:ndfeb",
+    "to": "REF:ndfeb_magnet",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.92,
+      "rationale": "NdFeB 영구자석 참조물질과 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": null,
+      "ref_id": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0913",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:silicone_resin",
+    "to": "REF:silicone",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.84,
+      "rationale": "실리콘 제품 일반 참조물질. 광학 그레이드 정제 공정은 미반영",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "silicone product production",
+      "ref_id": "7174",
+      "lci_ref_name": "silicone product production",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0946",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:epoxy_fr4",
+    "to": "REF:epoxy_resin",
+    "props": {
+      "match_type": "유사",
+      "confidence": 0.72,
+      "rationale": "에폭시 수지분만 대응. 유리섬유·동박은 별도 개념으로 분해",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "epoxy resin production, liquid",
+      "ref_id": "1233",
+      "lci_ref_name": "epoxy resin production, liquid",
+      "lci_mapping_priority": "production 우선"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E0979",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:hotmelt_pa",
+    "to": "REF:adhesive_metal",
+    "props": {
+      "match_type": "프록시",
+      "confidence": 0.55,
+      "rationale": "폴리아미드계 핫멜트 참조물질 부재. 금속용 접착제로 대체하며 수지계 차이로 불확실성이 큼",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": "adhesive production, for metal",
+      "ref_id": "74",
+      "lci_ref_name": "adhesive production, for metal",
+      "lci_mapping_priority": "production 우선",
+      "mapping_kind": "lci_proxy",
+      "same_substance": false,
+      "proxy_reason": "폴리아미드계 핫멜트 참조물질 부재. 금속용 접착제로 대체하며 수지계 차이로 불확실성이 큼",
+      "conservatism_direction": "불확실성 검토 필요",
+      "uncertainty_comment": "폴리아미드계 핫멜트 참조물질 부재. 금속용 접착제로 대체하며 수지계 차이로 불확실성이 큼",
+      "proxy_review_required": true
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "edge_id": "E1013",
+    "edge_type": "BRIDGES_TO",
+    "cardinality": "m:n",
+    "from": "CON:pu_paint",
+    "to": "REF:pu_paint",
+    "props": {
+      "match_type": "정확",
+      "confidence": 0.9,
+      "rationale": "폴리우레탄 도료 참조물질과 일치",
+      "is_selected": true,
+      "reviewer": "TBD",
+      "lci_db_name": null,
+      "ref_id": null,
+      "lci_ref_name": null,
+      "lci_mapping_priority": "매핑 후보 없음"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  }
+]

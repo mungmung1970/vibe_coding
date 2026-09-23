@@ -1,0 +1,587 @@
+[
+  {
+    "node_id": "DSC:pc",
+    "node_type": "description",
+    "name": "비스페놀A 기반 열가소성 엔지니어링 플라스틱. 투명성과 내충격성이 높아 헤드램프 렌즈와 리플렉터 기재로 사용된다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "비스페놀A 기반 열가소성 엔지니어링 플라스틱. 투명성과 내충격성이 높아 헤드램프 렌즈와 리플렉터 기재로 사용된다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pc:01",
+    "node_type": "vendor_item",
+    "name": "LUPOY 1201-10",
+    "props": {
+      "term_type": "상품명",
+      "vendor": "LG화학",
+      "description": "LUPOY 1201-10은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리카보네이트입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pc:02",
+    "node_type": "vendor_item",
+    "name": "MT-PC-001",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-PC-001은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리카보네이트입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pp",
+    "node_type": "description",
+    "name": "범용 열가소성 폴리올레핀. 램프 하우징에는 탈크 20% 충전 그레이드를 써서 치수안정성을 확보한다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "범용 열가소성 폴리올레핀. 램프 하우징에는 탈크 20% 충전 그레이드를 써서 치수안정성을 확보한다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pp:01",
+    "node_type": "vendor_item",
+    "name": "SEETEC M1600",
+    "props": {
+      "term_type": "상품명",
+      "vendor": "LG화학",
+      "description": "SEETEC M1600은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리프로필렌입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pp:02",
+    "node_type": "vendor_item",
+    "name": "MT-PP-T20",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-PP-T20은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리프로필렌입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:talc",
+    "node_type": "description",
+    "name": "함수 규산마그네슘 광물. 폴리프로필렌의 강성·내열성 향상을 위한 충전재로 사용된다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "함수 규산마그네슘 광물. 폴리프로필렌의 강성·내열성 향상을 위한 충전재로 사용된다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:abs",
+    "node_type": "description",
+    "name": "스티렌계 3원 공중합체. 도장 밀착성이 좋아 램프 베젤·미러 커버에 사용된다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "스티렌계 3원 공중합체. 도장 밀착성이 좋아 램프 베젤·미러 커버에 사용된다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:abs:01",
+    "node_type": "vendor_item",
+    "name": "TERLURAN GP-22",
+    "props": {
+      "term_type": "상품명",
+      "vendor": "INEOS",
+      "description": "TERLURAN GP-22은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 아크릴로니트릴-부타디엔-스티렌 공중합체입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:abs:02",
+    "node_type": "vendor_item",
+    "name": "MT-ABS-001",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-ABS-001은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 아크릴로니트릴-부타디엔-스티렌 공중합체입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:asa",
+    "node_type": "description",
+    "name": "ABS의 부타디엔 상을 아크릴레이트로 대체한 내후성 수지. 무도장 외장 미러 커버에 사용된다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "ABS의 부타디엔 상을 아크릴레이트로 대체한 내후성 수지. 무도장 외장 미러 커버에 사용된다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:asa:01",
+    "node_type": "vendor_item",
+    "name": "MT-ASA-001",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-ASA-001은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 아크릴로니트릴-스티렌-아크릴레이트 공중합체입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pa66",
+    "node_type": "description",
+    "name": "헥사메틸렌디아민과 아디프산 기반 폴리아미드. GF30 강화 그레이드가 커넥터와 미러 브라켓에 쓰인다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "헥사메틸렌디아민과 아디프산 기반 폴리아미드. GF30 강화 그레이드가 커넥터와 미러 브라켓에 쓰인다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pa66:01",
+    "node_type": "vendor_item",
+    "name": "Zytel 70G30HSLR",
+    "props": {
+      "term_type": "상품명",
+      "vendor": "DuPont",
+      "description": "Zytel 70G30HSLR은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리아미드 66입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pa66:02",
+    "node_type": "vendor_item",
+    "name": "MT-PA66-GF30",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-PA66-GF30은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리아미드 66입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pa6",
+    "node_type": "description",
+    "name": "카프로락탐 개환중합 폴리아미드. PA66 대비 흡습률이 높고 내열성이 낮다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "카프로락탐 개환중합 폴리아미드. PA66 대비 흡습률이 높고 내열성이 낮다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:gf",
+    "node_type": "description",
+    "name": "E-glass 계열 강화재. 수지 그레이드 표기(-GF30 등)의 실체이며 별도 참조물질로 분해 계상한다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "E-glass 계열 강화재. 수지 그레이드 표기(-GF30 등)의 실체이며 별도 참조물질로 분해 계상한다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:aldc12_1",
+    "node_type": "description",
+    "name": "Al-Si-Cu계 다이캐스팅 합금. 유동성과 열전도가 좋아 LED 헤드램프 히트싱크의 표준 소재다. 국가별 규격이 상호대응하므로 같은 개념으로 수렴시킨다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "Al-Si-Cu계 다이캐스팅 합금. 유동성과 열전도가 좋아 LED 헤드램프 히트싱크의 표준 소재다. 국가별 규격이 상호대응하므로 같은 개념으로 수렴시킨다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:aldc12_1:01",
+    "node_type": "vendor_item",
+    "name": "ALDC12.1 INGOT",
+    "props": {
+      "term_type": "상품명",
+      "vendor": null,
+      "description": "ALDC12.1 INGOT은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 알루미늄 다이캐스팅 합금 ALDC12.1입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:aldc12_1:02",
+    "node_type": "vendor_item",
+    "name": "MT-ALDC-121",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-ALDC-121은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 알루미늄 다이캐스팅 합금 ALDC12.1입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:al",
+    "node_type": "description",
+    "name": "리플렉터·미러글라스 반사막의 진공증착 원소재이자 ALDC12.1의 주성분.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "리플렉터·미러글라스 반사막의 진공증착 원소재이자 ALDC12.1의 주성분.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:al:01",
+    "node_type": "vendor_item",
+    "name": "MT-AL-9999",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-AL-9999은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 알루미늄입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:si",
+    "node_type": "description",
+    "name": "ALDC12.1의 주 합금원소. 한글 표기 '실리콘'이 실리콘 수지와 충돌하므로 혼동쌍으로 관리한다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "ALDC12.1의 주 합금원소. 한글 표기 '실리콘'이 실리콘 수지와 충돌하므로 혼동쌍으로 관리한다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:cu",
+    "node_type": "description",
+    "name": "미러 구동모터 권선, PCB 회로층, 와이어하니스 도체의 기본 금속.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "미러 구동모터 권선, PCB 회로층, 와이어하니스 도체의 기본 금속.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:fe",
+    "node_type": "description",
+    "name": "합금 불순물 및 강재의 기본 원소.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "합금 불순물 및 강재의 기본 원소.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:zn",
+    "node_type": "description",
+    "name": "체결부품 방청 도금층 및 ALDC12.1 미량 성분.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "체결부품 방청 도금층 및 ALDC12.1 미량 성분.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:mg",
+    "node_type": "description",
+    "name": "ALDC12.1 미량 합금원소.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "ALDC12.1 미량 합금원소.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:mn",
+    "node_type": "description",
+    "name": "ALDC12.1 미량 합금원소. 대한화학회 표기는 '망가니즈'.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "ALDC12.1 미량 합금원소. 대한화학회 표기는 '망가니즈'.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pom",
+    "node_type": "description",
+    "name": "저마찰·고강성 엔지니어링 플라스틱. 미러 구동부 기어에 사용된다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "저마찰·고강성 엔지니어링 플라스틱. 미러 구동부 기어에 사용된다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:pom:01",
+    "node_type": "vendor_item",
+    "name": "MT-POM-001",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-POM-001은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리옥시메틸렌입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pbt",
+    "node_type": "description",
+    "name": "내열·치수안정성이 좋은 폴리에스터. 램프 소켓·커넥터 대체 후보 소재.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "내열·치수안정성이 좋은 폴리에스터. 램프 소켓·커넥터 대체 후보 소재.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pet",
+    "node_type": "description",
+    "name": "미러 열선 필름의 기재 필름.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "미러 열선 필름의 기재 필름.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pvc",
+    "node_type": "description",
+    "name": "와이어하니스 절연 피복재.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "와이어하니스 절연 피복재.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:soda_lime_glass",
+    "node_type": "description",
+    "name": "미러글라스 기재. 후면에 알루미늄 반사막을 증착한다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "미러글라스 기재. 후면에 알루미늄 반사막을 증착한다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:soda_lime_glass:01",
+    "node_type": "vendor_item",
+    "name": "MT-GLS-002",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-GLS-002은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 소다석회유리입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:spcc",
+    "node_type": "description",
+    "name": "램프 마운팅 브라켓용 일반 냉연강판.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "램프 마운팅 브라켓용 일반 냉연강판.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:spcc:01",
+    "node_type": "vendor_item",
+    "name": "MT-STL-SPCC",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-STL-SPCC은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 냉간압연 강판입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:swch10a",
+    "node_type": "description",
+    "name": "체결 볼트·스크루용 냉간압조 강선재. 표면은 아연도금 처리.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "체결 볼트·스크루용 냉간압조 강선재. 표면은 아연도금 처리.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:electrical_steel",
+    "node_type": "description",
+    "name": "미러 구동모터 코어용 규소강판.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "미러 구동모터 코어용 규소강판.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:ndfeb",
+    "node_type": "description",
+    "name": "미러 구동모터 영구자석.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "미러 구동모터 영구자석.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:silicone_resin",
+    "node_type": "description",
+    "name": "LED 패키지 봉지재 및 램프 실링재. 한글 '실리콘'이 원소 규소(Si)와 충돌한다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "LED 패키지 봉지재 및 램프 실링재. 한글 '실리콘'이 원소 규소(Si)와 충돌한다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:epoxy_fr4",
+    "node_type": "description",
+    "name": "LED 구동 PCB 기판. 에폭시 수지와 유리섬유로 분해 계상한다.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "LED 구동 PCB 기판. 에폭시 수지와 유리섬유로 분해 계상한다.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:hotmelt_pa",
+    "node_type": "description",
+    "name": "램프 렌즈-하우징 접합 실링재.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "램프 렌즈-하우징 접합 실링재.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "VND:hotmelt_pa:01",
+    "node_type": "vendor_item",
+    "name": "MT-ADH-HM1",
+    "props": {
+      "term_type": "사내코드",
+      "vendor": null,
+      "description": "MT-ADH-HM1은(는) 공급사·제품 단위로 관리하는 재질 또는 부품 항목입니다. 상위 물질개념, 규격 및 적용 부품을 연결해 구매·사양 데이터를 추적합니다. 연결 대상은 폴리아미드계 핫멜트 접착제입니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  },
+  {
+    "node_id": "DSC:pu_paint",
+    "node_type": "description",
+    "name": "램프 베젤·미러 커버 외장 도장재.",
+    "props": {
+      "lang": "ko",
+      "source": "사내 용어사전",
+      "description": "램프 베젤·미러 커버 외장 도장재.에 대한 원문 설명 항목입니다. 물질의 특성·용도·관리 근거를 기록하고 물질개념의 상세 설명으로 사용합니다.",
+      "detail_schema": "entity-detail-v1"
+    },
+    "revision": 1,
+    "updated_at": "2026-09-14T00:00:00.000Z"
+  }
+]

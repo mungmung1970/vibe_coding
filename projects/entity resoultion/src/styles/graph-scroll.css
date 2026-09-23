@@ -1,0 +1,2 @@
+.graph-scroll { height: calc(100% - 70px); overflow: auto; }
+.graph-scroll .graph { display: block; width: 1180px; min-width: 100%; height: auto; }
