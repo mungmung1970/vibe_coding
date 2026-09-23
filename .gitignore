@@ -41,9 +41,11 @@ node_modules/
 **/output/
 **/*.log
 
-# mockup_surrodocs 파이프라인 산출물 (PDF 판독 결과·엑셀·문서·페이지 이미지는 재생성된다)
-projects/mockup_surrodocs/out/
-projects/mockup_surrodocs/out_*/
+# mockup_surrodocs 파이프라인: 최종 산출물(doc.json·xlsx·docx·hwpx)은 추적한다.
+# 중간 렌더 이미지와 모델 원문 덤프만 제외한다.
+projects/mockup_surrodocs/out/pages/
+projects/mockup_surrodocs/out_*/pages/
+projects/mockup_surrodocs/out*/last-response.txt
 
 # Generated test reports
 projects/tmax_mcp/*_result.md
