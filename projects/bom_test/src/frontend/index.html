@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BOM 기본정보 추출</title>
+<style>
+  :root {
+    --line: #d8dce3; --bg: #f6f7f9; --panel: #fff; --text: #1d2129;
+    --muted: #6b7280; --accent: #1f6feb; --sel: #e8f0fe;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: grid; grid-template-rows: auto 1fr; gap: 12px; padding: 12px;
+    background: var(--bg); color: var(--text);
+    font: 14px/1.5 "맑은 고딕", "Malgun Gothic", system-ui, sans-serif;
+  }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+  #top { padding: 12px 14px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  #top h1 { font-size: 16px; margin: 0 8px 0 0; }
+  #bottom { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; min-height: 0; }
+  #bottom > section { display: flex; flex-direction: column; min-height: 0; }
+  h2 { font-size: 13px; margin: 0; padding: 10px 12px; border-bottom: 1px solid var(--line); color: var(--muted); }
+  .scroll { overflow: auto; flex: 1; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border-bottom: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+  th { position: sticky; top: 0; background: #eef1f5; font-weight: 600; white-space: nowrap; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: #f2f5fa; }
+  tbody tr.selected { background: var(--sel); }
+  td.empty { color: #aab; }
+  button { padding: 7px 16px; border: 1px solid var(--accent); border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  #status { color: var(--muted); }
+  #status.error { color: #b42318; }
+  .hint { padding: 14px; color: var(--muted); }
+  .badge { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+  <div id="top" class="panel">
+    <h1>BOM 기본정보 추출</h1>
+    <input id="files" type="file" multiple
+           accept=".hwp,.hwpx,.docx,.pptx,.xlsx,.xlsm,.csv,.txt,.md,.json" />
+    <button id="run">실행</button>
+    <span id="status">준비 중…</span>
+  </div>
+
+  <div id="bottom">
+    <section class="panel">
+      <h2>기본정보 <span id="count" class="badge"></span></h2>
+      <div class="scroll"><table>
+        <thead><tr id="head"></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+    </section>
+    <section class="panel">
+      <h2>상세 항목</h2>
+      <div class="scroll" id="detail"><p class="hint">왼쪽 행을 클릭하세요.</p></div>
+    </section>
+  </div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+let FIELDS = ["표준물질명", "데이터유형", "CAS번호", "지역", "년도", "공정"];
+let rows = [];
+
+function setStatus(text, isError) {
+  $("status").textContent = text;
+  $("status").classList.toggle("error", !!isError);
+}
+
+async function api(path, options) {
+  const response = await fetch(path, options);
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error((payload.error && payload.error.message) || `요청 실패 (${response.status})`);
+  return payload;
+}
+
+function readFile(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve({ name: file.name, data: reader.result });
+    reader.onerror = () => reject(new Error(`${file.name}을 읽을 수 없습니다.`));
+    reader.readAsDataURL(file);
+  });
+}
+
+function renderHead() {
+  $("head").innerHTML = ["#", ...FIELDS, "부가정보"].map((name) => `<th>${name}</th>`).join("");
+}
+
+function renderRows() {
+  $("count").textContent = rows.length ? `${rows.length}건` : "";
+  $("rows").innerHTML = rows.map((row, index) => {
+    const cells = FIELDS.map((field) => {
+      const value = row[field] || "";
+      return `<td class="${value ? "" : "empty"}">${escapeHtml(value) || "—"}</td>`;
+    }).join("");
+    return `<tr data-index="${index}"><td>${index + 1}</td>${cells}<td>${(row.부가정보 || []).length}</td></tr>`;
+  }).join("");
+  if (!rows.length) $("detail").innerHTML = '<p class="hint">추출된 행이 없습니다.</p>';
+}
+
+function renderDetail(index) {
+  const row = rows[index];
+  if (!row) return;
+  const items = FIELDS.map((field) => [field, row[field] || "—"])
+    .concat((row.부가정보 || []).map((extra) => [extra.항목명, extra.값]));
+  $("detail").innerHTML = `<table><thead><tr><th>항목명</th><th>값</th></tr></thead><tbody>${
+    items.map(([name, value]) => `<tr><td>${escapeHtml(name)}</td><td>${escapeHtml(value)}</td></tr>`).join("")
+  }</tbody></table>`;
+}
+
+function escapeHtml(value) {
+  return String(value == null ? "" : value).replace(/[&<>"]/g, (ch) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[ch]));
+}
+
+$("rows").addEventListener("click", (event) => {
+  const tr = event.target.closest("tr[data-index]");
+  if (!tr) return;
+  for (const other of $("rows").children) other.classList.remove("selected");
+  tr.classList.add("selected");
+  renderDetail(Number(tr.dataset.index));
+});
+
+$("run").addEventListener("click", async () => {
+  const files = Array.from($("files").files || []);
+  if (!files.length) return setStatus("파일을 먼저 선택하세요.", true);
+  $("run").disabled = true;
+  setStatus(`${files.length}개 파일 추출 중…`);
+  try {
+    const payload = await api("/api/v1/extract", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ files: await Promise.all(files.map(readFile)) }),
+    });
+    rows = payload.rows || [];
+    renderRows();
+    $("detail").innerHTML = '<p class="hint">왼쪽 행을 클릭하세요.</p>';
+    setStatus(`완료 · ${rows.length}건 (${payload.model})`);
+  } catch (error) {
+    setStatus(error.message, true);
+  } finally {
+    $("run").disabled = false;
+  }
+});
+
+api("/api/v1/health").then((health) => {
+  FIELDS = health.fields || FIELDS;
+  renderHead();
+  setStatus(health.ready ? `모델 ${health.model} 준비됨` : health.detail, !health.ready);
+}).catch((error) => {
+  renderHead();
+  setStatus(error.message, true);
+});
+</script>
+</body>
+</html>
